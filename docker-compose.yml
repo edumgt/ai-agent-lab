@@ -1,0 +1,125 @@
+services:
+
+  # ── VoiceModelBuilder ── port 8951 ─────────────────────────────────────────
+  voice-model-builder:
+    build:
+      context: ./VoiceModelBuilder
+      dockerfile: Dockerfile
+    environment:
+      PROJECT_ID: ${VMB_PROJECT_ID:-project001}
+      PROJECT_NAME: ${VMB_PROJECT_NAME:-나만의 음성 모델 만들기}
+      PROJECT_TRACK: ${VMB_PROJECT_TRACK:-프로젝트-A}
+      PROJECT_TOPIC: ${VMB_PROJECT_TOPIC:-나만의 음성 모델 만들기}
+    ports:
+      - "8951:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── PersonaLLMResponder ── port 8952 ───────────────────────────────────────
+  persona-llm-responder:
+    build:
+      context: ./PersonaLLMResponder
+      dockerfile: Dockerfile
+    environment:
+      PROJECT_ID: ${PLR_PROJECT_ID:-project002}
+      PROJECT_NAME: ${PLR_PROJECT_NAME:-거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기}
+      PROJECT_TRACK: ${PLR_PROJECT_TRACK:-프로젝트-B}
+      PROJECT_TOPIC: ${PLR_PROJECT_TOPIC:-거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+    ports:
+      - "8952:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── PersonaKnowledgeCustomizer ── port 8953 ────────────────────────────────
+  persona-knowledge-customizer:
+    build:
+      context: ./PersonaKnowledgeCustomizer
+      dockerfile: Dockerfile
+    environment:
+      PROJECT_ID: ${PKC_PROJECT_ID:-project003}
+      PROJECT_NAME: ${PKC_PROJECT_NAME:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
+      PROJECT_TRACK: ${PKC_PROJECT_TRACK:-프로젝트-C}
+      PROJECT_TOPIC: ${PKC_PROJECT_TOPIC:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
+    ports:
+      - "8953:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── Agent API ── port 8954 ──────────────────────────────────────────────────
+  agent-api:
+    build:
+      context: .
+      dockerfile: Agent/Dockerfile
+    env_file:
+      - Agent/.env
+    environment:
+      REPO_ROOT: /srv/repo
+      VECTOR_DB_PATH: /srv/vector_db
+      VECTOR_COLLECTION: ${VECTOR_COLLECTION:-curriculum_repo}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
+      OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-large}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
+      CHUNK_SIZE: ${CHUNK_SIZE:-900}
+      CHUNK_OVERLAP: ${CHUNK_OVERLAP:-150}
+      DEFAULT_TOP_K: ${DEFAULT_TOP_K:-6}
+      DEFAULT_ORCHESTRATOR: ${DEFAULT_ORCHESTRATOR:-native}
+      USER_STORE_MODE: qdrant
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+      QDRANT_USER_COLLECTION: ${QDRANT_USER_COLLECTION:-agent_users}
+      AUTH_SECRET: ${AUTH_SECRET:-change-me-in-production}
+      AUTH_TOKEN_TTL_SECONDS: ${AUTH_TOKEN_TTL_SECONDS:-86400}
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-curriculum-agent}
+      OPENAI_STT_MODEL: ${OPENAI_STT_MODEL:-gpt-4o-mini-transcribe}
+      OPENAI_TTS_MODEL: ${OPENAI_TTS_MODEL:-gpt-4o-mini-tts}
+      OPENAI_TTS_VOICE: ${OPENAI_TTS_VOICE:-alloy}
+      OPENAI_VISION_MODEL: ${OPENAI_VISION_MODEL:-gpt-4o-mini}
+      MULTIMODAL_MOCK_FALLBACK: ${MULTIMODAL_MOCK_FALLBACK:-true}
+      DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY:-}
+      DEEPGRAM_MODEL: ${DEEPGRAM_MODEL:-nova-2}
+      ASSEMBLYAI_API_KEY: ${ASSEMBLYAI_API_KEY:-}
+      ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY:-}
+      ELEVENLABS_VOICE_ID: ${ELEVENLABS_VOICE_ID:-}
+      ELEVENLABS_MODEL_ID: ${ELEVENLABS_MODEL_ID:-eleven_multilingual_v2}
+      OCR_SPACE_API_KEY: ${OCR_SPACE_API_KEY:-}
+      TAVILY_API_KEY: ${TAVILY_API_KEY:-}
+      TAVILY_SEARCH_DEPTH: ${TAVILY_SEARCH_DEPTH:-advanced}
+      TAVILY_TOPIC: ${TAVILY_TOPIC:-general}
+      COHERE_API_KEY: ${COHERE_API_KEY:-}
+      COHERE_RERANK_MODEL: ${COHERE_RERANK_MODEL:-rerank-v3.5}
+      WEB_SEARCH_FALLBACK_THRESHOLD: ${WEB_SEARCH_FALLBACK_THRESHOLD:-0.34}
+    ports:
+      - "8954:8000"
+    volumes:
+      - ./:/srv/repo:ro
+      - agent_vector_db:/srv/vector_db
+    networks:
+      - default
+      - shared-net
+    restart: unless-stopped
+
+volumes:
+  agent_vector_db:
+
+networks:
+  default: {}
+  shared-net:
+    external: true

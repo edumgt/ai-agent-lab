@@ -223,6 +223,142 @@ class VectorUserStore:
         )
 
 
+class QdrantUserStore:
+    backend = "qdrant"
+
+    def __init__(self, host: str, port: int, collection_name: str) -> None:
+        from qdrant_client import QdrantClient
+        from qdrant_client.models import Distance, VectorParams
+
+        self._client = QdrantClient(host=host, port=port)
+        self._collection = collection_name
+
+        if not self._client.collection_exists(collection_name):
+            self._client.create_collection(
+                collection_name=collection_name,
+                vectors_config=VectorParams(size=1, distance=Distance.DOT),
+            )
+
+    def create_user(self, username: str, password_hash: str, password_salt: str, full_name: str = "") -> UserRecord:
+        from qdrant_client.models import FieldCondition, Filter, MatchValue, PointStruct
+
+        key = username.strip().lower()
+        if not key:
+            raise ValueError("username is required")
+        if self.get_by_username(key):
+            raise ValueError("username already exists")
+
+        now = _utc_now_iso()
+        new_uuid = uuid.uuid4()
+        user = UserRecord(
+            user_id=f"usr_{new_uuid.hex}",
+            username=key,
+            password_hash=password_hash,
+            password_salt=password_salt,
+            full_name=full_name.strip(),
+            settings=MemoryUserStore._default_settings(),
+            created_at=now,
+            updated_at=now,
+        )
+        self._client.upsert(
+            collection_name=self._collection,
+            points=[PointStruct(id=str(new_uuid), vector=[0.0], payload=self._to_payload(user))],
+        )
+        return user
+
+    def get_by_username(self, username: str) -> UserRecord | None:
+        from qdrant_client.models import FieldCondition, Filter, MatchValue
+
+        key = username.strip().lower()
+        if not key:
+            return None
+        results, _ = self._client.scroll(
+            collection_name=self._collection,
+            scroll_filter=Filter(must=[FieldCondition(key="username", match=MatchValue(value=key))]),
+            limit=1,
+            with_payload=True,
+        )
+        if not results:
+            return None
+        point = results[0]
+        return self._from_payload(qdrant_id=str(point.id), payload=point.payload or {})
+
+    def get_by_user_id(self, user_id: str) -> UserRecord | None:
+        if not user_id.startswith("usr_"):
+            return None
+        try:
+            qdrant_id = str(uuid.UUID(user_id[4:]))
+        except ValueError:
+            return None
+        results = self._client.retrieve(
+            collection_name=self._collection,
+            ids=[qdrant_id],
+            with_payload=True,
+        )
+        if not results:
+            return None
+        point = results[0]
+        return self._from_payload(qdrant_id=str(point.id), payload=point.payload or {})
+
+    def update_settings(self, user_id: str, updates: dict[str, Any]) -> UserRecord:
+        from qdrant_client.models import PointStruct
+
+        user = self.get_by_user_id(user_id)
+        if not user:
+            raise ValueError("user not found")
+        merged = dict(user.settings)
+        merged.update(updates)
+        user.settings = merged
+        user.updated_at = _utc_now_iso()
+
+        qdrant_id = str(uuid.UUID(user_id[4:]))
+        self._client.upsert(
+            collection_name=self._collection,
+            points=[PointStruct(id=qdrant_id, vector=[0.0], payload=self._to_payload(user))],
+        )
+        return user
+
+    def count_users(self) -> int:
+        info = self._client.get_collection(self._collection)
+        return int(info.points_count or 0)
+
+    @staticmethod
+    def _to_payload(user: UserRecord) -> dict[str, Any]:
+        return {
+            "user_id": user.user_id,
+            "username": user.username,
+            "password_hash": user.password_hash,
+            "password_salt": user.password_salt,
+            "full_name": user.full_name,
+            "settings_json": json.dumps(user.settings, ensure_ascii=False),
+            "created_at": user.created_at,
+            "updated_at": user.updated_at,
+        }
+
+    @staticmethod
+    def _from_payload(qdrant_id: str, payload: dict[str, Any]) -> UserRecord:
+        settings_json = str(payload.get("settings_json", "{}"))
+        try:
+            settings = json.loads(settings_json)
+        except json.JSONDecodeError:
+            settings = {}
+        if not isinstance(settings, dict):
+            settings = {}
+        defaults = MemoryUserStore._default_settings()
+        defaults.update(settings)
+        user_id = str(payload.get("user_id") or f"usr_{uuid.UUID(qdrant_id).hex}")
+        return UserRecord(
+            user_id=user_id,
+            username=str(payload.get("username", "")),
+            password_hash=str(payload.get("password_hash", "")),
+            password_salt=str(payload.get("password_salt", "")),
+            full_name=str(payload.get("full_name", "")),
+            settings=defaults,
+            created_at=str(payload.get("created_at", _utc_now_iso())),
+            updated_at=str(payload.get("updated_at", _utc_now_iso())),
+        )
+
+
 class MariaDbUserStore:
     backend = "mariadb"
 
@@ -369,6 +505,9 @@ def build_user_store(
     mode: str,
     vector_db_path: Path,
     vector_collection: str,
+    qdrant_host: str,
+    qdrant_port: int,
+    qdrant_collection: str,
     mariadb_url: str,
     mariadb_host: str,
     mariadb_port: int,
@@ -378,6 +517,15 @@ def build_user_store(
 ) -> UserStoreInit:
     desired = (mode or "auto").strip().lower()
     warnings: list[str] = []
+
+    if desired == "qdrant":
+        try:
+            return UserStoreInit(
+                store=QdrantUserStore(host=qdrant_host, port=qdrant_port, collection_name=qdrant_collection),
+                warnings=warnings,
+            )
+        except Exception as exc:
+            warnings.append(f"qdrant user store unavailable: {exc}")
 
     if desired in {"auto", "vector"}:
         try:

@@ -32,6 +32,10 @@ class Settings:
         self.user_store_mode = os.getenv("USER_STORE_MODE", "auto").strip().lower()
         self.user_vector_collection = os.getenv("USER_VECTOR_COLLECTION", "agent_users")
 
+        self.qdrant_host = os.getenv("QDRANT_HOST", "qdrant").strip()
+        self.qdrant_port = int(os.getenv("QDRANT_PORT", "6333"))
+        self.qdrant_user_collection = os.getenv("QDRANT_USER_COLLECTION", "agent_users")
+
         self.mariadb_host = os.getenv("MARIADB_HOST", "mariadb").strip()
         self.mariadb_port = int(os.getenv("MARIADB_PORT", "3306"))
         self.mariadb_user = os.getenv("MARIADB_USER", "agent")
