@@ -14,7 +14,7 @@ jobs:
     env:
       REPO_ROOT: ${{ github.workspace }}
       VECTOR_DB_PATH: /tmp/vector_db_rag
-      VECTOR_COLLECTION: curriculum_repo
+      VECTOR_COLLECTION: finance_agent_lab
 
     steps:
       - name: Checkout repository
@@ -46,7 +46,7 @@ jobs:
           from app.rag_engine import RepoRAG
           rag = RepoRAG(
               db_path=Path(os.environ["VECTOR_DB_PATH"]),
-              collection_name="curriculum_repo",
+              collection_name="finance_agent_lab",
               embed_dim=1024,
           )
           count = rag.count()
@@ -61,7 +61,7 @@ jobs:
     env:
       REPO_ROOT: ${{ github.workspace }}
       VECTOR_DB_PATH: /tmp/vector_db_agent
-      VECTOR_COLLECTION: curriculum_repo
+      VECTOR_COLLECTION: finance_agent_lab
 
     steps:
       - name: Checkout repository
@@ -91,7 +91,7 @@ jobs:
           cat /tmp/agent_reindex.json
           curl -fsS -X POST "http://127.0.0.1:8000/v1/ask" \
             -H "Content-Type: application/json" \
-            -d '{"question":"class001에서 가상환경을 왜 쓰나요?","top_k":6,"use_llm":false}' >/tmp/agent_ask.json
+            -d '{"question":"금융 상담 에이전트에서 약관 문서를 어떻게 인덱싱해야 하나요?","top_k":6,"use_llm":false}' >/tmp/agent_ask.json
           cat /tmp/agent_ask.json
           grep -q '"answer"' /tmp/agent_ask.json
 
@@ -116,19 +116,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build local Docker image
-        run: docker build -f Agent/Dockerfile -t local/curriculum-rag-agent:${{ github.sha }} .
+        run: docker build -f Agent/Dockerfile -t local/finance-agent-lab:${{ github.sha }} .
 
       - name: Run container and verify API
         run: |
           mkdir -p /tmp/vector_db_ci
-          docker run -d --name curriculum-rag-agent-ci \
+          docker run -d --name finance-agent-lab-ci \
             -p 8000:8000 \
             -e REPO_ROOT=/srv/repo \
             -e VECTOR_DB_PATH=/srv/vector_db \
-            -e VECTOR_COLLECTION=curriculum_repo \
+            -e VECTOR_COLLECTION=finance_agent_lab \
             -v "${{ github.workspace }}:/srv/repo:ro" \
             -v /tmp/vector_db_ci:/srv/vector_db \
-            local/curriculum-rag-agent:${{ github.sha }}
+            local/finance-agent-lab:${{ github.sha }}
           for i in $(seq 1 40); do
             if curl -fsS http://127.0.0.1:8000/health >/tmp/docker_health.json; then
               break
