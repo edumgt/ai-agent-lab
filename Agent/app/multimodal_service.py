@@ -115,7 +115,10 @@ class MultimodalService:
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
-        raise ValueError("STT provider unavailable (configure at least one real provider API key; mock fallback removed): " + " | ".join(errors))
+        raise ValueError(
+            "STT provider unavailable. Configure at least one real provider API key because mock fallback was removed. Details: "
+            + " | ".join(errors)
+        )
 
     def synthesize(
         self,
@@ -145,7 +148,10 @@ class MultimodalService:
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
-        raise ValueError("TTS provider unavailable (configure at least one real provider API key; mock fallback removed): " + " | ".join(errors))
+        raise ValueError(
+            "TTS provider unavailable. Configure at least one real provider API key because mock fallback was removed. Details: "
+            + " | ".join(errors)
+        )
 
     def ocr(
         self,
@@ -172,7 +178,10 @@ class MultimodalService:
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
-        raise ValueError("OCR provider unavailable (configure at least one real provider API key; mock fallback removed): " + " | ".join(errors))
+        raise ValueError(
+            "OCR provider unavailable. Configure at least one real provider API key because mock fallback was removed. Details: "
+            + " | ".join(errors)
+        )
 
     def _stt_openai(self, *, payload: bytes, mime_type: str, language: str) -> SttResult:
         if self._client is None:
