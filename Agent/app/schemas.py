@@ -191,7 +191,7 @@ class HealthResponse(BaseModel):
     status: str
     collection: str
     documents: int
-    curriculum_index: str
+    finance_index: str
     pending_validations: int
     user_store: str
     users: int

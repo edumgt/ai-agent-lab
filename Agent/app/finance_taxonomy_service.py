@@ -22,10 +22,12 @@ class SubjectRange:
     class_count: int
 
 
-class CurriculumIndex:
+class FinanceDomainIndex:
     def __init__(self, repo_root: Path) -> None:
         self._repo_root = repo_root
-        self._index_file = repo_root / "curriculum_index.csv"
+        finance_index_file = repo_root / "finance_domain_index.csv"
+        legacy_index_file = repo_root / "curriculum_index.csv"
+        self._index_file = finance_index_file if finance_index_file.exists() else legacy_index_file
         self._rows: list[dict[str, str]] = []
         self._subject_ranges: dict[str, SubjectRange] = {}
         self._alias_to_subject: dict[str, str] = {}
@@ -114,33 +116,33 @@ class CurriculumIndex:
         glossary: dict[str, dict[str, str]] = {
             "llm": {
                 "title": "LLM (Large Language Model)",
-                "desc": "LLM은 대규모 텍스트 데이터로 학습된 언어 모델로, 질문 답변/요약/생성 같은 자연어 작업을 수행합니다.",
+                "desc": "LLM은 대규모 텍스트 데이터로 학습된 언어 모델로, 금융 상담/요약/문서 생성 같은 업무를 자동화합니다.",
                 "subject": "거대 언어 모델을 활용한 자연어 생성",
-                "hint": "이 과정에서는 class289 ~ class352에서 핵심 개념과 활용법을 학습합니다.",
+                "hint": "금융 민감정보 마스킹, 환각 통제, 감사 가능한 응답 추적이 핵심 운영 포인트입니다.",
             },
             "rag": {
                 "title": "RAG (Retrieval-Augmented Generation)",
                 "desc": "RAG는 문서 검색 결과를 근거로 결합해 답변을 생성하는 방식으로, 환각을 줄이고 근거 기반 답변을 강화합니다.",
                 "subject": "RAG(Retrieval-Augmented Generation)",
-                "hint": "이 과정에서는 class449 ~ class500에서 파이프라인 전반을 다룹니다.",
+                "hint": "여신 규정, 내부통제 기준, 상품 약관 같은 문서를 근거로 답변할 때 특히 효과적입니다.",
             },
             "langchain": {
                 "title": "LangChain",
                 "desc": "LangChain은 LLM 애플리케이션을 체인, 도구, 메모리 구조로 구성할 수 있게 돕는 프레임워크입니다.",
                 "subject": "Langchain 활용하기",
-                "hint": "이 과정에서는 class393 ~ class448에서 실습 중심으로 학습합니다.",
+                "hint": "금융 상담 워크플로를 툴 호출, 규정 조회, 요약 리포트 생성 단계로 분리할 때 유용합니다.",
             },
             "prompt": {
                 "title": "프롬프트 엔지니어링",
                 "desc": "프롬프트 엔지니어링은 모델이 원하는 형식과 품질로 응답하도록 입력(역할/맥락/출력형식)을 설계하는 방법입니다.",
                 "subject": "프롬프트 엔지니어링",
-                "hint": "이 과정에서는 class353 ~ class392에서 체계적으로 다룹니다.",
+                "hint": "금융 답변은 근거 우선, 규정 인용, 불확실성 고지 규칙을 프롬프트에 명시하는 것이 중요합니다.",
             },
             "embedding": {
                 "title": "임베딩 (Embedding)",
                 "desc": "임베딩은 텍스트/데이터를 의미를 보존한 벡터로 변환한 표현으로, 검색/유사도 계산의 기반입니다.",
                 "subject": "RAG(Retrieval-Augmented Generation)",
-                "hint": "벡터 검색과 함께 사용되며 class449 이후 차시에서 자주 등장합니다.",
+                "hint": "신용평가 보고서, 시장 코멘트, 리스크 공지의 의미 유사도 탐색에 활용됩니다.",
             },
             "vector_db": {
                 "title": "벡터 DB (Vector Database)",
@@ -212,7 +214,7 @@ class CurriculumIndex:
         if subject_name:
             range_answer = self.answer_subject_range(subject_name)
             if range_answer:
-                range_line = f" 관련 교과 범위: {range_answer}"
+                range_line = f" 관련 도메인 범위: {range_answer}"
 
         return f"{item['title']}: {item['desc']} {item['hint']}{range_line}"
 
@@ -255,7 +257,7 @@ class CurriculumIndex:
                     best_line = line.strip()
             if best_score <= 0.0:
                 continue
-            # 학습가이드(.md)와 예제/정답 파일을 우선 노출
+            # 가이드(.md)와 예제/정답 파일을 우선 노출
             if rel_lower.endswith(".md"):
                 best_score = min(1.0, best_score + 0.14)
             elif "_example" in rel_lower or "_solution.py" in rel_lower:
@@ -289,7 +291,7 @@ class CurriculumIndex:
             )
 
         lead = (
-            f"{class_id}는 '{module}' 주제(교과목: {subject}, Day {day_text} / {slot}교시)입니다. "
+            f"{class_id}는 '{module}' 주제(도메인: {subject}, Day {day_text} / {slot}교시)입니다. "
             f"질문 '{question}'과 직접 관련된 근거를 우선 정리했습니다."
         )
         bullets = []
@@ -409,7 +411,7 @@ class CurriculumIndex:
 
     @staticmethod
     def _lexical_overlap(q_tokens: list[str], text: str) -> float:
-        d_tokens = set(CurriculumIndex._tokenize(text))
+        d_tokens = set(FinanceDomainIndex._tokenize(text))
         if not d_tokens:
             return 0.0
         overlap = sum(1 for t in q_tokens if t in d_tokens)

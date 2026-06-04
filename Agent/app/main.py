@@ -10,7 +10,7 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from app.agent_service import QnaAgent
 from app.auth_service import AuthService, AuthUser
 from app.config import settings
-from app.curriculum_service import CurriculumIndex
+from app.finance_taxonomy_service import FinanceDomainIndex
 from app.ingest import run_ingestion
 from app.multimodal_service import MultimodalService
 from app.orchestration import AnswerOrchestrator
@@ -62,8 +62,8 @@ def _new_rag() -> RepoRAG:
 
 rag = _new_rag()
 agent = QnaAgent()
-curriculum = CurriculumIndex(repo_root=settings.repo_root)
-router = QueryRouter(curriculum_index=curriculum)
+finance_index = FinanceDomainIndex(repo_root=settings.repo_root)
+router = QueryRouter(finance_index=finance_index)
 validation_queue = RagValidationQueue(db_path=settings.vector_db_path)
 orchestrator = AnswerOrchestrator(
     agent=agent,
@@ -253,15 +253,15 @@ def _process_ask(payload: AskRequest, current_user: AuthUser | None) -> AskRespo
     persona_instruction, persona_name = _resolve_persona(current_user, payload)
 
     if routed.mode == "concept_definition" and routed.concept:
-        answer = curriculum.answer_concept_definition(routed.concept)
+        answer = finance_index.answer_concept_definition(routed.concept)
         if answer:
             resp = AskResponse(
                 answer=answer,
                 sources=[
                     SourceItem(
-                        path="curriculum_index.csv",
+                        path=finance_index.index_path,
                         score=1.0,
-                        chunk="개념형 질문은 구조화 Glossary + curriculum_index.csv 범위 매핑으로 응답합니다.",
+                        chunk="개념형 질문은 구조화 Glossary + 금융 도메인 인덱스 범위 매핑으로 응답합니다.",
                     )
                 ],
                 mode="concept_definition",
@@ -282,15 +282,15 @@ def _process_ask(payload: AskRequest, current_user: AuthUser | None) -> AskRespo
             return resp
 
     if routed.mode == "subject_range" and routed.subject_name:
-        answer = curriculum.answer_subject_range(routed.subject_name)
+        answer = finance_index.answer_subject_range(routed.subject_name)
         if answer:
             resp = AskResponse(
                 answer=answer,
                 sources=[
                     SourceItem(
-                        path="curriculum_index.csv",
+                        path=finance_index.index_path,
                         score=1.0,
-                        chunk="과목 범위 매핑은 curriculum_index.csv의 class/day/subject_name 컬럼 기준으로 계산됩니다.",
+                        chunk="도메인 범위 매핑은 인덱스의 class/day/subject_name 컬럼 기준으로 계산됩니다.",
                     )
                 ],
                 mode="subject_range",
@@ -311,14 +311,14 @@ def _process_ask(payload: AskRequest, current_user: AuthUser | None) -> AskRespo
             return resp
 
     if routed.class_id:
-        class_sources = curriculum.class_local_search(
+        class_sources = finance_index.class_local_search(
             class_id=routed.class_id,
             question=question,
             top_k=top_k,
         )
         if class_sources:
-            class_subject = routed.subject_name or curriculum.class_subject(routed.class_id)
-            class_answer = curriculum.answer_class_scoped(
+            class_subject = routed.subject_name or finance_index.class_subject(routed.class_id)
+            class_answer = finance_index.answer_class_scoped(
                 class_id=routed.class_id,
                 question=question,
                 sources=class_sources,
@@ -359,7 +359,7 @@ def _process_ask(payload: AskRequest, current_user: AuthUser | None) -> AskRespo
         )
         rag = _new_rag()
 
-    preferred_dirs = curriculum.subject_directory_hints(routed.subject_name)
+    preferred_dirs = finance_index.subject_directory_hints(routed.subject_name)
     sources = rag.query(
         question=question,
         top_k=top_k,
@@ -449,7 +449,7 @@ def health() -> HealthResponse:
         status="ok",
         collection=rag.collection_name,
         documents=rag.count(),
-        curriculum_index=curriculum.index_path,
+        finance_index=finance_index.index_path,
         pending_validations=validation_queue.pending_count(),
         user_store=auth_service.backend,
         users=auth_service.count_users(),
@@ -500,7 +500,7 @@ def reindex(force: bool = True) -> ReindexResponse:
         skip_if_exists=False,
     )
     rag = _new_rag()
-    curriculum.reload()
+    finance_index.reload()
     validation_queue.process_on_reindex(rag)
     return ReindexResponse(
         indexed_files=indexed_files,
