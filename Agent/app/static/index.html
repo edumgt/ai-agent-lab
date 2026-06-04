@@ -8,348 +8,467 @@
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <style>
     :root {
-      --bg0: #f2f5ff;
-      --bg1: #dce6ff;
-      --card: #ffffffcc;
-      --line: #cfd8ef;
-      --ink: #1f2a44;
-      --muted: #5f6e8c;
-      --brand: #0f62fe;
-      --brand2: #13b0a5;
-      --bubble: #ffffff;
-      --input: #ffffff;
+      --bg: #ffffff;
+      --surface: #f5f4f8;
+      --surface2: #ebe9f1;
+      --border: #e2e0ea;
+      --ink: #1c1b1f;
+      --muted: #79747e;
+      --accent: #6d38e0;
+      --accent2: #2f6fed;
+      --accent-light: #ede8fb;
+      --user-bubble: #ede8fb;
+      --user-ink: #3b1fa8;
+      --bot-bg: #ffffff;
+      --input-bg: #f5f4f8;
+      --header-bg: #ffffff;
     }
-
     [data-theme="dark"] {
-      --bg0: #0f172a;
-      --bg1: #111827;
-      --card: #111827d9;
-      --line: #273449;
-      --ink: #e5edf9;
-      --muted: #9db0cc;
-      --brand: #3b82f6;
-      --brand2: #14b8a6;
-      --bubble: #0b1220;
-      --input: #0b1220;
+      --bg: #1c1b1f;
+      --surface: #28272c;
+      --surface2: #323136;
+      --border: #3b3942;
+      --ink: #e6e0ec;
+      --muted: #9e99a8;
+      --accent: #b69df8;
+      --accent2: #7baaf7;
+      --accent-light: #2c1e4a;
+      --user-bubble: #2c1e4a;
+      --user-ink: #d8c8ff;
+      --bot-bg: #28272c;
+      --input-bg: #28272c;
+      --header-bg: #1c1b1f;
     }
 
     * { box-sizing: border-box; }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-    }
-
+    html, body { height: 100%; margin: 0; overflow: hidden; }
     body {
       font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--ink);
-      background:
-        radial-gradient(1200px 540px at 92% -16%, rgba(19, 176, 165, 0.22) 0%, transparent 60%),
-        radial-gradient(860px 540px at 10% 0%, rgba(59, 130, 246, 0.16) 0%, transparent 60%),
-        linear-gradient(160deg, var(--bg0), var(--bg1));
+      background: var(--bg);
     }
 
-    .glass {
-      background: var(--card);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 24px rgba(20, 36, 66, 0.14);
+    /* Scrollbar */
+    .cscroll::-webkit-scrollbar { width: 5px; }
+    .cscroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .cscroll::-webkit-scrollbar-track { background: transparent; }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+    .fade-up { animation: fadeUp .28s ease both; }
+    .fade-in { animation: fadeIn .2s ease both; }
+
+    /* Layout panels */
+    .drawer {
+      position: fixed; inset-y: 0; z-index: 50;
+      background: var(--header-bg);
+      transition: transform .25s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column;
+    }
+    #settingsDrawer { left:0; width:288px; border-right:1px solid var(--border); transform:translateX(-100%); }
+    #settingsDrawer.open { transform:translateX(0); }
+    #sourcesDrawer { right:0; width:360px; border-left:1px solid var(--border); transform:translateX(100%); }
+    #sourcesDrawer.open { transform:translateX(0); }
+
+    /* Overlay */
+    .overlay {
+      position:fixed; inset:0; z-index:40;
+      background:rgba(0,0,0,.25); backdrop-filter:blur(2px);
+      opacity:0; pointer-events:none; transition:opacity .2s;
+    }
+    .overlay.on { opacity:1; pointer-events:auto; }
+
+    /* Header */
+    .app-header {
+      height:56px; flex-shrink:0;
+      background:var(--header-bg); border-bottom:1px solid var(--border);
+      display:flex; align-items:center; padding:0 12px; gap:10px;
     }
 
-    .rise { animation: rise 0.34s ease both; }
+    /* Icon button */
+    .ibtn {
+      width:36px; height:36px; border-radius:8px; border:none;
+      background:transparent; cursor:pointer; color:var(--muted);
+      display:flex; align-items:center; justify-content:center;
+      transition:background .15s,color .15s; flex-shrink:0;
+    }
+    .ibtn:hover { background:var(--surface); color:var(--ink); }
 
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Toggle switch */
+    .toggle-wrap { display:flex; align-items:center; justify-content:space-between; cursor:pointer; }
+    .toggle-rail {
+      width:40px; height:22px; border-radius:11px; background:var(--surface2);
+      position:relative; transition:background .2s; flex-shrink:0;
+    }
+    .toggle-rail.on { background:var(--accent); }
+    .toggle-knob {
+      position:absolute; top:3px; left:3px; width:16px; height:16px;
+      border-radius:50%; background:#fff;
+      box-shadow:0 1px 3px rgba(0,0,0,.25); transition:transform .2s;
+    }
+    .toggle-rail.on .toggle-knob { transform:translateX(18px); }
+
+    /* Form input */
+    .finput {
+      width:100%; border:1px solid var(--border); border-radius:10px;
+      background:var(--surface); color:var(--ink);
+      padding:7px 10px; font-size:13px; outline:none;
+      font-family:inherit;
+    }
+    .finput:focus { border-color:var(--accent); }
+
+    /* Message bubbles */
+    .msg-user {
+      background:var(--user-bubble); color:var(--user-ink);
+      border-radius:20px 20px 6px 20px; padding:10px 16px;
+      max-width:78%; font-size:14px; line-height:1.6; word-break:break-word;
+    }
+    .msg-bot {
+      background:var(--bot-bg); color:var(--ink);
+      border:1px solid var(--border); border-radius:6px 20px 20px 20px;
+      padding:14px 16px; max-width:86%; font-size:14px; line-height:1.7; word-break:break-word;
     }
 
-    .gradient-chip {
-      background: linear-gradient(120deg, var(--brand), var(--brand2));
-      color: #fff;
+    /* Input box */
+    .input-box {
+      border:1.5px solid var(--border); border-radius:26px;
+      background:var(--input-bg); transition:border-color .15s, box-shadow .15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .input-box:focus-within {
+      border-color:var(--accent);
+      box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%, transparent);
     }
 
-    .fancy-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
-    .fancy-scroll::-webkit-scrollbar-thumb { background: #7f93b61f; border-radius: 999px; }
+    /* Send button */
+    .send-btn {
+      width:38px; height:38px; border-radius:50%; border:none; cursor:pointer;
+      background:linear-gradient(135deg,#6d38e0,#2f6fed);
+      display:flex; align-items:center; justify-content:center;
+      transition:opacity .15s, transform .1s; flex-shrink:0;
+    }
+    .send-btn:hover:not(:disabled) { opacity:.88; transform:scale(1.06); }
+    .send-btn:disabled { opacity:.38; cursor:not-allowed; }
 
-    .panel-slide-left { transform: translateX(-100%); }
-    .panel-slide-right { transform: translateX(100%); }
+    /* Suggestion card */
+    .sug-card {
+      border:1px solid var(--border); border-radius:14px;
+      padding:12px 16px; background:var(--surface);
+      cursor:pointer; text-align:left; width:100%;
+      transition:border-color .15s, background .15s;
+    }
+    .sug-card:hover { border-color:var(--accent); background:var(--accent-light); }
 
-    .theme-switch {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 8px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--bubble);
-      color: var(--ink);
-      cursor: pointer;
-      user-select: none;
+    /* Live badge */
+    .live-badge {
+      display:inline-flex; align-items:center; gap:5px;
+      background:#dcfce7; color:#15803d;
+      border-radius:20px; padding:3px 9px;
+      font-size:11px; font-weight:600;
+    }
+    [data-theme="dark"] .live-badge { background:#14532d; color:#86efac; }
+    .live-dot { width:6px; height:6px; border-radius:50%; background:#22c55e; animation:blink 2s infinite; }
+
+    /* Typing dots */
+    .tdot { width:7px; height:7px; border-radius:50%; background:var(--muted); animation:blink 1.2s infinite; }
+    .tdot:nth-child(2){animation-delay:.18s;} .tdot:nth-child(3){animation-delay:.36s;}
+
+    /* Source card */
+    .src-card {
+      border:1px solid var(--border); border-radius:12px;
+      padding:12px; background:var(--surface);
     }
 
-    .theme-switch input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
+    /* Meta pill */
+    .mpill {
+      display:inline-block; background:var(--surface2); color:var(--muted);
+      border-radius:6px; padding:1px 7px; font-size:10px; font-weight:500;
     }
 
-    .theme-track {
-      position: relative;
-      width: 34px;
-      height: 20px;
-      border-radius: 999px;
-      background: #cbd5e1;
-      transition: background 0.2s ease;
+    /* Verify button */
+    .vbtn {
+      display:inline-flex; align-items:center; gap:5px;
+      border:1px solid #fcd34d; background:#fffbeb; color:#92400e;
+      border-radius:8px; padding:4px 10px; font-size:12px; font-weight:600;
+      cursor:pointer; transition:background .15s;
     }
+    .vbtn:hover { background:#fef3c7; }
+    [data-theme="dark"] .vbtn { background:#2a1c00; color:#fcd34d; border-color:#b45309; }
 
-    .theme-knob {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.25);
-      transition: transform 0.2s ease;
-    }
-
-    .theme-switch input:checked + .theme-track {
-      background: var(--brand);
-    }
-
-    .theme-switch input:checked + .theme-track .theme-knob {
-      transform: translateX(14px);
-    }
-
-    .theme-label {
-      font-size: 11px;
-      line-height: 1;
-      font-weight: 600;
-      color: var(--muted);
-    }
+    /* Section label */
+    .slabel { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
   </style>
 </head>
 <body data-theme="light">
-  <div class="relative h-screen w-screen overflow-hidden">
-    <aside id="leftPanel" class="panel-slide-left fixed inset-y-0 left-0 z-40 w-[18rem] p-3 transition-transform duration-300">
-      <div class="glass h-full rounded-2xl p-4">
-        <div class="mb-4 flex items-center justify-between">
-          <div>
-            <p class="text-[10px] font-bold tracking-[0.22em] text-blue-500">FINANCE AGENT LAB</p>
-            <h1 class="mt-1 text-lg font-bold">RAG Control Deck</h1>
-          </div>
-          <button id="closeLeftPanel" class="rounded-lg border border-slate-300/70 bg-white/70 px-2 py-1 text-xs text-slate-700">닫기</button>
+
+  <!-- Hidden SVG defs (reusable gradients) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="copGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#6d38e0"/>
+        <stop offset="55%" stop-color="#2f6fed"/>
+        <stop offset="100%" stop-color="#06b6d4"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Settings Drawer -->
+  <aside id="settingsDrawer" class="drawer">
+    <div class="app-header">
+      <span class="slabel flex-1">설정</span>
+      <button id="closeSettings" class="ibtn" title="닫기">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto cscroll p-4 space-y-6">
+      <!-- Health -->
+      <section>
+        <p class="slabel mb-3">시스템 상태</p>
+        <div class="rounded-xl p-3 space-y-2 text-sm" style="background:var(--surface);border:1px solid var(--border);">
+          <div class="flex justify-between"><span style="color:var(--muted);">상태</span><span id="healthStatus" class="font-semibold">확인 중...</span></div>
+          <div class="flex justify-between"><span style="color:var(--muted);">컬렉션</span><span id="healthCollection" class="font-semibold">-</span></div>
+          <div class="flex justify-between"><span style="color:var(--muted);">문서 수</span><span id="healthDocs" class="font-semibold">-</span></div>
+          <div class="flex justify-between"><span style="color:var(--muted);">검증 대기</span><span id="healthPending" class="font-semibold">0</span></div>
         </div>
+      </section>
 
-        <section class="mb-3 rounded-xl border border-blue-200/80 bg-blue-50/70 p-3 rise">
-          <h2 class="mb-2 text-xs font-bold text-blue-700">시스템 상태</h2>
-          <p class="text-xs"><span class="font-semibold">상태</span>: <span id="healthStatus">확인 중...</span></p>
-          <p class="mt-1 text-xs"><span class="font-semibold">컬렉션</span>: <span id="healthCollection">-</span></p>
-          <p class="mt-1 text-xs"><span class="font-semibold">문서 수</span>: <span id="healthDocs">-</span></p>
-          <p class="mt-1 text-xs"><span class="font-semibold">검증 대기</span>: <span id="healthPending">0</span></p>
-        </section>
-
-        <section class="rounded-xl border border-slate-200/80 bg-white/70 p-3 rise">
-          <h2 class="mb-2 text-xs font-bold text-slate-700">질의 설정</h2>
-          <label class="mb-2 block text-xs">
-            <span class="mb-1 block" style="color: var(--muted);">Top-K</span>
-            <input id="topK" type="number" min="1" max="20" value="6" class="w-full rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-xs text-slate-800" />
-          </label>
-          <label class="mb-3 flex items-center gap-2 text-xs" style="color: var(--ink);">
-            <input id="useLlm" type="checkbox" checked class="h-3.5 w-3.5 rounded border-slate-300" />
-            LLM 답변 사용
-          </label>
-          <label class="mb-2 block text-xs">
-            <span class="mb-1 block" style="color: var(--muted);">Orchestrator</span>
-            <select id="orchestrator" class="w-full rounded-lg border border-slate-300 bg-white px-2 py-1.5 text-xs text-slate-800">
+      <!-- Query settings -->
+      <section>
+        <p class="slabel mb-3">질의 설정</p>
+        <div class="space-y-3">
+          <div>
+            <label class="text-xs block mb-1.5" style="color:var(--muted);">Top-K</label>
+            <input id="topK" type="number" min="1" max="20" value="6" class="finput" />
+          </div>
+          <div>
+            <label class="text-xs block mb-1.5" style="color:var(--muted);">Orchestrator</label>
+            <select id="orchestrator" class="finput">
               <option value="native">native</option>
               <option value="langchain">langchain</option>
               <option value="langgraph">langgraph</option>
             </select>
-          </label>
-          <label class="mb-2 flex items-center gap-2 text-xs" style="color: var(--ink);">
-            <input id="useWebSearch" type="checkbox" class="h-3.5 w-3.5 rounded border-slate-300" />
-            Tavily 웹 검색 병합
-          </label>
-          <label class="mb-2 flex items-center gap-2 text-xs" style="color: var(--ink);">
-            <input id="useRerank" type="checkbox" checked class="h-3.5 w-3.5 rounded border-slate-300" />
-            리랭킹 사용(Cohere/Lexical)
-          </label>
-          <button id="reindexBtn" class="w-full rounded-lg gradient-chip px-2 py-1.5 text-xs font-semibold transition hover:brightness-110">
-            RAG 재반영
-          </button>
-        </section>
-      </div>
-    </aside>
-
-    <aside id="rightPanel" class="panel-slide-right fixed inset-y-0 right-0 z-40 w-[26rem] p-3 transition-transform duration-300">
-      <div class="glass flex h-full min-h-0 flex-col rounded-2xl p-4">
-        <div class="mb-2 flex items-center justify-between">
-          <h3 class="text-sm font-bold">검색 근거</h3>
-          <button id="closeRightPanel" class="rounded-lg border border-slate-300/70 bg-white/70 px-2 py-1 text-xs text-slate-700">닫기</button>
-        </div>
-        <p id="sourceMeta" class="mb-2 text-[11px]" style="color: var(--muted);">아직 검색 결과가 없습니다.</p>
-        <div id="sources" class="fancy-scroll min-h-0 flex-1 space-y-2 overflow-y-auto rounded-xl border border-slate-200/80 p-2 text-xs" style="background: var(--bubble); color: var(--ink);">
-          아직 검색 결과가 없습니다.
-        </div>
-      </div>
-    </aside>
-
-    <div id="panelBackdrop" class="fixed inset-0 z-30 hidden bg-slate-900/45"></div>
-
-    <main class="relative z-10 flex h-full min-w-0 flex-col gap-2 p-3">
-      <header class="glass rounded-xl px-3 py-2">
-        <div class="flex items-center justify-between gap-3">
-          <div class="flex items-center gap-2">
-            <button id="openLeftPanel" class="rounded-lg border border-slate-300/80 bg-white/70 px-2 py-1 text-xs text-slate-700">메뉴</button>
-            <div>
-              <p class="text-[11px]" style="color: var(--muted);">Finance / Risk / AI Agent Q&A Workspace</p>
-              <h2 class="text-xl font-bold leading-tight">Ask, Trace, Ship</h2>
-            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <label class="theme-switch" for="themeToggle">
-              <input id="themeToggle" type="checkbox" role="switch" aria-label="다크 모드 토글" />
-              <span class="theme-track"><span class="theme-knob"></span></span>
-              <span class="theme-label">다크모드</span>
+
+          <div class="space-y-3 pt-1">
+            <label class="toggle-wrap text-sm">
+              <span>LLM 답변 사용</span>
+              <div class="toggle-rail on" data-for="useLlm"><div class="toggle-knob"></div></div>
+              <input id="useLlm" type="checkbox" checked class="sr-only" />
             </label>
-            <button id="openRightPanel" class="rounded-lg border border-slate-300/80 bg-white/70 px-2 py-1 text-[11px] text-slate-700">근거 보기</button>
-            <span class="gradient-chip rounded-full px-2.5 py-1 text-[11px] font-semibold">FastAPI + Chroma</span>
+            <label class="toggle-wrap text-sm">
+              <span>Tavily 웹 검색</span>
+              <div class="toggle-rail" data-for="useWebSearch"><div class="toggle-knob"></div></div>
+              <input id="useWebSearch" type="checkbox" class="sr-only" />
+            </label>
+            <label class="toggle-wrap text-sm">
+              <span>리랭킹 사용</span>
+              <div class="toggle-rail on" data-for="useRerank"><div class="toggle-knob"></div></div>
+              <input id="useRerank" type="checkbox" checked class="sr-only" />
+            </label>
           </div>
         </div>
-      </header>
-
-      <section class="min-h-0 flex-1">
-        <article class="glass flex h-full min-h-0 flex-col rounded-2xl p-3">
-          <div class="mb-2 flex items-center justify-between">
-            <h3 class="text-sm font-bold">질문 / 답변</h3>
-            <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Live</span>
-          </div>
-
-          <div id="chatLog" class="fancy-scroll min-h-0 flex-1 space-y-2 overflow-y-auto rounded-xl border border-slate-200/80 p-2" style="background: var(--bubble);">
-            <div class="rounded-xl border border-blue-200 bg-blue-50 p-2 text-xs text-blue-900 rise">
-              RAG 모드: 질문 입력 → 금융 관련 문서 검색 → 근거 기반 답변 생성. 오른쪽 <b>근거 보기</b> 오프캔버스에서 출처를 확인하세요.
-            </div>
-          </div>
-
-          <p id="answerMeta" class="mt-1 text-[11px]" style="color: var(--muted);"></p>
-
-          <form id="askForm" class="mt-2 space-y-1.5">
-            <textarea id="question" rows="2" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs outline-none ring-blue-500 focus:ring" style="background: var(--input); color: var(--ink);" placeholder="예: 기업대출 심사 에이전트에 필요한 근거 문서는 무엇인가요?"></textarea>
-            <div class="flex items-center justify-between">
-              <p class="text-[11px]" style="color: var(--muted);">Enter: 질문 전송 / Shift+Enter: 줄바꿈</p>
-              <button type="submit" id="askBtn" class="rounded-xl gradient-chip px-3 py-1.5 text-xs font-semibold transition hover:brightness-110">
-                질문하기
-              </button>
-            </div>
-          </form>
-        </article>
       </section>
 
-      <footer class="glass rounded-xl px-3 py-1.5 text-center text-[11px]" style="color: var(--muted);">
-        © www.edumgt.co.kr All rights reserved.
-      </footer>
+      <button id="reindexBtn" class="w-full rounded-xl py-2.5 text-sm font-semibold text-white transition hover:opacity-90" style="background:linear-gradient(135deg,#6d38e0,#2f6fed);">
+        RAG 재반영
+      </button>
+    </div>
+
+    <div class="p-4 border-t text-xs text-center" style="border-color:var(--border);color:var(--muted);">
+      © www.edumgt.co.kr All rights reserved.
+    </div>
+  </aside>
+
+  <!-- Sources Drawer -->
+  <aside id="sourcesDrawer" class="drawer">
+    <div class="app-header">
+      <div class="flex-1">
+        <p class="font-semibold text-sm">검색 근거</p>
+        <p id="sourceMeta" class="text-[11px] mt-0.5" style="color:var(--muted);">아직 결과가 없습니다.</p>
+      </div>
+      <button id="closeSources" class="ibtn" title="닫기">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="sources" class="flex-1 overflow-y-auto cscroll p-4 space-y-3 text-sm">
+      <p style="color:var(--muted);font-size:13px;">아직 검색 결과가 없습니다.</p>
+    </div>
+  </aside>
+
+  <!-- Main App -->
+  <div class="flex flex-col h-screen">
+
+    <!-- Header -->
+    <header class="app-header">
+      <button id="openSettings" class="ibtn" title="설정">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+
+      <!-- Brand -->
+      <div class="flex items-center gap-2.5">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <circle cx="15" cy="15" r="15" fill="url(#copGrad)" opacity=".12"/>
+          <path d="M15 5 17.5 13.5 26 15 17.5 16.5 15 25 12.5 16.5 4 15 12.5 13.5Z" fill="url(#copGrad)"/>
+          <circle cx="21" cy="8" r="2.2" fill="url(#copGrad)" opacity=".7"/>
+          <circle cx="9" cy="22" r="1.6" fill="url(#copGrad)" opacity=".5"/>
+        </svg>
+        <div>
+          <p class="text-[10px] font-bold tracking-[.18em] leading-none" style="color:var(--accent);">FINANCE AGENT LAB</p>
+          <p class="text-[13px] font-semibold leading-tight mt-0.5">Ask, Trace, Ship</p>
+        </div>
+      </div>
+
+      <div class="flex-1"></div>
+
+      <div class="flex items-center gap-2">
+        <div class="live-badge"><span class="live-dot"></span>Live</div>
+
+        <button id="themeBtn" class="ibtn" title="테마 전환">
+          <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button id="openSources" class="ibtn" title="검색 근거">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+        </button>
+
+        <span class="rounded-full px-3 py-1 text-[11px] font-semibold text-white" style="background:linear-gradient(135deg,#6d38e0,#2f6fed);">FastAPI + Chroma</span>
+      </div>
+    </header>
+
+    <!-- Chat area -->
+    <main class="flex-1 overflow-hidden">
+      <div id="chatContainer" class="h-full overflow-y-auto cscroll">
+        <div class="max-w-[720px] mx-auto px-4 py-6">
+
+          <!-- Welcome screen -->
+          <div id="welcomeScreen" class="fade-in">
+            <div class="text-center pt-10 pb-8">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" class="mx-auto mb-5">
+                <circle cx="30" cy="30" r="30" fill="url(#copGrad)" opacity=".1"/>
+                <path d="M30 8 34 23.5 49 27 34 30.5 30 46 26 30.5 11 27 26 23.5Z" fill="url(#copGrad)"/>
+                <circle cx="41" cy="15" r="4" fill="url(#copGrad)" opacity=".6"/>
+                <circle cx="17" cy="43" r="3" fill="url(#copGrad)" opacity=".4"/>
+              </svg>
+              <h1 class="text-[28px] font-bold mb-2">금융에 대해 무엇이든 물어보세요</h1>
+              <p class="text-base" style="color:var(--muted);">Finance &amp; Risk AI · RAG 기반 전문 답변 · 근거 추적 가능</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button class="sug-card fade-up" style="animation-delay:.05s" onclick="fillAndSend('기업대출 심사 에이전트에 필요한 근거 문서는 무엇인가요?')">
+                <p class="text-sm font-semibold mb-1">📋 기업대출 심사</p>
+                <p class="text-xs leading-snug" style="color:var(--muted);">기업대출 심사 에이전트에 필요한 근거 문서는 무엇인가요?</p>
+              </button>
+              <button class="sug-card fade-up" style="animation-delay:.1s" onclick="fillAndSend('주식 포트폴리오 리스크 관리 방법을 설명해 주세요.')">
+                <p class="text-sm font-semibold mb-1">📊 포트폴리오 리스크</p>
+                <p class="text-xs leading-snug" style="color:var(--muted);">주식 포트폴리오 리스크 관리 방법을 설명해 주세요.</p>
+              </button>
+              <button class="sug-card fade-up" style="animation-delay:.15s" onclick="fillAndSend('파생상품 헤지 전략과 주요 위험 지표는 무엇인가요?')">
+                <p class="text-sm font-semibold mb-1">📈 파생상품 헤지</p>
+                <p class="text-xs leading-snug" style="color:var(--muted);">파생상품 헤지 전략과 주요 위험 지표는 무엇인가요?</p>
+              </button>
+              <button class="sug-card fade-up" style="animation-delay:.2s" onclick="fillAndSend('금융 데이터 분석에 AI를 활용하는 주요 사례를 알려주세요.')">
+                <p class="text-sm font-semibold mb-1">🤖 AI 금융 분석</p>
+                <p class="text-xs leading-snug" style="color:var(--muted);">금융 데이터 분석에 AI를 활용하는 주요 사례를 알려주세요.</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div id="chatLog" class="space-y-5 pb-2"></div>
+
+          <!-- Answer meta -->
+          <div id="answerMeta" class="text-[11px] mt-1 pb-1 flex flex-wrap gap-1.5" style="color:var(--muted);"></div>
+        </div>
+      </div>
     </main>
+
+    <!-- Input bar -->
+    <div class="flex-shrink-0 px-4 pb-4 pt-3" style="background:var(--bg);border-top:1px solid var(--border);">
+      <div class="max-w-[720px] mx-auto">
+        <form id="askForm">
+          <div class="input-box flex items-end gap-2 px-4 py-3">
+            <textarea id="question" rows="1"
+              class="flex-1 bg-transparent outline-none resize-none text-sm leading-relaxed"
+              style="color:var(--ink);max-height:180px;overflow-y:auto;font-family:inherit;"
+              placeholder="금융·리스크·AI 에이전트에 대해 질문하세요..."></textarea>
+            <button type="submit" id="askBtn" class="send-btn mb-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-[11px] mt-2" style="color:var(--muted);">Enter: 전송 &nbsp;·&nbsp; Shift+Enter: 줄바꿈</p>
+      </div>
+    </div>
   </div>
 
   <script>
+    // ─── Theme ────────────────────────────────────────────────────────────
     const body = document.body;
+    const themeBtn = document.getElementById("themeBtn");
+    const themeIcon = document.getElementById("themeIcon");
+    const MOON = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    const SUN  = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
 
-    const leftPanel = document.getElementById("leftPanel");
-    const rightPanel = document.getElementById("rightPanel");
-    const backdrop = document.getElementById("panelBackdrop");
+    let theme = localStorage.getItem("agent-theme") || (window.matchMedia?.("(prefers-color-scheme:dark)").matches ? "dark" : "light");
 
-    const openLeftPanel = document.getElementById("openLeftPanel");
-    const closeLeftPanel = document.getElementById("closeLeftPanel");
-    const openRightPanel = document.getElementById("openRightPanel");
-    const closeRightPanel = document.getElementById("closeRightPanel");
-
-    function refreshBackdrop() {
-      const leftOpened = !leftPanel.classList.contains("panel-slide-left");
-      const rightOpened = !rightPanel.classList.contains("panel-slide-right");
-      if (leftOpened || rightOpened) backdrop.classList.remove("hidden");
-      else backdrop.classList.add("hidden");
+    function applyTheme(t) {
+      theme = t;
+      body.setAttribute("data-theme", t);
+      themeIcon.innerHTML = t === "dark" ? SUN : MOON;
+      localStorage.setItem("agent-theme", t);
     }
+    applyTheme(theme);
+    themeBtn.addEventListener("click", () => applyTheme(theme === "dark" ? "light" : "dark"));
 
-    function showLeftPanel() {
-      leftPanel.classList.remove("panel-slide-left");
-      refreshBackdrop();
-    }
-
-    function hideLeftPanel() {
-      leftPanel.classList.add("panel-slide-left");
-      refreshBackdrop();
-    }
-
-    function showRightPanel() {
-      rightPanel.classList.remove("panel-slide-right");
-      refreshBackdrop();
-    }
-
-    function hideRightPanel() {
-      rightPanel.classList.add("panel-slide-right");
-      refreshBackdrop();
-    }
-
-    openLeftPanel?.addEventListener("click", showLeftPanel);
-    closeLeftPanel?.addEventListener("click", hideLeftPanel);
-    openRightPanel?.addEventListener("click", showRightPanel);
-    closeRightPanel?.addEventListener("click", hideRightPanel);
-
-    backdrop?.addEventListener("click", () => {
-      hideLeftPanel();
-      hideRightPanel();
+    // ─── Toggles ──────────────────────────────────────────────────────────
+    document.querySelectorAll(".toggle-rail").forEach(rail => {
+      const cb = document.getElementById(rail.dataset.for);
+      rail.addEventListener("click", () => {
+        cb.checked = !cb.checked;
+        rail.classList.toggle("on", cb.checked);
+      });
     });
 
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        hideLeftPanel();
-        hideRightPanel();
-      }
-    });
+    // ─── Drawers ──────────────────────────────────────────────────────────
+    const overlay     = document.getElementById("overlay");
+    const settingsDr  = document.getElementById("settingsDrawer");
+    const sourcesDr   = document.getElementById("sourcesDrawer");
 
-    const themeToggle = document.getElementById("themeToggle");
-    const savedTheme = localStorage.getItem("agent-theme");
-    const systemPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme === "dark" || savedTheme === "light"
-      ? savedTheme
-      : (systemPrefersDark ? "dark" : "light");
-
-    function applyTheme(theme) {
-      body.setAttribute("data-theme", theme);
-      if (themeToggle) {
-        const isDark = theme === "dark";
-        themeToggle.checked = isDark;
-        themeToggle.setAttribute("aria-checked", String(isDark));
-      }
-      localStorage.setItem("agent-theme", theme);
+    function refreshOverlay() {
+      const any = settingsDr.classList.contains("open") || sourcesDr.classList.contains("open");
+      overlay.classList.toggle("on", any);
     }
+    function openDrawer(el)  { el.classList.add("open");    refreshOverlay(); }
+    function closeDrawer(el) { el.classList.remove("open"); refreshOverlay(); }
 
-    applyTheme(initialTheme);
+    document.getElementById("openSettings").addEventListener("click",  () => openDrawer(settingsDr));
+    document.getElementById("closeSettings").addEventListener("click", () => closeDrawer(settingsDr));
+    document.getElementById("openSources").addEventListener("click",   () => openDrawer(sourcesDr));
+    document.getElementById("closeSources").addEventListener("click",  () => closeDrawer(sourcesDr));
+    overlay.addEventListener("click", () => { closeDrawer(settingsDr); closeDrawer(sourcesDr); });
+    window.addEventListener("keydown", e => { if (e.key === "Escape") { closeDrawer(settingsDr); closeDrawer(sourcesDr); } });
 
-    themeToggle?.addEventListener("change", () => {
-      applyTheme(themeToggle.checked ? "dark" : "light");
-    });
-
+    // ─── Health ───────────────────────────────────────────────────────────
     async function refreshHealth() {
       try {
-        const res = await fetch("/health");
-        const data = await res.json();
-        document.getElementById("healthStatus").textContent = data.status;
-        document.getElementById("healthCollection").textContent = data.collection;
-        document.getElementById("healthDocs").textContent = String(data.documents);
-        document.getElementById("healthPending").textContent = String(data.pending_validations || 0);
-      } catch {
-        document.getElementById("healthStatus").textContent = "error";
-      }
+        const d = await fetch("/health").then(r => r.json());
+        document.getElementById("healthStatus").textContent     = d.status;
+        document.getElementById("healthCollection").textContent = d.collection;
+        document.getElementById("healthDocs").textContent       = String(d.documents);
+        document.getElementById("healthPending").textContent    = String(d.pending_validations || 0);
+      } catch { document.getElementById("healthStatus").textContent = "error"; }
     }
 
+    // ─── RAG validation ───────────────────────────────────────────────────
     async function queueRagValidation(payload) {
       const res = await fetch("/v1/rag-validation/queue", {
         method: "POST",
@@ -357,121 +476,167 @@
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("rag validation queue failed");
-      const data = await res.json();
-      document.getElementById("healthPending").textContent = String(data.pending_count || 0);
-      return data;
+      const d = await res.json();
+      document.getElementById("healthPending").textContent = String(d.pending_count || 0);
+      return d;
     }
 
     document.getElementById("reindexBtn").addEventListener("click", async () => {
       const btn = document.getElementById("reindexBtn");
       const pendingBefore = Number(document.getElementById("healthPending").textContent || "0");
-      btn.disabled = true;
-      btn.textContent = "재반영 중...";
+      btn.disabled = true; btn.textContent = "재반영 중...";
       try {
         const res = await fetch("/v1/reindex?force=true", { method: "POST" });
         if (!res.ok) throw new Error("reindex failed");
         await refreshHealth();
         const pendingAfter = Number(document.getElementById("healthPending").textContent || "0");
-        if (pendingBefore > 0 && pendingAfter === 0) {
-          appendBubble("assistant", `RAG 재반영 완료. 검증 대기 ${pendingBefore}건을 다음 인덱싱 작업으로 처리했습니다.`);
-        } else {
-          appendBubble("assistant", "RAG 재반영이 완료되었습니다.");
-        }
-      } catch {
-        appendBubble("assistant", "RAG 재반영 중 오류가 발생했습니다.");
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "RAG 재반영";
-      }
+        appendMsg("assistant", pendingBefore > 0 && pendingAfter === 0
+          ? `RAG 재반영 완료. 검증 대기 ${pendingBefore}건을 다음 인덱싱 작업으로 처리했습니다.`
+          : "RAG 재반영이 완료되었습니다.");
+      } catch { appendMsg("assistant", "RAG 재반영 중 오류가 발생했습니다."); }
+      finally { btn.disabled = false; btn.textContent = "RAG 재반영"; }
     });
 
-    function appendBubble(role, text, options = {}) {
-      const box = document.createElement("div");
-      box.className = role === "user"
-        ? "ml-auto max-w-[94%] rounded-xl bg-slate-900 px-2 py-1.5 text-xs text-white rise"
-        : "max-w-[94%] rounded-xl border border-slate-200 px-2 py-1.5 text-xs rise";
-      if (role !== "user") {
-        box.style.background = "var(--bubble)";
-        box.style.color = "var(--ink)";
-      }
-      if (role === "assistant") {
-        const textEl = document.createElement("p");
-        textEl.className = "whitespace-pre-wrap";
-        textEl.textContent = text;
-        box.appendChild(textEl);
+    // ─── Messages ─────────────────────────────────────────────────────────
+    const welcome     = document.getElementById("welcomeScreen");
+    const chatLog     = document.getElementById("chatLog");
+    const chatCont    = document.getElementById("chatContainer");
+    let welcomed      = false;
 
-        if (options.reviewPayload) {
-          const actions = document.createElement("div");
-          actions.className = "mt-2 flex justify-end";
+    const BOT_AVATAR = `<svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="15" fill="url(#copGrad)" opacity=".15"/><path d="M15 5 17.5 13.5 26 15 17.5 16.5 15 25 12.5 16.5 4 15 12.5 13.5Z" fill="url(#copGrad)"/></svg>`;
 
-          const verifyBtn = document.createElement("button");
-          verifyBtn.type = "button";
-          verifyBtn.className = "rounded-md border border-amber-300/90 bg-amber-50/80 px-2 py-1 text-[11px] font-semibold text-amber-800 hover:brightness-95";
-          verifyBtn.textContent = "RAG 검증";
-          verifyBtn.addEventListener("click", async () => {
-            if (verifyBtn.dataset.queued === "true") return;
-            verifyBtn.disabled = true;
-            verifyBtn.textContent = "등록 중...";
-            try {
-              const result = await queueRagValidation(options.reviewPayload);
-              verifyBtn.dataset.queued = "true";
-              verifyBtn.textContent = "검증 등록됨";
-              appendBubble("assistant", `RAG 검증 대기열에 등록했습니다. 현재 대기 ${result.pending_count}건입니다.`);
-            } catch {
-              verifyBtn.disabled = false;
-              verifyBtn.textContent = "RAG 검증";
-              appendBubble("assistant", "RAG 검증 등록 중 오류가 발생했습니다.");
-            }
-          });
-
-          actions.appendChild(verifyBtn);
-          box.appendChild(actions);
-        }
-      } else {
-        box.textContent = text;
-      }
-      const chatLog = document.getElementById("chatLog");
-      chatLog.appendChild(box);
-      chatLog.scrollTop = chatLog.scrollHeight;
+    function hideWelcome() {
+      if (!welcomed) { welcome.style.display = "none"; welcomed = true; }
     }
 
+    function appendMsg(role, text, opts = {}) {
+      hideWelcome();
+      const wrap = document.createElement("div");
+
+      if (role === "user") {
+        wrap.className = "fade-up flex justify-end";
+        const bub = document.createElement("div");
+        bub.className = "msg-user";
+        bub.textContent = text;
+        wrap.appendChild(bub);
+      } else {
+        wrap.className = "fade-up flex justify-start items-start gap-3";
+        const av = document.createElement("div");
+        av.className = "flex-shrink-0 mt-1";
+        av.innerHTML = BOT_AVATAR;
+
+        const bub = document.createElement("div");
+        bub.className = "msg-bot";
+
+        const p = document.createElement("p");
+        p.className = "whitespace-pre-wrap";
+        p.textContent = text;
+        bub.appendChild(p);
+
+        if (opts.reviewPayload) {
+          const acts = document.createElement("div");
+          acts.className = "mt-3 flex justify-end";
+          const vbtn = document.createElement("button");
+          vbtn.type = "button";
+          vbtn.className = "vbtn";
+          vbtn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>RAG 검증`;
+          vbtn.addEventListener("click", async () => {
+            if (vbtn.dataset.queued) return;
+            vbtn.disabled = true; vbtn.textContent = "등록 중...";
+            try {
+              const res = await queueRagValidation(opts.reviewPayload);
+              vbtn.dataset.queued = "1"; vbtn.textContent = "✓ 검증 등록됨";
+              appendMsg("assistant", `RAG 검증 대기열에 등록했습니다. 현재 대기 ${res.pending_count}건입니다.`);
+            } catch {
+              vbtn.disabled = false;
+              vbtn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>RAG 검증`;
+              appendMsg("assistant", "RAG 검증 등록 중 오류가 발생했습니다.");
+            }
+          });
+          acts.appendChild(vbtn);
+          bub.appendChild(acts);
+        }
+
+        wrap.appendChild(av);
+        wrap.appendChild(bub);
+      }
+
+      chatLog.appendChild(wrap);
+      chatCont.scrollTop = chatCont.scrollHeight;
+    }
+
+    function showTyping() {
+      hideWelcome();
+      const wrap = document.createElement("div");
+      wrap.id = "typing";
+      wrap.className = "fade-up flex justify-start items-start gap-3";
+      const av = document.createElement("div");
+      av.className = "flex-shrink-0 mt-1";
+      av.innerHTML = BOT_AVATAR;
+      const bub = document.createElement("div");
+      bub.className = "msg-bot flex items-center gap-1.5 py-3.5";
+      bub.innerHTML = `<div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>`;
+      wrap.appendChild(av); wrap.appendChild(bub);
+      chatLog.appendChild(wrap);
+      chatCont.scrollTop = chatCont.scrollHeight;
+    }
+
+    function hideTyping() { document.getElementById("typing")?.remove(); }
+
+    // ─── Sources ──────────────────────────────────────────────────────────
     function renderSources(sources) {
       const root = document.getElementById("sources");
       const meta = document.getElementById("sourceMeta");
-      if (!sources || sources.length === 0) {
-        root.textContent = "검색된 근거가 없습니다.";
-        meta.textContent = "근거 0건";
-        return;
+      if (!sources?.length) {
+        root.innerHTML = `<p style="color:var(--muted);font-size:13px;">검색된 근거가 없습니다.</p>`;
+        meta.textContent = "근거 0건"; return;
       }
       meta.textContent = `근거 ${sources.length}건`;
       root.innerHTML = sources.map((s, i) => `
-        <div class="rounded-xl border border-slate-200 bg-white/85 p-2 rise">
-          <p class="text-[11px] font-semibold text-blue-700">#${i + 1} · score ${Number(s.score).toFixed(3)} · ${s.source_type || "repo"}${s.provider ? " · " + s.provider : ""}</p>
-          <p class="mt-0.5 break-all text-[11px] text-slate-500">${s.path}</p>
-          <p class="mt-1 text-xs text-slate-700">${s.chunk.slice(0, 260)}${s.chunk.length > 260 ? "..." : ""}</p>
+        <div class="src-card fade-up" style="animation-delay:${i * .04}s">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold" style="color:var(--accent);">#${i + 1}</span>
+            <span class="mpill">score ${Number(s.score).toFixed(3)}</span>
+          </div>
+          <div class="flex flex-wrap gap-1 mb-2">
+            <span class="mpill">${s.source_type || "repo"}</span>
+            ${s.provider ? `<span class="mpill">${s.provider}</span>` : ""}
+          </div>
+          <p class="text-[11px] mb-1.5 break-all" style="color:var(--muted);">${s.path}</p>
+          <p class="text-[13px] leading-relaxed" style="color:var(--ink);">${s.chunk.slice(0, 280)}${s.chunk.length > 280 ? "…" : ""}</p>
         </div>
       `).join("");
     }
 
-    const questionEl = document.getElementById("question");
-    questionEl.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault();
-        document.getElementById("askForm").requestSubmit();
-      }
+    // ─── Auto-resize textarea ─────────────────────────────────────────────
+    const qEl = document.getElementById("question");
+    qEl.addEventListener("input", () => {
+      qEl.style.height = "auto";
+      qEl.style.height = Math.min(qEl.scrollHeight, 180) + "px";
+    });
+    qEl.addEventListener("keydown", e => {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); document.getElementById("askForm").requestSubmit(); }
     });
 
-    document.getElementById("askForm").addEventListener("submit", async (e) => {
+    // ─── Suggestion fill ─────────────────────────────────────────────────
+    function fillAndSend(text) {
+      qEl.value = text;
+      qEl.dispatchEvent(new Event("input"));
+      document.getElementById("askForm").requestSubmit();
+    }
+
+    // ─── Ask ──────────────────────────────────────────────────────────────
+    document.getElementById("askForm").addEventListener("submit", async e => {
       e.preventDefault();
-      const q = questionEl.value.trim();
+      const q = qEl.value.trim();
       if (!q) return;
 
-      appendBubble("user", q);
-      questionEl.value = "";
+      appendMsg("user", q);
+      qEl.value = ""; qEl.style.height = "auto";
+      showTyping();
 
       const askBtn = document.getElementById("askBtn");
       askBtn.disabled = true;
-      askBtn.textContent = "응답 생성 중...";
 
       try {
         const payload = {
@@ -491,12 +656,12 @@
         });
         if (!res.ok) throw new Error("ask failed");
         const data = await res.json();
-        appendBubble("assistant", data.answer || "응답이 비어 있습니다.", {
+        hideTyping();
+
+        appendMsg("assistant", data.answer || "응답이 비어 있습니다.", {
           reviewPayload: {
-            question: q,
-            answer: data.answer || "",
-            sources: data.sources || [],
-            mode: data.mode || "rag",
+            question: q, answer: data.answer || "",
+            sources: data.sources || [], mode: data.mode || "rag",
             matched_subject: data.matched_subject || null,
             matched_class_id: data.matched_class_id || null,
             note: "ui_rag_validation",
@@ -504,22 +669,24 @@
             use_llm: document.getElementById("useLlm").checked,
           },
         });
+
         renderSources(data.sources || []);
 
-        const meta = [];
-        if (data.mode) meta.push(`mode=${data.mode}`);
-        if (data.selected_orchestrator) meta.push(`orchestrator=${data.selected_orchestrator}`);
-        if (data.matched_subject) meta.push(`subject=${data.matched_subject}`);
-        if (data.matched_class_id) meta.push(`class=${data.matched_class_id}`);
-        if (data.retrieval_diagnostics?.used_web_search) meta.push("web=on");
-        document.getElementById("answerMeta").textContent = meta.join(" · ");
+        const metaEl = document.getElementById("answerMeta");
+        const tags = [];
+        if (data.mode)                tags.push(data.mode);
+        if (data.selected_orchestrator) tags.push(data.selected_orchestrator);
+        if (data.matched_subject)       tags.push(data.matched_subject);
+        if (data.matched_class_id)      tags.push(`class:${data.matched_class_id}`);
+        if (data.retrieval_diagnostics?.used_web_search) tags.push("web:on");
+        metaEl.innerHTML = tags.map(t => `<span class="mpill">${t}</span>`).join("");
 
-        showRightPanel();
+        openDrawer(sourcesDr);
       } catch {
-        appendBubble("assistant", "요청 처리 중 오류가 발생했습니다. 서버 로그를 확인해 주세요.");
+        hideTyping();
+        appendMsg("assistant", "요청 처리 중 오류가 발생했습니다. 서버 로그를 확인해 주세요.");
       } finally {
         askBtn.disabled = false;
-        askBtn.textContent = "질문하기";
       }
     });
 
