@@ -5,9 +5,9 @@ services:
       dockerfile: Dockerfile
     environment:
       PROJECT_ID: ${PROJECT_ID:-project003}
-      PROJECT_NAME: ${PROJECT_NAME:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
-      PROJECT_TRACK: ${PROJECT_TRACK:-프로젝트-C}
-      PROJECT_TOPIC: ${PROJECT_TOPIC:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
+      PROJECT_NAME: ${PROJECT_NAME:-금융 지식베이스 커스터마이저}
+      PROJECT_TRACK: ${PROJECT_TRACK:-금융-프로젝트-C}
+      PROJECT_TOPIC: ${PROJECT_TOPIC:-금융 지식베이스 커스터마이저}
     ports:
       - "${APP_HOST_PORT:-9103}:8080"
     healthcheck:

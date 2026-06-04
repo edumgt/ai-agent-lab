@@ -3,7 +3,7 @@ set -euo pipefail
 
 REPO_ROOT="${REPO_ROOT:-/srv/repo}"
 VECTOR_DB_PATH="${VECTOR_DB_PATH:-/srv/vector_db}"
-VECTOR_COLLECTION="${VECTOR_COLLECTION:-curriculum_repo}"
+VECTOR_COLLECTION="${VECTOR_COLLECTION:-finance_agent_lab}"
 PORT="${PORT:-8000}"
 
 echo "[agent] repo_root=${REPO_ROOT}"

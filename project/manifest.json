@@ -1,24 +1,24 @@
 [
   {
     "project_id": "project001",
-    "track": "프로젝트-A",
-    "topic": "나만의 음성 모델 만들기",
+    "track": "금융-프로젝트-A",
+    "topic": "금융 상담 음성 브리핑 스튜디오",
     "group": "TopLevelProjectApps",
     "docker_port": 9101,
     "app_path": "VoiceModelBuilder"
   },
   {
     "project_id": "project002",
-    "track": "프로젝트-B",
-    "topic": "거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기",
+    "track": "금융-프로젝트-B",
+    "topic": "금융 상품 상담 에이전트",
     "group": "TopLevelProjectApps",
     "docker_port": 9102,
     "app_path": "PersonaLLMResponder"
   },
   {
     "project_id": "project003",
-    "track": "프로젝트-C",
-    "topic": "사전 데이터 기반 PERSO AI의 답변 커스텀하기",
+    "track": "금융-프로젝트-C",
+    "topic": "금융 지식베이스 커스터마이저",
     "group": "TopLevelProjectApps",
     "docker_port": 9103,
     "app_path": "PersonaKnowledgeCustomizer"

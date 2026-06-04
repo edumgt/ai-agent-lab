@@ -44,7 +44,7 @@ from app.schemas import (
 from app.telemetry import TraceLogger
 from app.user_store import build_user_store
 
-app = FastAPI(title="Curriculum RAG Agent", version="2.0.0")
+app = FastAPI(title="Finance Agent Lab", version="2.0.0")
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 bearer_scheme = HTTPBearer(auto_error=False)
 
@@ -103,7 +103,6 @@ multimodal = MultimodalService(
     tts_model=settings.openai_tts_model,
     tts_voice=settings.openai_tts_voice,
     vision_model=settings.openai_vision_model,
-    mock_fallback=settings.multimodal_mock_fallback,
     deepgram_api_key=settings.deepgram_api_key,
     deepgram_model=settings.deepgram_model,
     assemblyai_api_key=settings.assemblyai_api_key,
@@ -478,7 +477,6 @@ def bootstrap() -> dict[str, Any]:
         "user_store_warnings": user_store_warnings,
         "multimodal": {
             "openai_available": multimodal.has_openai,
-            "mock_fallback": settings.multimodal_mock_fallback,
             "providers": multimodal.provider_availability,
         },
         "rag_booster": rag_booster.capabilities,

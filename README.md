@@ -1,60 +1,42 @@
 <!-- 이 파일은 www.edumgt.co.kr 의 에듀엠지티에 저작권이 있습니다 -->
-# Python · AI Agent Curriculum 
+# Finance AI Agent Lab
 
-### 본 과정의 과목
+금융 도메인 에이전트 실습을 위한 Python 기반 저장소입니다.  
+RAG, 멀티모달, 음성 브리핑, 금융 지식베이스, 상품/리서치 응답 자동화를 한 저장소에서 실험할 수 있도록 구성했습니다.
 
-1. Python 프로그래밍
-2. Python 전처리 및 시각화
-3. 머신러닝과 딥러닝
-4. 자연어 및 음성 데이터 활용 및 모델 개발
-5. 음성 데이터를 활용한 TTS와 STT 모델 개발
-6. 거대 언어 모델을 활용한 자연어 생성
-7. 프롬프트 엔지니어링
-8. LangChain 활용하기
-9. RAG 기반 생성형 AI 애플리케이션 구현
-10. **LLMOps** *(신규 추가)*
+### 핵심 목표
 
-### 본 과정의 목표
+1. 금융 문서 검색과 근거 기반 답변 에이전트 구축
+2. 상품 설명, 심사/리스크 체크, 리서치 요약을 위한 LLM 워크플로우 실습
+3. Python 백엔드 + 바닐라 HTML 프런트엔드 기반 멀티모달 서빙
+4. LangChain/LangGraph/RAG/LLMOps 아키텍처를 금융 시나리오에 맞춰 검증
+5. Docker, AWS, On-Prem 환경까지 고려한 서비스형 Agent Lab 운영
 
-1. 이론을 너무 깊게 들어가기보다 “어떻게 쓰는지” 중심, 실습 위주, API 활용 중심
-2. 이 과정은 AI 가 Teacher 이고, 강사는 말그대로 실무 중심의 Tutor 임. 
-3. 상기 1 ~ 3 의 과목은 기본 PL 연습과 단어 이해 중심(취업 인터뷰 시 대응 목적)
-4. Python 코드 백엔드 + 바닐라 html FE 의 멀티모달 Serving
-5. 모델 호출/파이프라인 설계, 클라우드 기반, On Prem 환경 기반 ( Docker, k8s 응용 )
-6. LangChain/RAG 아키텍처 이해
+### 운영 방식
 
-### 학습 방법
+1. 금융 시나리오 중심 예제와 API를 빠르게 실행하고 검증
+2. 문서, 코드, 설정 변경을 Git 기반으로 축적해 RAG 지식 원천으로 활용
+3. 프로젝트 앱 단위로 브리핑, 상담, 지식 커스터마이징 기능을 독립 실험
+4. 결과물은 Markdown, JSON, API 응답 형태로 남겨 재현성과 검토 가능성 확보
+5. 필요 시 외부 검색, 리랭킹, 멀티모달 API를 결합해 실제 운영 패턴 검증
 
-1. Open AI 기반 Codex 연동으로 No Code 중심으로 py 파일 생성 및 관련 py 파일을 API 로 서빙할 수 있도록 구성
-2. 강사, 학생간 학습에 필요한 내용을 git 으로 Pull Request 하여 본 repo 의 RAG 에 구성
-3. Slack 을 통한 클래스 참여자 간의 정보 공유, 총 500개로 분류한 각 클래스(매 학습 시간 단위) 별 10~20분간 강사 지도, 이후 개인별 실습진행
-4. 학생 각자 개인별 repo 를 20개 이상 구성 하여, 빌드업, 개인 취업 용 증적으로 사용
-5. 기본 example 성격의 py 실행 및 결과 확인, 각자 결과에 대해 QnA를 AI 기반 질의, 검증 및 md 파일 포맷으로 정리
-6. Agent 유사기능, 챗봇 유사기능 활용을 위해 fastapi , uvicorn , html 로 서빙 테스트
+### 저장소 활용 방향
 
-### 본인 경험 여부에 따라 자기주도 학습
-
-1. 비전공, 미취업, PL 경험 없는 초급의 경우 문서 위주, Python 위주의 생성과 API 사용법 위주 문서 정리
-2. 전공, 취업 및 실무 유경험자는 수업 외 유사 git repo 로 개별 학습 - AI 바이브 코딩 혹은 No code 중심으로 실행 모듈 단위로 개인별 테스트
-3. 예를들어 프롬프트로 질의할때 " 나는 javascript 는 조금 공부해서 문법을 아는데, 파이썬은 왜 __name__ == "__main__" 이렇게 언더바를 두번 사용해? " 라는 식으로 질의 및 답변을 메모
-4. 예를들어 프롬프트로 질의할때 " example1.py 의 결과가 이상한데, 해당 클래스 내용에 맞게, 다시 생성해서 실행하고, 모든 라인에 주석으로 상세히 설명 달아줘 " 라는 식으로 수정하면서 내재화(본인만의 knowledge에 맞도록 메모)
-5. 모든 문서는 MarkDown md 포맷으로 작성되며, 모든 산출물은 git repo 로 저장, 모듈 작업은 docker 로 구성, docker hub 로 공유
-6. VS Code 사용 및 각 git repo 마다 github actions 를 통한 트리거 구성
-7. 클라우드는 AWS 기반으로 서빙, 배포, AWS ML 리소스 사용
-8. 우수학생의 평가는 개인별로 매일 산출물에 해대 10k byte 이상의 결과물을 만들어가는 양적인 성실성으로 평가. 
+1. `Agent/`는 금융 Q&A/RAG 허브 역할을 수행합니다.
+2. `VoiceModelBuilder/`, `PersonaLLMResponder/`, `PersonaKnowledgeCustomizer/`는 금융 특화 보조 앱입니다.
+3. 기존 과목형 실습 폴더는 Python/LLM/RAG 기초를 다지는 참고 모듈로 유지합니다.
+4. 모든 신규 예시는 가상 아이디 기반 모의 캡처 없이 텍스트/코드 중심으로 관리합니다.
 
 ---
 
-최종 목표: `Agent/` 폴더의 실제 시스템 구축을 단계별로 연습하는 개발자 중심 커리큘럼 **(540개 고유 학습주제)**
+최종 목표: `Agent/` 중심의 금융 에이전트 실험실을 단계별로 구축하고, 보조 앱까지 포함한 실무형 레퍼런스를 축적하는 것입니다.
 
-첨부 커리큘럼의 **정규교과 520시간 + LLMOps 20시간** 기준으로 세분화한 교육 저장소이며, 540개 클래스의 학습주제를 모두 고유하게 구성했습니다.  
-`class001`부터 `class500`은 기존 정규교과, `class501`~`class520`은 **LLMOps 심화 과정**, 프로젝트 과목은 루트의 3개 독립 앱(`VoiceModelBuilder`, `PersonaLLMResponder`, `PersonaKnowledgeCustomizer`)으로 운영합니다.
+기존 학습 모듈(`class001`~`class520`)은 Python, 데이터, LLM, RAG, LLMOps 기초를 익히는 참고 자료로 유지하고, 프로젝트 과목은 루트의 3개 독립 앱(`VoiceModelBuilder`, `PersonaLLMResponder`, `PersonaKnowledgeCustomizer`)으로 금융 시나리오를 실험합니다.
 
 ## 1) 현재까지 반영된 핵심 작업
-- 540개 차시 `classXXX.md` 자동 정비 (class001~class520)
-- 교과목/학습주제 용어 해설(문법, 한글·한자, 영어, 기술 설명) 반영
-- 각 차시별 **서로 다른 Mermaid Flowchart** 생성
-- 각 차시별 Flow를 **PNG 캡처 이미지(`classXXX_flow.png`)**로 생성 및 md 참조 연결
+- 금융 Agent 허브(`Agent/`)와 보조 앱 3종 운영
+- Python/LLM/RAG/LLMOps 기초 모듈 유지
+- Markdown, Mermaid, 실행 예제 중심의 실습 자료 구조화
 - 예제/퀴즈/런처/웹 서빙 파일 체계 정비
 
 ## 2) 기술 스택
@@ -84,8 +66,8 @@
 - 보조/운영 파일
   - `tools/`: 콘텐츠 재생성/검증 스크립트
   - `docs/`: 운영 가이드/채점 가이드/부가 문서
-  - `curriculum_index.csv`: 전체 차시 인덱스
-  - `VoiceModelBuilder/`, `PersonaLLMResponder/`, `PersonaKnowledgeCustomizer/`: 프로젝트 독립 앱(FastAPI + Vanilla JS + Docker)
+  - `curriculum_index.csv`: 기존 학습 모듈 인덱스
+  - `VoiceModelBuilder/`, `PersonaLLMResponder/`, `PersonaKnowledgeCustomizer/`: 금융 특화 프로젝트 앱(FastAPI + Vanilla JS + Docker)
   - `project/`: 프로젝트 인덱스/매니페스트
 
 ## 3-1) 과목 폴더 매핑 및 상세 학습 내용
@@ -101,7 +83,7 @@
 | Langchain 활용하기 | `langChainLab` | class393~class448 | 체인 구성, PromptTemplate/OutputParser, 메모리/도구 연결, LangGraph 상태 흐름, LangSmith 추적 기반 서비스형 워크플로우 구현 |
 | RAG(Retrieval-Augmented Generation) | `ragPipeline` | class449~class500 | 문서 로딩/청크, 임베딩·벡터검색, 근거 결합 응답, 출처 기반 검증까지 RAG 전체 파이프라인 구현 |
 | **LLMOps** | `llmOps` | **class501~class520** | LLMOps 개요, 프롬프트 버전관리, LLM 평가·품질관리, 모니터링·관측성, 배포 자동화(CI/CD·Blue-Green·Canary)까지 Lab 스타일 실습 |
-| 프로젝트 앱 | `VoiceModelBuilder`, `PersonaLLMResponder`, `PersonaKnowledgeCustomizer` | 독립 앱 3종 | 음성 모델 생성, PERSONA LLM 답변, 사전 데이터 기반 답변 커스텀을 각각 독립 서비스로 실습 |
+| 프로젝트 앱 | `VoiceModelBuilder`, `PersonaLLMResponder`, `PersonaKnowledgeCustomizer` | 독립 앱 3종 | 금융 상담 음성 브리핑, 상품/리서치 응답, 금융 지식베이스 커스터마이징을 각각 독립 서비스로 실습 |
 
 ### 3-1-1) dataVizPrep 7단계 구성(요청 반영)
 | 단계 | 핵심 내용 | class 범위 |
@@ -441,29 +423,9 @@ aws sts get-caller-identity
 4. 브라우저에서 자동으로 열린 주소에서 퀴즈 풀이
 5. 정지할 때는 하단 상태바의 `Port:5500`(또는 `Go Live`) 클릭
 
-## 5-2) 솔루션/플랫폼 화면 캡처 (가상 아이디 모의)
-보안/개인정보 보호를 위해 아래 이미지는 **가상 아이디 기반 모의 캡처**입니다.
-
-### ChatGPT 가입/로그인
-![chatgpt signup mock](docs/screenshots/01_chatgpt_signup_mock.png)
-
-### Codex 연동 설정
-![codex integration mock](docs/screenshots/02_codex_integration_mock.png)
-
-### GitHub 로그인/저장소 접근
-![github mock](docs/screenshots/03_github_mock.png)
-
-### VS Code 확장팩 설치
-![vscode extensions mock](docs/screenshots/04_vscode_extensions_mock.png)
-
-### Markdown Mermaid 미리보기
-![mermaid preview mock](docs/screenshots/05_mermaid_preview_mock.png)
-
-### Python 가상환경/라이브러리 설치
-![python env mock](docs/screenshots/06_python_env_mock.png)
-
-### Docker 기반 RAG/LLM 실습 구성
-![docker rag mock](docs/screenshots/07_docker_rag_mock.png)
+## 5-2) 화면 캡처 정책
+이 저장소는 가상 아이디 기반 모의 캡처 이미지를 더 이상 포함하지 않습니다.  
+설치/실행 절차는 텍스트 명령과 실제 설정 파일 기준으로만 안내합니다.
 
 ## 6) Markdown/MD 이해 및 뷰어
 
@@ -622,11 +584,6 @@ python tools/rebuild_self_study_materials.py
 - class별 md 갱신
 - class별 Mermaid flow 갱신
 - class별 PNG(`classXXX_flow.png`) 재생성
-
-README용 모의 캡처 이미지 재생성:
-```bash
-python tools/generate_readme_mock_screenshots.py
-```
 
 첨부 커리큘럼 기준 반영 점검 리포트 생성:
 ```bash

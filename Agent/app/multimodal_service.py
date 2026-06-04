@@ -1,12 +1,8 @@
 from __future__ import annotations
 
 import base64
-import io
-import math
-import struct
 import tempfile
 import time
-import wave
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -50,7 +46,6 @@ class MultimodalService:
         tts_model: str,
         tts_voice: str,
         vision_model: str,
-        mock_fallback: bool,
         deepgram_api_key: str,
         deepgram_model: str,
         assemblyai_api_key: str,
@@ -63,7 +58,6 @@ class MultimodalService:
         self._tts_model = tts_model
         self._tts_voice = tts_voice
         self._vision_model = vision_model
-        self._mock_fallback = bool(mock_fallback)
 
         self._deepgram_api_key = deepgram_api_key.strip()
         self._deepgram_model = deepgram_model.strip() or "nova-2"
@@ -91,7 +85,6 @@ class MultimodalService:
             "assemblyai": bool(self._assemblyai_api_key),
             "elevenlabs": bool(self._elevenlabs_api_key and self._elevenlabs_voice_id),
             "ocr_space": bool(self._ocr_space_api_key),
-            "mock": self._mock_fallback,
         }
 
     def transcribe(
@@ -106,7 +99,7 @@ class MultimodalService:
         selected = (provider or "auto").strip().lower()
 
         if selected == "auto":
-            pipeline = ["openai", "deepgram", "assemblyai", "mock"]
+            pipeline = ["openai", "deepgram", "assemblyai"]
         else:
             pipeline = [selected]
 
@@ -119,8 +112,6 @@ class MultimodalService:
                     return self._stt_deepgram(payload=payload, mime_type=mime_type, language=language)
                 if step == "assemblyai":
                     return self._stt_assemblyai(payload=payload, language=language)
-                if step == "mock":
-                    return self._stt_mock(payload)
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
@@ -140,7 +131,7 @@ class MultimodalService:
 
         selected = (provider or "auto").strip().lower()
         if selected == "auto":
-            pipeline = ["openai", "elevenlabs", "mock"]
+            pipeline = ["openai", "elevenlabs"]
         else:
             pipeline = [selected]
 
@@ -151,8 +142,6 @@ class MultimodalService:
                     return self._tts_openai(text=clean_text, voice=voice, audio_format=audio_format)
                 if step == "elevenlabs":
                     return self._tts_elevenlabs(text=clean_text, voice=voice, audio_format=audio_format)
-                if step == "mock":
-                    return self._tts_mock(text=clean_text)
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
@@ -169,7 +158,7 @@ class MultimodalService:
         payload = self._decode_base64(image_base64)
         selected = (provider or "auto").strip().lower()
         if selected == "auto":
-            pipeline = ["openai", "ocr_space", "mock"]
+            pipeline = ["openai", "ocr_space"]
         else:
             pipeline = [selected]
 
@@ -180,8 +169,6 @@ class MultimodalService:
                     return self._ocr_openai(payload=payload, mime_type=mime_type, prompt=prompt)
                 if step == "ocr_space":
                     return self._ocr_ocr_space(payload=payload, mime_type=mime_type)
-                if step == "mock":
-                    return self._ocr_mock(payload)
             except Exception as exc:
                 errors.append(f"{step}:{exc}")
 
@@ -279,11 +266,6 @@ class MultimodalService:
 
         raise RuntimeError("assemblyai transcription timeout")
 
-    def _stt_mock(self, payload: bytes) -> SttResult:
-        if not self._mock_fallback:
-            raise RuntimeError("mock fallback disabled")
-        return SttResult(text=f"[mock-stt] {len(payload)} bytes audio received.", provider="mock")
-
     def _tts_openai(self, *, text: str, voice: str | None, audio_format: str) -> TtsResult:
         if self._client is None:
             raise RuntimeError("OPENAI_API_KEY is missing")
@@ -339,12 +321,6 @@ class MultimodalService:
             format=actual_fmt,
             note=note,
         )
-
-    def _tts_mock(self, *, text: str) -> TtsResult:
-        if not self._mock_fallback:
-            raise RuntimeError("mock fallback disabled")
-        mock_wav = self._generate_mock_wav(text)
-        return TtsResult(audio_base64=base64.b64encode(mock_wav).decode("utf-8"), provider="mock", format="wav")
 
     def _ocr_openai(self, *, payload: bytes, mime_type: str, prompt: str) -> OcrResult:
         if self._client is None:
@@ -404,11 +380,6 @@ class MultimodalService:
             raise RuntimeError("empty ocr text")
         return OcrResult(text=final, provider="ocr_space")
 
-    def _ocr_mock(self, payload: bytes) -> OcrResult:
-        if not self._mock_fallback:
-            raise RuntimeError("mock fallback disabled")
-        return OcrResult(text=f"[mock-ocr] {len(payload)} bytes image received.", provider="mock")
-
     @staticmethod
     def _decode_base64(data: str) -> bytes:
         raw = (data or "").strip()
@@ -433,24 +404,3 @@ class MultimodalService:
         if "ogg" in mime:
             return ".ogg"
         return ".bin"
-
-    @staticmethod
-    def _generate_mock_wav(text: str) -> bytes:
-        sample_rate = 16000
-        duration = min(2.5, max(0.5, len(text) / 25.0))
-        freq = 440.0
-        amp = 12000
-        frame_count = int(sample_rate * duration)
-
-        frames = bytearray()
-        for i in range(frame_count):
-            sample = int(amp * math.sin(2.0 * math.pi * freq * i / sample_rate))
-            frames.extend(struct.pack("<h", sample))
-
-        buf = io.BytesIO()
-        with wave.open(buf, "wb") as wf:
-            wf.setnchannels(1)
-            wf.setsampwidth(2)
-            wf.setframerate(sample_rate)
-            wf.writeframes(bytes(frames))
-        return buf.getvalue()

@@ -1,10 +1,10 @@
-# PersonaLLMResponder · 거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기
+# PersonaLLMResponder · 금융 상품 상담 에이전트
 
-독립 실행형 PERSONA 답변 프로젝트입니다.
+독립 실행형 금융 상담 응답 프로젝트입니다.
 
 ## 기능
-- Persona 등록/수정
-- Persona별 질문 응답 생성
+- 상담 페르소나 등록/수정
+- 금융 질문 응답 생성
 - OpenAI 키가 있으면 LLM 응답, 없으면 로컬 규칙 응답
 
 ## 실행

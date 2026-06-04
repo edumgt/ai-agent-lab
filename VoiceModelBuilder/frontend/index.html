@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>project001 · 나만의 음성 모델 만들기</title>
+  <title>project001 · 금융 상담 음성 브리핑 스튜디오</title>
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
   <main class="page">
     <section class="panel hero">
-      <h1>나만의 음성 모델 만들기</h1>
-      <p>음성 프로필 생성 → 학습 품질 진단 → 합성 프리뷰를 한 화면에서 실습합니다.</p>
+      <h1>금융 상담 음성 브리핑 스튜디오</h1>
+      <p>브리핑 프로필 생성 → 품질 진단 → 음성 프리뷰를 한 화면에서 실습합니다.</p>
       <pre id="metaBox">프로젝트 정보를 불러오는 중...</pre>
     </section>
 
     <section class="panel">
-      <h2>1) 음성 프로필 생성</h2>
+      <h2>1) 브리핑 프로필 생성</h2>
       <div class="grid">
-        <input id="name" placeholder="프로필 이름 (예: coach-kim)" value="coach-kim" />
+        <input id="name" placeholder="프로필 이름 (예: market-brief-kim)" value="market-brief-kim" />
         <input id="baseVoice" placeholder="기본 보이스" value="warm_female" />
         <input id="styleTags" placeholder="스타일 태그 (comma)" value="calm,clear" />
       </div>
@@ -26,7 +26,7 @@
     </section>
 
     <section class="panel">
-      <h2>2) 학습 시뮬레이션</h2>
+      <h2>2) 브리핑 품질 진단</h2>
       <div class="grid">
         <input id="trainProfileId" placeholder="profile_id" />
         <input id="recordings" type="number" value="180" />
@@ -35,15 +35,15 @@
         <input id="pron" type="number" step="0.01" value="0.86" />
         <input id="emo" type="number" step="0.01" value="0.72" />
       </div>
-      <button id="trainBtn">학습 품질 계산</button>
-      <pre id="trainBox">학습 품질 결과가 여기에 표시됩니다.</pre>
+      <button id="trainBtn">브리핑 품질 계산</button>
+      <pre id="trainBox">브리핑 품질 결과가 여기에 표시됩니다.</pre>
     </section>
 
     <section class="panel">
-      <h2>3) 합성 프리뷰</h2>
+      <h2>3) 브리핑 프리뷰</h2>
       <div class="grid">
         <input id="synthProfileId" placeholder="profile_id" />
-        <input id="synthText" placeholder="합성할 문장" value="안녕하세요. 오늘 학습 계획을 점검해볼게요." />
+        <input id="synthText" placeholder="합성할 문장" value="안녕하세요. 오늘의 환율과 금리 변동 리스크를 브리핑하겠습니다." />
         <input id="strength" type="number" step="0.1" value="0.7" />
       </div>
       <button id="synthBtn">프리뷰 생성</button>

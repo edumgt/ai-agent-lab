@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>project003 · 사전 데이터 기반 PERSO AI 커스텀</title>
+  <title>project003 · 금융 지식베이스 커스터마이저</title>
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
   <main class="container">
     <section class="card hero">
-      <h1>사전 데이터 기반 PERSO AI의 답변 커스텀하기</h1>
-      <p>지식 데이터 업서트 후 검색 기반 커스텀 답변을 생성합니다.</p>
+      <h1>금융 지식베이스 커스터마이저</h1>
+      <p>금융 지식 데이터 업서트 후 검색 기반 커스텀 답변을 생성합니다.</p>
       <pre id="metaBox">메타 정보를 불러오는 중...</pre>
     </section>
 
     <section class="card">
-      <h2>1) 지식 데이터 준비</h2>
+      <h2>1) 금융 지식 데이터 준비</h2>
       <button id="bootstrapBtn">기본 지식 로드</button>
       <button id="listBtn">지식 목록 조회</button>
       <pre id="knowledgeBox">지식 데이터 결과</pre>
     </section>
 
     <section class="card">
-      <h2>2) 커스텀 답변 생성</h2>
+      <h2>2) 금융 답변 생성</h2>
       <div class="grid">
-        <input id="persona" value="PERSO" placeholder="persona name" />
-        <input id="style" value="친절하고 실행 중심" placeholder="style" />
-        <input id="question" value="RAG 검색 품질을 높이려면 어떤 기준으로 chunking 해야 해?" />
+        <input id="persona" value="금융 리서치 봇" placeholder="persona name" />
+        <input id="style" value="차분하고 실행 중심" placeholder="style" />
+        <input id="question" value="대출 심사 지식베이스를 만들 때 약관 문서는 어떤 기준으로 나눠야 해?" />
         <input id="topk" type="number" value="3" />
       </div>
       <button id="answerBtn">커스텀 답변 생성</button>

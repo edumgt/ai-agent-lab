@@ -9,7 +9,7 @@ class Settings:
     def __init__(self) -> None:
         self.repo_root = Path(os.getenv("REPO_ROOT", "/srv/repo")).resolve()
         self.vector_db_path = Path(os.getenv("VECTOR_DB_PATH", "/srv/vector_db")).resolve()
-        self.vector_collection = os.getenv("VECTOR_COLLECTION", "curriculum_repo")
+        self.vector_collection = os.getenv("VECTOR_COLLECTION", "finance_agent_lab")
         self.embedding_dim = int(os.getenv("EMBEDDING_DIM", "1024"))
         self.embedding_provider = os.getenv("EMBEDDING_PROVIDER", "local").strip().lower()
         self.openai_embedding_model = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
@@ -46,15 +46,13 @@ class Settings:
         # LangSmith
         self.langsmith_tracing = self._as_bool(os.getenv("LANGSMITH_TRACING", "false"))
         self.langsmith_api_key = os.getenv("LANGSMITH_API_KEY", "").strip()
-        self.langsmith_project = os.getenv("LANGSMITH_PROJECT", "curriculum-agent")
+        self.langsmith_project = os.getenv("LANGSMITH_PROJECT", "finance-agent-lab")
 
         # Multimodal defaults
         self.openai_stt_model = os.getenv("OPENAI_STT_MODEL", "gpt-4o-mini-transcribe")
         self.openai_tts_model = os.getenv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts")
         self.openai_tts_voice = os.getenv("OPENAI_TTS_VOICE", "alloy")
         self.openai_vision_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
-        self.multimodal_mock_fallback = self._as_bool(os.getenv("MULTIMODAL_MOCK_FALLBACK", "true"))
-
         # Third-party practical integrations
         self.deepgram_api_key = os.getenv("DEEPGRAM_API_KEY", "").strip()
         self.deepgram_model = os.getenv("DEEPGRAM_MODEL", "nova-2")

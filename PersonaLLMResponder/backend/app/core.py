@@ -73,8 +73,8 @@ def upsert_persona(personas_file: Path, payload: dict) -> dict:
     record = {
         "persona_id": persona_id,
         "name": str(payload.get("name", "")).strip(),
-        "role": str(payload.get("role", "학습 코치")).strip(),
-        "tone": str(payload.get("tone", "친절하고 명확한")).strip(),
+        "role": str(payload.get("role", "금융 상담 분석가")).strip(),
+        "tone": str(payload.get("tone", "차분하고 근거 중심의")).strip(),
         "speaking_rules": [str(v).strip() for v in payload.get("speaking_rules", []) if str(v).strip()],
         "forbidden_topics": [str(v).strip() for v in payload.get("forbidden_topics", []) if str(v).strip()],
         "greeting": str(payload.get("greeting", "")).strip(),
@@ -98,9 +98,9 @@ def build_prompt(persona: dict, question: str, context: str) -> str:
     rules = "\n".join(f"- {r}" for r in persona.get("speaking_rules", [])) or "- 핵심부터 간결하게 설명"
     forbidden = ", ".join(persona.get("forbidden_topics", [])) or "없음"
     return (
-        f"역할: {persona.get('role','학습 코치')}\n"
+        f"역할: {persona.get('role','금융 상담 분석가')}\n"
         f"이름: {persona.get('name','PERSONA')}\n"
-        f"톤: {persona.get('tone','친절하고 명확한')}\n"
+        f"톤: {persona.get('tone','차분하고 근거 중심의')}\n"
         f"말하기 규칙:\n{rules}\n"
         f"금지 주제: {forbidden}\n\n"
         f"[참고 컨텍스트]\n{context or '(없음)'}\n\n"

@@ -107,7 +107,7 @@ class SttRequest(BaseModel):
     audio_base64: str = Field(..., min_length=8)
     mime_type: str = Field("audio/wav")
     language: str = Field("ko")
-    provider: Literal["auto", "openai", "deepgram", "assemblyai", "mock"] = Field("auto")
+    provider: Literal["auto", "openai", "deepgram", "assemblyai"] = Field("auto")
 
 
 class SttResponse(BaseModel):
@@ -120,7 +120,7 @@ class SttResponse(BaseModel):
 class TtsRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=3000)
     voice: str | None = None
-    provider: Literal["auto", "openai", "elevenlabs", "mock"] = Field("auto")
+    provider: Literal["auto", "openai", "elevenlabs"] = Field("auto")
     audio_format: Literal["wav", "mp3"] = Field("wav")
 
 
@@ -136,7 +136,7 @@ class OcrRequest(BaseModel):
     image_base64: str = Field(..., min_length=8)
     mime_type: str = Field("image/png")
     prompt: str = Field("이미지 안 텍스트를 OCR 결과로 정리해 주세요.", max_length=500)
-    provider: Literal["auto", "openai", "ocr_space", "mock"] = Field("auto")
+    provider: Literal["auto", "openai", "ocr_space"] = Field("auto")
 
 
 class OcrResponse(BaseModel):
