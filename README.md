@@ -425,7 +425,8 @@ aws sts get-caller-identity
 
 ## 5-2) 화면 캡처 정책
 이 저장소는 가상 아이디 기반 모의 캡처 이미지를 더 이상 포함하지 않습니다.  
-설치/실행 절차는 텍스트 명령과 실제 설정 파일 기준으로만 안내합니다.
+설치/실행 절차는 텍스트 명령과 실제 설정 파일 기준으로만 안내합니다.  
+시각적인 설정 참고가 필요하면 `Agent/.env.example`, `Agent/docker-compose.yml`, `project/manifest.json`을 먼저 확인하세요.
 
 ## 6) Markdown/MD 이해 및 뷰어
 
