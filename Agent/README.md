@@ -1,6 +1,6 @@
-# Agent (RAG + Auth + Multimodal + 3rd-party Integrations)
+# Agent (Finance RAG + Auth + Multimodal + 3rd-party Integrations)
 
-교육 커리큘럼 저장소용 FastAPI Agent입니다. 실무형 적용을 위해 주요 외부 API를 바로 붙일 수 있게 확장되어 있습니다.
+금융 관련 문서 검색, 상담 보조, 리서치 요약 실험을 위한 FastAPI Agent입니다. 실무형 적용을 위해 주요 외부 API를 바로 붙일 수 있게 확장되어 있습니다.
 
 ## 핵심 기능
 - RAG 질의응답
@@ -9,9 +9,9 @@
   - Cohere 리랭킹(선택)
   - Tavily 웹 검색 병합(선택/저신뢰 자동 보강)
 - 멀티모달
-  - STT: OpenAI, Deepgram, AssemblyAI, Mock
-  - TTS: OpenAI, ElevenLabs, Mock
-  - OCR: OpenAI Vision, OCR.Space, Mock
+  - STT: OpenAI, Deepgram, AssemblyAI
+  - TTS: OpenAI, ElevenLabs
+  - OCR: OpenAI Vision, OCR.Space
   - 통합 질의: `/v1/multimodal/ask`
 - 오케스트레이션 선택
   - `native`, `langchain`, `langgraph`
@@ -110,7 +110,7 @@ curl http://localhost:8000/v1/bootstrap
 ```bash
 curl -X POST http://localhost:8000/v1/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"username":"student01","password":"Pass1234","full_name":"학생1"}'
+  -d '{"username":"analyst01","password":"Pass1234","full_name":"금융 분석가"}'
 ```
 
 ### 실무형 RAG 질의 (웹검색+리랭크)
@@ -119,7 +119,7 @@ curl -X POST http://localhost:8000/v1/ask \
   -H "Authorization: Bearer <TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{
-    "question":"RAG 최신 운영 패턴을 우리 커리큘럼과 연결해 설명해줘",
+    "question":"기업대출 심사 에이전트에 필요한 문서 검증 흐름을 설명해줘",
     "top_k": 8,
     "use_llm": true,
     "orchestrator": "langgraph",
@@ -143,7 +143,7 @@ curl -X POST http://localhost:8000/v1/stt \
 curl -X POST http://localhost:8000/v1/tts \
   -H "Authorization: Bearer <TOKEN>" \
   -H "Content-Type: application/json" \
-  -d '{"text":"안녕하세요, 실무형 에이전트 테스트입니다.","provider":"auto","audio_format":"mp3"}'
+  -d '{"text":"안녕하세요. 오늘의 시장 리스크 요약을 브리핑합니다.","provider":"auto","audio_format":"mp3"}'
 ```
 
 ### OCR (OpenAI Vision/OCR.Space 자동 선택)
@@ -160,6 +160,6 @@ cd Agent
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python -m app.ingest --repo-root .. --db-path ./data/chroma --collection curriculum_repo
+python -m app.ingest --repo-root .. --db-path ./data/chroma --collection finance_agent_lab
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```

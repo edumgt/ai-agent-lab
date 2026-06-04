@@ -6,11 +6,11 @@ from pydantic import BaseModel, Field
 class PersonaUpsertRequest(BaseModel):
     persona_id: str | None = None
     name: str = Field(..., min_length=2, max_length=40)
-    role: str = Field("학습 코치", max_length=80)
-    tone: str = Field("친절하고 명확한")
+    role: str = Field("금융 상담 분석가", max_length=80)
+    tone: str = Field("차분하고 근거 중심의")
     speaking_rules: list[str] = Field(default_factory=list)
     forbidden_topics: list[str] = Field(default_factory=list)
-    greeting: str = Field("안녕하세요. 오늘 목표를 함께 정리해볼게요.")
+    greeting: str = Field("안녕하세요. 금융 의사결정에 필요한 핵심 근거부터 정리해드리겠습니다.")
 
 
 class PersonaResponse(BaseModel):

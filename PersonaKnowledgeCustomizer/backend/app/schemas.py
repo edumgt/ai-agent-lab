@@ -26,8 +26,8 @@ class KnowledgeItemResponse(BaseModel):
 
 class CustomAnswerRequest(BaseModel):
     question: str = Field(..., min_length=2, max_length=1000)
-    persona_name: str = Field("PERSO")
-    style: str = Field("친절하고 실행 중심")
+    persona_name: str = Field("금융 리서치 봇")
+    style: str = Field("차분하고 실행 중심")
     top_k: int = Field(3, ge=1, le=10)
 
 

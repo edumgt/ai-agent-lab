@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     environment:
       PROJECT_ID: ${VMB_PROJECT_ID:-project001}
-      PROJECT_NAME: ${VMB_PROJECT_NAME:-나만의 음성 모델 만들기}
-      PROJECT_TRACK: ${VMB_PROJECT_TRACK:-프로젝트-A}
-      PROJECT_TOPIC: ${VMB_PROJECT_TOPIC:-나만의 음성 모델 만들기}
+      PROJECT_NAME: ${VMB_PROJECT_NAME:-금융 상담 음성 브리핑 스튜디오}
+      PROJECT_TRACK: ${VMB_PROJECT_TRACK:-금융-프로젝트-A}
+      PROJECT_TOPIC: ${VMB_PROJECT_TOPIC:-금융 상담 음성 브리핑 스튜디오}
     ports:
       - "8951:8080"
     healthcheck:
@@ -26,9 +26,9 @@ services:
       dockerfile: Dockerfile
     environment:
       PROJECT_ID: ${PLR_PROJECT_ID:-project002}
-      PROJECT_NAME: ${PLR_PROJECT_NAME:-거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기}
-      PROJECT_TRACK: ${PLR_PROJECT_TRACK:-프로젝트-B}
-      PROJECT_TOPIC: ${PLR_PROJECT_TOPIC:-거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기}
+      PROJECT_NAME: ${PLR_PROJECT_NAME:-금융 상품 상담 에이전트}
+      PROJECT_TRACK: ${PLR_PROJECT_TRACK:-금융-프로젝트-B}
+      PROJECT_TOPIC: ${PLR_PROJECT_TOPIC:-금융 상품 상담 에이전트}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
     ports:
@@ -47,9 +47,9 @@ services:
       dockerfile: Dockerfile
     environment:
       PROJECT_ID: ${PKC_PROJECT_ID:-project003}
-      PROJECT_NAME: ${PKC_PROJECT_NAME:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
-      PROJECT_TRACK: ${PKC_PROJECT_TRACK:-프로젝트-C}
-      PROJECT_TOPIC: ${PKC_PROJECT_TOPIC:-사전 데이터 기반 PERSO AI의 답변 커스텀하기}
+      PROJECT_NAME: ${PKC_PROJECT_NAME:-금융 지식베이스 커스터마이저}
+      PROJECT_TRACK: ${PKC_PROJECT_TRACK:-금융-프로젝트-C}
+      PROJECT_TOPIC: ${PKC_PROJECT_TOPIC:-금융 지식베이스 커스터마이저}
     ports:
       - "8953:8080"
     healthcheck:
@@ -69,7 +69,7 @@ services:
     environment:
       REPO_ROOT: /srv/repo
       VECTOR_DB_PATH: /srv/vector_db
-      VECTOR_COLLECTION: ${VECTOR_COLLECTION:-curriculum_repo}
+      VECTOR_COLLECTION: ${VECTOR_COLLECTION:-finance_agent_lab}
       EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
       OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-large}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
@@ -87,12 +87,12 @@ services:
       AUTH_TOKEN_TTL_SECONDS: ${AUTH_TOKEN_TTL_SECONDS:-86400}
       LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
       LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
-      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-curriculum-agent}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-finance-agent-lab}
       OPENAI_STT_MODEL: ${OPENAI_STT_MODEL:-gpt-4o-mini-transcribe}
       OPENAI_TTS_MODEL: ${OPENAI_TTS_MODEL:-gpt-4o-mini-tts}
       OPENAI_TTS_VOICE: ${OPENAI_TTS_VOICE:-alloy}
       OPENAI_VISION_MODEL: ${OPENAI_VISION_MODEL:-gpt-4o-mini}
-      MULTIMODAL_MOCK_FALLBACK: ${MULTIMODAL_MOCK_FALLBACK:-true}
+      # 멀티모달 기능은 실제 공급자 API 키가 필요합니다. Mock fallback은 지원하지 않습니다.
       DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY:-}
       DEEPGRAM_MODEL: ${DEEPGRAM_MODEL:-nova-2}
       ASSEMBLYAI_API_KEY: ${ASSEMBLYAI_API_KEY:-}

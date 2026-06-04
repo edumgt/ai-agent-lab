@@ -137,7 +137,7 @@ class AnswerOrchestrator:
         try:
             prompt = self._ChatPromptTemplate.from_template(
                 """
-당신은 교육용 저장소 Q&A 도우미입니다.
+당신은 금융 서비스 실험실용 에이전트입니다.
 반드시 제공된 컨텍스트 범위에서만 답변하세요.
 추측하지 말고 근거가 부족하면 부족하다고 명시하세요.
 

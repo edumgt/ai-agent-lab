@@ -8,9 +8,9 @@ from pathlib import Path
 @dataclass
 class Settings:
     project_id: str = os.getenv("PROJECT_ID", "project002")
-    project_name: str = os.getenv("PROJECT_NAME", "거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기")
-    project_track: str = os.getenv("PROJECT_TRACK", "프로젝트-B")
-    project_topic: str = os.getenv("PROJECT_TOPIC", "거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기")
+    project_name: str = os.getenv("PROJECT_NAME", "금융 상품 상담 에이전트")
+    project_track: str = os.getenv("PROJECT_TRACK", "금융-프로젝트-B")
+    project_topic: str = os.getenv("PROJECT_TOPIC", "금융 상품 상담 에이전트")
     data_dir: Path = Path(os.getenv("DATA_DIR", "./data")).resolve()
 
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "").strip()

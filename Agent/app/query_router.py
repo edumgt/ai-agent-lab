@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import re
 
-from app.curriculum_service import CurriculumIndex
+from app.finance_taxonomy_service import FinanceDomainIndex
 
 
 @dataclass
@@ -18,8 +18,8 @@ class RoutedQuery:
 class QueryRouter:
     """Route question to structured handler or RAG search."""
 
-    def __init__(self, curriculum_index: CurriculumIndex) -> None:
-        self._index = curriculum_index
+    def __init__(self, finance_index: FinanceDomainIndex) -> None:
+        self._index = finance_index
 
     def route(self, question: str) -> RoutedQuery:
         subject = self._index.detect_subject_in_question(question)
@@ -111,25 +111,25 @@ class QueryRouter:
         if concept == "llm" or any(k in q_norm for k in ["거대언어모델", "언어모델", "llm"]):
             expansions.extend(
                 [
-                    "거대 언어 모델 LLM 개요 생성 파라미터 안전성 환각",
-                    "llmTextGen class289 class352 학습 내용",
-                    "생성형 ai 언어모델 개념",
+                    "금융 생성형 AI 모델 거버넌스 환각 통제 개인정보 보호",
+                    "투자 리서치 보고서 생성 자동화 LLM 프롬프트 설계",
+                    "금융 상담 챗봇 설명 가능성 감사 로그 설계",
                 ]
             )
         if concept == "rag" or "rag" in q_norm:
             expansions.extend(
                 [
-                    "RAG retrieval augmented generation 문서 검색 근거 답변",
-                    "ragPipeline class449 class500 학습 내용",
-                    "벡터 검색 임베딩 청크 출처 기반 응답",
+                    "RAG 기반 금융 규정 문서 검색 근거 답변",
+                    "신용심사 약관 내부통제 매뉴얼 벡터 검색 파이프라인",
+                    "금융 보고서 출처 추적 임베딩 리랭크 품질 평가",
                 ]
             )
         if concept in {"devops", "mlops", "aiops", "llmops"}:
             expansions.extend(
                 [
-                    "프로젝트 project001 project020 devops mlops aiops llmops",
-                    "devops_mlops_aiops_llmops_report 개요 비교",
-                    "프로젝트 과목 학습 내용 운영 자동화 관측성",
+                    "금융 AI 서비스 devops mlops aiops llmops 운영체계",
+                    "모델 배포 승인 체계 모니터링 경보 감사 추적",
+                    "리스크 관리 대시보드 운영 자동화 관측성",
                 ]
             )
         if concept == "aws_stt" or (

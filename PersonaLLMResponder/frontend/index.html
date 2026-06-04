@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>project002 · PERSONA AI 답변 기능 구현</title>
+  <title>project002 · 금융 상품 상담 에이전트</title>
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
   <main class="wrap">
     <section class="box title">
-      <h1>거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기</h1>
-      <p>페르소나를 정의하고 LLM/로컬 모드로 답변을 생성합니다.</p>
+      <h1>금융 상품 상담 에이전트</h1>
+      <p>상담 페르소나를 정의하고 금융 질의에 대해 LLM/로컬 모드로 답변을 생성합니다.</p>
       <pre id="metaBox">메타 정보를 불러오는 중...</pre>
     </section>
 
     <section class="box">
-      <h2>1) Persona 등록/수정</h2>
+      <h2>1) 상담 Persona 등록/수정</h2>
       <div class="grid">
         <input id="personaId" placeholder="persona_id(선택)" />
-        <input id="name" value="mentor-lee" placeholder="name" />
-        <input id="role" value="LLM 멘토" placeholder="role" />
-        <input id="tone" value="명확하고 실무적인" placeholder="tone" />
-        <input id="rules" value="근거를 먼저 말하기,실행 순서 제시" placeholder="speaking rules(comma)" />
+        <input id="name" value="advisor-lee" placeholder="name" />
+        <input id="role" value="금융 상담 분석가" placeholder="role" />
+        <input id="tone" value="차분하고 근거 중심의" placeholder="tone" />
+        <input id="rules" value="핵심 결론 먼저,리스크 고지 포함" placeholder="speaking rules(comma)" />
       </div>
       <button id="saveBtn">Persona 저장</button>
       <pre id="personaBox">저장 결과</pre>
     </section>
 
     <section class="box">
-      <h2>2) Persona 답변 생성</h2>
+      <h2>2) 금융 답변 생성</h2>
       <div class="grid">
         <input id="askPersonaId" placeholder="persona_id" />
-        <input id="question" value="내 서비스에 맞는 RAG 도입 순서를 알려줘" />
-        <input id="context" value="현재 사내 문서 200개와 FAQ 50개를 보유" />
+        <input id="question" value="초보 투자자에게 ETF와 예금의 차이를 어떻게 설명할까?" />
+        <input id="context" value="현재 상품 설명서 120개와 리스크 FAQ 40개를 보유" />
       </div>
       <label><input id="useLlm" type="checkbox" checked /> LLM 사용(OpenAI 키 필요)</label>
       <button id="askBtn">답변 생성</button>
