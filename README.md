@@ -4,6 +4,8 @@
 금융 도메인 에이전트 실습을 위한 Python 기반 저장소입니다.  
 RAG, 멀티모달, 음성 브리핑, 금융 지식베이스, 상품/리서치 응답 자동화를 한 저장소에서 실험할 수 있도록 구성했습니다.
 
+RAG 대상 - https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71938
+
 ### 핵심 목표
 
 1. 금융 문서 검색과 근거 기반 답변 에이전트 구축
