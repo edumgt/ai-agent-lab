@@ -458,6 +458,55 @@ def summarize_mode(mode, rows, memory_store):
         }
     return {"result_count": len(rows)}
 
+def _lm_studio_langchain_demo():
+    """
+    LM Studio + LangChain 연동 실습.
+    langchain-openai 의 ChatOpenAI 에 base_url 을 LM Studio 로 지정합니다.
+
+    필요 패키지: pip install langchain-openai
+    LM Studio: http://localhost:1234 에서 서버 실행 필요
+    """
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+
+    try:
+        from langchain_openai import ChatOpenAI
+        from langchain.prompts import ChatPromptTemplate
+    except ImportError:
+        print("[LangChain+LM Studio] langchain-openai 패키지가 필요합니다: pip install langchain-openai")
+        return
+
+    lm_url = os.getenv("LM_STUDIO_URL", "http://localhost:1234/v1")
+    lm_model = os.getenv("LM_STUDIO_MODEL", "local-model")
+
+    print(f"\n{'='*60}")
+    print(f"[LangChain + LM Studio 실습] 모델: {lm_model}")
+    print(f"{'='*60}")
+
+    try:
+        llm = ChatOpenAI(
+            base_url=lm_url,
+            api_key="lm-studio",
+            model=lm_model,
+            temperature=0.7,
+        )
+
+        # PromptTemplate + LLM 체인
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", "당신은 친절한 한국어 AI 어시스턴트입니다."),
+            ("user", "{question}"),
+        ])
+        chain = prompt | llm
+
+        question = "LangChain 의 PromptTemplate 이 왜 유용한지 설명해주세요."
+        print(f"\n[질문] {question}")
+        response = chain.invoke({"question": question})
+        print(f"[LM Studio 응답]\n{response.content}")
+    except Exception as exc:
+        print(f"[LangChain+LM Studio] 연결 실패: {exc}")
+        print("  → LM Studio 가 실행 중인지 확인하세요 (포트 1234).")
+
+
 def main():
     print("오늘 주제:", TOPIC)
     mode = resolve_mode()
@@ -478,6 +527,10 @@ def main():
     summary = summarize_mode(mode, rows, memory_store)
     print("모드:", mode)
     print("요약:", summary)
+
+    # LM Studio + LangChain 실제 연동 실습
+    _lm_studio_langchain_demo()
+
     return {
         "variant": EXAMPLE_VARIANT,
         "mode": mode,

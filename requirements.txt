@@ -1,15 +1,33 @@
 # 이 파일은 www.edumgt.co.kr 의 에듀엠지티에 저작권이 있습니다
-# Optional packages for advanced class practice
+# LM Studio + AI Agent Lab 실습 패키지
+
+# ── LM Studio 연동 (OpenAI 호환 API) ──────────────────────────────────────────
+openai>=1.30                 # LM Studio OpenAI-compatible API 호출
+
+# ── 데이터/ML ──────────────────────────────────────────────────────────────────
 pandas>=2.0
 numpy>=1.26
 matplotlib>=3.8
 scikit-learn>=1.4
+
+# ── 웹/API 서빙 ────────────────────────────────────────────────────────────────
 requests>=2.31
 fastapi>=0.115
 uvicorn>=0.30
+
+# ── 음성 ───────────────────────────────────────────────────────────────────────
 pyttsx3>=2.90
 SpeechRecognition>=3.10
+
+# ── LangChain / LangGraph (LM Studio 백엔드와 연동) ───────────────────────────
 langchain>=0.3
 langchain-community>=0.3
 langgraph>=1.0
+langchain-openai>=0.2        # ChatOpenAI → LM Studio base_url 오버라이드
+
+# ── RAG / 벡터DB ───────────────────────────────────────────────────────────────
+chromadb>=0.5                # 로컬 벡터DB (RAG 실습)
+sentence-transformers>=3.0   # 로컬 임베딩 모델
+
+# ── 유틸리티 ───────────────────────────────────────────────────────────────────
 Pillow>=10.0

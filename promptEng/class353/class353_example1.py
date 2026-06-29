@@ -418,6 +418,56 @@ def summarize_mode(mode, rows, cases):
         }
     return {"avg_score": avg_score, "failure_patterns": failures}
 
+def _lm_studio_prompt_demo():
+    """
+    LM Studio 로 다양한 프롬프트 전략을 직접 비교합니다.
+    같은 질문에 Zero-shot / Few-shot / 역할 부여 프롬프트를 적용해 차이를 관찰하세요.
+    """
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+    try:
+        from lmstudio_config import call_lm, LM_STUDIO_AVAILABLE, LM_MODEL
+    except ImportError:
+        return
+
+    if not LM_STUDIO_AVAILABLE:
+        return
+
+    question = "금융 상품을 추천해주세요."
+    strategies = [
+        {
+            "name": "Zero-shot (기본)",
+            "messages": [{"role": "user", "content": question}],
+        },
+        {
+            "name": "역할 부여 (System prompt)",
+            "messages": [
+                {"role": "system", "content": "당신은 15년 경력의 금융 전문 상담사입니다. 고객의 위험 성향을 먼저 확인하고 맞춤형 추천을 제공합니다."},
+                {"role": "user", "content": question},
+            ],
+        },
+        {
+            "name": "Few-shot (예시 포함)",
+            "messages": [
+                {"role": "system", "content": "당신은 금융 상담 AI 입니다."},
+                {"role": "user", "content": "안전한 상품을 원해요."},
+                {"role": "assistant", "content": "위험 성향이 낮으시군요. 예금, 국채 ETF, MMF 를 추천드립니다."},
+                {"role": "user", "content": question},
+            ],
+        },
+    ]
+
+    print(f"\n{'='*60}")
+    print(f"[LM Studio 프롬프트 전략 비교] 모델: {LM_MODEL}")
+    print(f"질문: {question}")
+    print(f"{'='*60}")
+
+    for strategy in strategies:
+        result = call_lm(strategy["messages"], temperature=0.7, max_tokens=150)
+        print(f"\n[{strategy['name']}]")
+        print(result if result else "  → LM Studio 연결 실패 (포트 1234 확인)")
+
+
 def main():
     print("오늘 주제:", TOPIC)
     mode = resolve_mode()
@@ -440,6 +490,10 @@ def main():
     summary = summarize_mode(mode, rows, cases)
     print("모드:", mode)
     print("요약:", summary)
+
+    # LM Studio 프롬프트 전략 비교 실습
+    _lm_studio_prompt_demo()
+
     return {
         "variant": EXAMPLE_VARIANT,
         "mode": mode,

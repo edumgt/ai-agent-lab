@@ -13,8 +13,22 @@ except Exception:  # pragma: no cover
 class QnaAgent:
     def __init__(self) -> None:
         self._client = None
-        if settings.openai_api_key and OpenAI is not None:
+        self._model = ""
+
+        if OpenAI is None:
+            return
+
+        if settings.use_lm_studio:
+            # LM Studio (로컬 추론, OpenAI 호환 API)
+            self._client = OpenAI(
+                base_url=settings.lm_studio_url,
+                api_key=settings.lm_studio_api_key,
+            )
+            self._model = settings.lm_studio_model
+        elif settings.openai_api_key:
+            # OpenAI 클라우드 API
             self._client = OpenAI(api_key=settings.openai_api_key)
+            self._model = settings.openai_model
 
     def answer(
         self,
@@ -25,7 +39,6 @@ class QnaAgent:
         persona_instruction: str = "",
     ) -> str:
         if mode == "subject_range":
-            # Structured mode is answered by deterministic rule at API layer.
             return self._answer_without_llm(question, sources)
         if use_llm and self._client is not None:
             try:
@@ -54,7 +67,7 @@ class QnaAgent:
         )
 
         response = self._client.chat.completions.create(
-            model=settings.openai_model,
+            model=self._model,
             temperature=0.2,
             messages=[
                 {"role": "system", "content": "You are a careful repository Q&A assistant."},
@@ -80,6 +93,6 @@ class QnaAgent:
             )
 
         summary_lines.append(
-            "\n참고: OPENAI_API_KEY를 설정하면 근거 기반의 더 자연스러운 생성형 답변을 받을 수 있습니다."
+            "\n참고: LM Studio 를 실행하고 LM_STUDIO_URL 을 설정하면 생성형 답변을 받을 수 있습니다."
         )
         return "\n".join(summary_lines)

@@ -1,525 +1,525 @@
 # 이 파일은 www.edumgt.co.kr 의 에듀엠지티에 저작권이 있습니다
-class,day,slot,subject_code,subject_name,subject_session,module,level,md_file
-class001,1,1,정규교과-1,Python 프로그래밍,1/40,수업 준비 1: 필수 플랫폼 가입/계정 설정 (class001) · 단계 1/1 입문 이해 [class001],입문,pyBasics/class001/class001.md
-class002,1,2,정규교과-1,Python 프로그래밍,2/40,수업 준비 2: 필수 소프트웨어 설치 (class002) · 단계 1/1 입문 이해 [class002],입문,pyBasics/class002/class002.md
-class003,1,3,정규교과-1,Python 프로그래밍,3/40,수업 준비 3: 개발환경 검증/실행 확인 (class003) · 단계 1/1 입문 이해 [class003],입문,pyBasics/class003/class003.md
-class004,1,4,정규교과-1,Python 프로그래밍,4/40,Python 기초 시작: 변수와 출력 첫 실행 (class004) · 단계 1/1 입문 이해 [class004],입문,pyBasics/class004/class004.md
-class005,1,5,정규교과-1,Python 프로그래밍,5/40,변수와 자료형 · 단계 1/4 입문 이해 [class005],입문,pyBasics/class005/class005.md
-class006,1,6,정규교과-1,Python 프로그래밍,6/40,변수와 자료형 · 단계 2/4 기초 구현 [class006],입문,pyBasics/class006/class006.md
-class007,1,7,정규교과-1,Python 프로그래밍,7/40,변수와 자료형 · 단계 3/4 실전 검증 [class007],입문,pyBasics/class007/class007.md
-class008,1,8,정규교과-1,Python 프로그래밍,8/40,변수와 자료형 · 단계 4/4 운영 최적화 [class008],입문,pyBasics/class008/class008.md
-class009,2,1,정규교과-1,Python 프로그래밍,9/40,연산자와 조건문 · 단계 1/4 입문 이해 [class009],기초응용,pyBasics/class009/class009.md
-class010,2,2,정규교과-1,Python 프로그래밍,10/40,연산자와 조건문 · 단계 2/4 기초 구현 [class010],기초응용,pyBasics/class010/class010.md
-class011,2,3,정규교과-1,Python 프로그래밍,11/40,연산자와 조건문 · 단계 3/4 실전 검증 [class011],기초응용,pyBasics/class011/class011.md
-class012,2,4,정규교과-1,Python 프로그래밍,12/40,연산자와 조건문 · 단계 4/4 운영 최적화 [class012],기초응용,pyBasics/class012/class012.md
-class013,2,5,정규교과-1,Python 프로그래밍,13/40,반복문과 흐름제어 · 단계 1/4 입문 이해 [class013],기초응용,pyBasics/class013/class013.md
-class014,2,6,정규교과-1,Python 프로그래밍,14/40,반복문과 흐름제어 · 단계 2/4 기초 구현 [class014],기초응용,pyBasics/class014/class014.md
-class015,2,7,정규교과-1,Python 프로그래밍,15/40,반복문과 흐름제어 · 단계 3/4 실전 검증 [class015],기초응용,pyBasics/class015/class015.md
-class016,2,8,정규교과-1,Python 프로그래밍,16/40,반복문과 흐름제어 · 단계 4/4 운영 최적화 [class016],기초응용,pyBasics/class016/class016.md
-class017,3,1,정규교과-1,Python 프로그래밍,17/40,함수와 모듈 · 단계 1/4 입문 이해 [class017],기초응용,pyBasics/class017/class017.md
-class018,3,2,정규교과-1,Python 프로그래밍,18/40,함수와 모듈 · 단계 2/4 기초 구현 [class018],기초응용,pyBasics/class018/class018.md
-class019,3,3,정규교과-1,Python 프로그래밍,19/40,함수와 모듈 · 단계 3/4 실전 검증 [class019],기초응용,pyBasics/class019/class019.md
-class020,3,4,정규교과-1,Python 프로그래밍,20/40,함수와 모듈 · 단계 4/4 운영 최적화 [class020],기초응용,pyBasics/class020/class020.md
-class021,3,5,정규교과-1,Python 프로그래밍,21/40,컬렉션 자료구조 · 단계 1/4 입문 이해 [class021],기초응용,pyBasics/class021/class021.md
-class022,3,6,정규교과-1,Python 프로그래밍,22/40,컬렉션 자료구조 · 단계 2/4 기초 구현 [class022],기초응용,pyBasics/class022/class022.md
-class023,3,7,정규교과-1,Python 프로그래밍,23/40,컬렉션 자료구조 · 단계 3/4 실전 검증 [class023],기초응용,pyBasics/class023/class023.md
-class024,3,8,정규교과-1,Python 프로그래밍,24/40,컬렉션 자료구조 · 단계 4/4 운영 최적화 [class024],기초응용,pyBasics/class024/class024.md
-class025,4,1,정규교과-1,Python 프로그래밍,25/40,파일 입출력 · 단계 1/4 입문 이해 [class025],기초응용,pyBasics/class025/class025.md
-class026,4,2,정규교과-1,Python 프로그래밍,26/40,파일 입출력 · 단계 2/4 기초 구현 [class026],기초응용,pyBasics/class026/class026.md
-class027,4,3,정규교과-1,Python 프로그래밍,27/40,파일 입출력 · 단계 3/4 실전 검증 [class027],기초응용,pyBasics/class027/class027.md
-class028,4,4,정규교과-1,Python 프로그래밍,28/40,파일 입출력 · 단계 4/4 운영 최적화 [class028],기초응용,pyBasics/class028/class028.md
-class029,4,5,정규교과-1,Python 프로그래밍,29/40,웹 프론트엔드 기초 (HTML/CSS/JS) · 단계 1/2 입문 이해 [class029],실전심화,pyBasics/class029/class029.md
-class030,4,6,정규교과-1,Python 프로그래밍,30/40,웹 프론트엔드 기초 (HTML/CSS/JS) · 단계 2/2 운영 최적화 [class030],실전심화,pyBasics/class030/class030.md
-class031,4,7,정규교과-1,Python 프로그래밍,31/40,Tailwind CSS와 UI 컴포넌트 · 단계 1/2 입문 이해 [class031],실전심화,pyBasics/class031/class031.md
-class032,4,8,정규교과-1,Python 프로그래밍,32/40,Tailwind CSS와 UI 컴포넌트 · 단계 2/2 운영 최적화 [class032],실전심화,pyBasics/class032/class032.md
-class033,5,1,정규교과-1,Python 프로그래밍,33/40,Python 외부 라이브러리 활용 · 단계 1/2 입문 이해 [class033],실전심화,pyBasics/class033/class033.md
-class034,5,2,정규교과-1,Python 프로그래밍,34/40,Python 외부 라이브러리 활용 · 단계 2/2 운영 최적화 [class034],실전심화,pyBasics/class034/class034.md
-class035,5,3,정규교과-1,Python 프로그래밍,35/40,API 기본 개념과 HTTP · 단계 1/2 입문 이해 [class035],실전심화,pyBasics/class035/class035.md
-class036,5,4,정규교과-1,Python 프로그래밍,36/40,API 기본 개념과 HTTP · 단계 2/2 운영 최적화 [class036],실전심화,pyBasics/class036/class036.md
-class037,5,5,정규교과-1,Python 프로그래밍,37/40,FastAPI와 Uvicorn · 단계 1/2 입문 이해 [class037],실전심화,pyBasics/class037/class037.md
-class038,5,6,정규교과-1,Python 프로그래밍,38/40,FastAPI와 Uvicorn · 단계 2/2 운영 최적화 [class038],실전심화,pyBasics/class038/class038.md
-class039,5,7,정규교과-1,Python 프로그래밍,39/40,API 명세서와 개발자 문서화 · 단계 1/2 입문 이해 [class039],실전심화,pyBasics/class039/class039.md
-class040,5,8,정규교과-1,Python 프로그래밍,40/40,API 명세서와 개발자 문서화 · 단계 2/2 운영 최적화 [class040],실전심화,pyBasics/class040/class040.md
-class041,6,1,정규교과-2,Python 전처리 및 시각화,1/40,데이터 분석 환경 구성 · 단계 1/4 입문 이해 [class041],입문,dataVizPrep/class041/class041.md
-class042,6,2,정규교과-2,Python 전처리 및 시각화,2/40,데이터 분석 환경 구성 · 단계 2/4 기초 구현 [class042],입문,dataVizPrep/class042/class042.md
-class043,6,3,정규교과-2,Python 전처리 및 시각화,3/40,데이터 분석 환경 구성 · 단계 3/4 실전 검증 [class043],입문,dataVizPrep/class043/class043.md
-class044,6,4,정규교과-2,Python 전처리 및 시각화,4/40,데이터 분석 환경 구성 · 단계 4/4 운영 최적화 [class044],입문,dataVizPrep/class044/class044.md
-class045,6,5,정규교과-2,Python 전처리 및 시각화,5/40,NumPy 기초 · 단계 1/4 입문 이해 [class045],입문,dataVizPrep/class045/class045.md
-class046,6,6,정규교과-2,Python 전처리 및 시각화,6/40,NumPy 기초 · 단계 2/4 기초 구현 [class046],입문,dataVizPrep/class046/class046.md
-class047,6,7,정규교과-2,Python 전처리 및 시각화,7/40,NumPy 기초 · 단계 3/4 실전 검증 [class047],입문,dataVizPrep/class047/class047.md
-class048,6,8,정규교과-2,Python 전처리 및 시각화,8/40,NumPy 기초 · 단계 4/4 운영 최적화 [class048],입문,dataVizPrep/class048/class048.md
-class049,7,1,정규교과-2,Python 전처리 및 시각화,9/40,Pandas 데이터프레임 기초 · 단계 1/4 입문 이해 [class049],기초응용,dataVizPrep/class049/class049.md
-class050,7,2,정규교과-2,Python 전처리 및 시각화,10/40,Pandas 데이터프레임 기초 · 단계 2/4 기초 구현 [class050],기초응용,dataVizPrep/class050/class050.md
-class051,7,3,정규교과-2,Python 전처리 및 시각화,11/40,Pandas 데이터프레임 기초 · 단계 3/4 실전 검증 [class051],기초응용,dataVizPrep/class051/class051.md
-class052,7,4,정규교과-2,Python 전처리 및 시각화,12/40,Pandas 데이터프레임 기초 · 단계 4/4 운영 최적화 [class052],기초응용,dataVizPrep/class052/class052.md
-class053,7,5,정규교과-2,Python 전처리 및 시각화,13/40,결측치/이상치 처리 · 단계 1/4 입문 이해 [class053],기초응용,dataVizPrep/class053/class053.md
-class054,7,6,정규교과-2,Python 전처리 및 시각화,14/40,결측치/이상치 처리 · 단계 2/4 기초 구현 [class054],기초응용,dataVizPrep/class054/class054.md
-class055,7,7,정규교과-2,Python 전처리 및 시각화,15/40,결측치/이상치 처리 · 단계 3/4 실전 검증 [class055],기초응용,dataVizPrep/class055/class055.md
-class056,7,8,정규교과-2,Python 전처리 및 시각화,16/40,결측치/이상치 처리 · 단계 4/4 운영 최적화 [class056],기초응용,dataVizPrep/class056/class056.md
-class057,8,1,정규교과-2,Python 전처리 및 시각화,17/40,문자열/날짜 전처리 · 단계 1/4 입문 이해 [class057],기초응용,dataVizPrep/class057/class057.md
-class058,8,2,정규교과-2,Python 전처리 및 시각화,18/40,문자열/날짜 전처리 · 단계 2/4 기초 구현 [class058],기초응용,dataVizPrep/class058/class058.md
-class059,8,3,정규교과-2,Python 전처리 및 시각화,19/40,문자열/날짜 전처리 · 단계 3/4 실전 검증 [class059],기초응용,dataVizPrep/class059/class059.md
-class060,8,4,정규교과-2,Python 전처리 및 시각화,20/40,문자열/날짜 전처리 · 단계 4/4 운영 최적화 [class060],기초응용,dataVizPrep/class060/class060.md
-class061,8,5,정규교과-2,Python 전처리 및 시각화,21/40,그룹화와 집계 · 단계 1/4 입문 이해 [class061],기초응용,dataVizPrep/class061/class061.md
-class062,8,6,정규교과-2,Python 전처리 및 시각화,22/40,그룹화와 집계 · 단계 2/4 기초 구현 [class062],기초응용,dataVizPrep/class062/class062.md
-class063,8,7,정규교과-2,Python 전처리 및 시각화,23/40,그룹화와 집계 · 단계 3/4 실전 검증 [class063],기초응용,dataVizPrep/class063/class063.md
-class064,8,8,정규교과-2,Python 전처리 및 시각화,24/40,그룹화와 집계 · 단계 4/4 운영 최적화 [class064],기초응용,dataVizPrep/class064/class064.md
-class065,9,1,정규교과-2,Python 전처리 및 시각화,25/40,데이터 병합과 변환 · 단계 1/4 입문 이해 [class065],기초응용,dataVizPrep/class065/class065.md
-class066,9,2,정규교과-2,Python 전처리 및 시각화,26/40,데이터 병합과 변환 · 단계 2/4 기초 구현 [class066],기초응용,dataVizPrep/class066/class066.md
-class067,9,3,정규교과-2,Python 전처리 및 시각화,27/40,데이터 병합과 변환 · 단계 3/4 실전 검증 [class067],기초응용,dataVizPrep/class067/class067.md
-class068,9,4,정규교과-2,Python 전처리 및 시각화,28/40,데이터 병합과 변환 · 단계 4/4 운영 최적화 [class068],기초응용,dataVizPrep/class068/class068.md
-class069,9,5,정규교과-2,Python 전처리 및 시각화,29/40,Matplotlib 시각화 기초 · 단계 1/4 입문 이해 [class069],실전심화,dataVizPrep/class069/class069.md
-class070,9,6,정규교과-2,Python 전처리 및 시각화,30/40,Matplotlib 시각화 기초 · 단계 2/4 기초 구현 [class070],실전심화,dataVizPrep/class070/class070.md
-class071,9,7,정규교과-2,Python 전처리 및 시각화,31/40,Matplotlib 시각화 기초 · 단계 3/4 실전 검증 [class071],실전심화,dataVizPrep/class071/class071.md
-class072,9,8,정규교과-2,Python 전처리 및 시각화,32/40,Matplotlib 시각화 기초 · 단계 4/4 운영 최적화 [class072],실전심화,dataVizPrep/class072/class072.md
-class073,10,1,정규교과-2,Python 전처리 및 시각화,33/40,Seaborn/실전 차트 해석 · 단계 1/4 입문 이해 [class073],실전심화,dataVizPrep/class073/class073.md
-class074,10,2,정규교과-2,Python 전처리 및 시각화,34/40,Seaborn/실전 차트 해석 · 단계 2/4 기초 구현 [class074],실전심화,dataVizPrep/class074/class074.md
-class075,10,3,정규교과-2,Python 전처리 및 시각화,35/40,Seaborn/실전 차트 해석 · 단계 3/4 실전 검증 [class075],실전심화,dataVizPrep/class075/class075.md
-class076,10,4,정규교과-2,Python 전처리 및 시각화,36/40,Seaborn/실전 차트 해석 · 단계 4/4 운영 최적화 [class076],실전심화,dataVizPrep/class076/class076.md
-class077,10,5,정규교과-2,Python 전처리 및 시각화,37/40,Agent 시스템 통합 구현 · 단계 1/4 입문 이해 [class077],실전심화,dataVizPrep/class077/class077.md
-class078,10,6,정규교과-2,Python 전처리 및 시각화,38/40,Agent 시스템 통합 구현 · 단계 2/4 기초 구현 [class078],실전심화,dataVizPrep/class078/class078.md
-class079,10,7,정규교과-2,Python 전처리 및 시각화,39/40,Agent 시스템 통합 구현 · 단계 3/4 실전 검증 [class079],실전심화,dataVizPrep/class079/class079.md
-class080,10,8,정규교과-2,Python 전처리 및 시각화,40/40,Agent 시스템 통합 구현 · 단계 4/4 운영 최적화 [class080],실전심화,dataVizPrep/class080/class080.md
-class081,11,1,정규교과-3,머신러닝과 딥러닝,1/48,ML/DL 개요와 문제정의 · 단계 1/5 입문 이해 [class081],입문,mlDeepDive/class081/class081.md
-class082,11,2,정규교과-3,머신러닝과 딥러닝,2/48,ML/DL 개요와 문제정의 · 단계 2/5 기초 구현 [class082],입문,mlDeepDive/class082/class082.md
-class083,11,3,정규교과-3,머신러닝과 딥러닝,3/48,ML/DL 개요와 문제정의 · 단계 3/5 응용 확장 [class083],입문,mlDeepDive/class083/class083.md
-class084,11,4,정규교과-3,머신러닝과 딥러닝,4/48,ML/DL 개요와 문제정의 · 단계 4/5 실전 검증 [class084],입문,mlDeepDive/class084/class084.md
-class085,11,5,정규교과-3,머신러닝과 딥러닝,5/48,ML/DL 개요와 문제정의 · 단계 5/5 운영 최적화 [class085],입문,mlDeepDive/class085/class085.md
-class086,11,6,정규교과-3,머신러닝과 딥러닝,6/48,지도학습 기초 · 단계 1/5 입문 이해 [class086],입문,mlDeepDive/class086/class086.md
-class087,11,7,정규교과-3,머신러닝과 딥러닝,7/48,지도학습 기초 · 단계 2/5 기초 구현 [class087],입문,mlDeepDive/class087/class087.md
-class088,11,8,정규교과-3,머신러닝과 딥러닝,8/48,지도학습 기초 · 단계 3/5 응용 확장 [class088],입문,mlDeepDive/class088/class088.md
-class089,12,1,정규교과-3,머신러닝과 딥러닝,9/48,지도학습 기초 · 단계 4/5 실전 검증 [class089],입문,mlDeepDive/class089/class089.md
-class090,12,2,정규교과-3,머신러닝과 딥러닝,10/48,지도학습 기초 · 단계 5/5 운영 최적화 [class090],기초응용,mlDeepDive/class090/class090.md
-class091,12,3,정규교과-3,머신러닝과 딥러닝,11/48,회귀 모델 · 단계 1/5 입문 이해 [class091],기초응용,mlDeepDive/class091/class091.md
-class092,12,4,정규교과-3,머신러닝과 딥러닝,12/48,회귀 모델 · 단계 2/5 기초 구현 [class092],기초응용,mlDeepDive/class092/class092.md
-class093,12,5,정규교과-3,머신러닝과 딥러닝,13/48,회귀 모델 · 단계 3/5 응용 확장 [class093],기초응용,mlDeepDive/class093/class093.md
-class094,12,6,정규교과-3,머신러닝과 딥러닝,14/48,회귀 모델 · 단계 4/5 실전 검증 [class094],기초응용,mlDeepDive/class094/class094.md
-class095,12,7,정규교과-3,머신러닝과 딥러닝,15/48,회귀 모델 · 단계 5/5 운영 최적화 [class095],기초응용,mlDeepDive/class095/class095.md
-class096,12,8,정규교과-3,머신러닝과 딥러닝,16/48,분류 모델 · 단계 1/5 입문 이해 [class096],기초응용,mlDeepDive/class096/class096.md
-class097,13,1,정규교과-3,머신러닝과 딥러닝,17/48,분류 모델 · 단계 2/5 기초 구현 [class097],기초응용,mlDeepDive/class097/class097.md
-class098,13,2,정규교과-3,머신러닝과 딥러닝,18/48,분류 모델 · 단계 3/5 응용 확장 [class098],기초응용,mlDeepDive/class098/class098.md
-class099,13,3,정규교과-3,머신러닝과 딥러닝,19/48,분류 모델 · 단계 4/5 실전 검증 [class099],기초응용,mlDeepDive/class099/class099.md
-class100,13,4,정규교과-3,머신러닝과 딥러닝,20/48,분류 모델 · 단계 5/5 운영 최적화 [class100],기초응용,mlDeepDive/class100/class100.md
-class101,13,5,정규교과-3,머신러닝과 딥러닝,21/48,모델 평가 지표 · 단계 1/4 입문 이해 [class101],기초응용,mlDeepDive/class101/class101.md
-class102,13,6,정규교과-3,머신러닝과 딥러닝,22/48,모델 평가 지표 · 단계 2/4 기초 구현 [class102],기초응용,mlDeepDive/class102/class102.md
-class103,13,7,정규교과-3,머신러닝과 딥러닝,23/48,모델 평가 지표 · 단계 3/4 실전 검증 [class103],기초응용,mlDeepDive/class103/class103.md
-class104,13,8,정규교과-3,머신러닝과 딥러닝,24/48,모델 평가 지표 · 단계 4/4 운영 최적화 [class104],기초응용,mlDeepDive/class104/class104.md
-class105,14,1,정규교과-3,머신러닝과 딥러닝,25/48,특성공학과 전처리 · 단계 1/5 입문 이해 [class105],기초응용,mlDeepDive/class105/class105.md
-class106,14,2,정규교과-3,머신러닝과 딥러닝,26/48,특성공학과 전처리 · 단계 2/5 기초 구현 [class106],기초응용,mlDeepDive/class106/class106.md
-class107,14,3,정규교과-3,머신러닝과 딥러닝,27/48,특성공학과 전처리 · 단계 3/5 응용 확장 [class107],기초응용,mlDeepDive/class107/class107.md
-class108,14,4,정규교과-3,머신러닝과 딥러닝,28/48,특성공학과 전처리 · 단계 4/5 실전 검증 [class108],기초응용,mlDeepDive/class108/class108.md
-class109,14,5,정규교과-3,머신러닝과 딥러닝,29/48,특성공학과 전처리 · 단계 5/5 운영 최적화 [class109],기초응용,mlDeepDive/class109/class109.md
-class110,14,6,정규교과-3,머신러닝과 딥러닝,30/48,과적합과 일반화 · 단계 1/5 입문 이해 [class110],기초응용,mlDeepDive/class110/class110.md
-class111,14,7,정규교과-3,머신러닝과 딥러닝,31/48,과적합과 일반화 · 단계 2/5 기초 구현 [class111],기초응용,mlDeepDive/class111/class111.md
-class112,14,8,정규교과-3,머신러닝과 딥러닝,32/48,과적합과 일반화 · 단계 3/5 응용 확장 [class112],기초응용,mlDeepDive/class112/class112.md
-class113,15,1,정규교과-3,머신러닝과 딥러닝,33/48,과적합과 일반화 · 단계 4/5 실전 검증 [class113],기초응용,mlDeepDive/class113/class113.md
-class114,15,2,정규교과-3,머신러닝과 딥러닝,34/48,과적합과 일반화 · 단계 5/5 운영 최적화 [class114],실전심화,mlDeepDive/class114/class114.md
-class115,15,3,정규교과-3,머신러닝과 딥러닝,35/48,신경망 기초 · 단계 1/5 입문 이해 [class115],실전심화,mlDeepDive/class115/class115.md
-class116,15,4,정규교과-3,머신러닝과 딥러닝,36/48,신경망 기초 · 단계 2/5 기초 구현 [class116],실전심화,mlDeepDive/class116/class116.md
-class117,15,5,정규교과-3,머신러닝과 딥러닝,37/48,신경망 기초 · 단계 3/5 응용 확장 [class117],실전심화,mlDeepDive/class117/class117.md
-class118,15,6,정규교과-3,머신러닝과 딥러닝,38/48,신경망 기초 · 단계 4/5 실전 검증 [class118],실전심화,mlDeepDive/class118/class118.md
-class119,15,7,정규교과-3,머신러닝과 딥러닝,39/48,신경망 기초 · 단계 5/5 운영 최적화 [class119],실전심화,mlDeepDive/class119/class119.md
-class120,15,8,정규교과-3,머신러닝과 딥러닝,40/48,딥러닝 학습 구조 · 단계 1/5 입문 이해 [class120],실전심화,mlDeepDive/class120/class120.md
-class121,16,1,정규교과-3,머신러닝과 딥러닝,41/48,딥러닝 학습 구조 · 단계 2/5 기초 구현 [class121],실전심화,mlDeepDive/class121/class121.md
-class122,16,2,정규교과-3,머신러닝과 딥러닝,42/48,딥러닝 학습 구조 · 단계 3/5 응용 확장 [class122],실전심화,mlDeepDive/class122/class122.md
-class123,16,3,정규교과-3,머신러닝과 딥러닝,43/48,딥러닝 학습 구조 · 단계 4/5 실전 검증 [class123],실전심화,mlDeepDive/class123/class123.md
-class124,16,4,정규교과-3,머신러닝과 딥러닝,44/48,딥러닝 학습 구조 · 단계 5/5 운영 최적화 [class124],실전심화,mlDeepDive/class124/class124.md
-class125,16,5,정규교과-3,머신러닝과 딥러닝,45/48,Agent 시스템 통합 구현 · 단계 1/4 입문 이해 [class125],실전심화,mlDeepDive/class125/class125.md
-class126,16,6,정규교과-3,머신러닝과 딥러닝,46/48,Agent 시스템 통합 구현 · 단계 2/4 기초 구현 [class126],실전심화,mlDeepDive/class126/class126.md
-class127,16,7,정규교과-3,머신러닝과 딥러닝,47/48,Agent 시스템 통합 구현 · 단계 3/4 실전 검증 [class127],실전심화,mlDeepDive/class127/class127.md
-class128,16,8,정규교과-3,머신러닝과 딥러닝,48/48,Agent 시스템 통합 구현 · 단계 4/4 운영 최적화 [class128],실전심화,mlDeepDive/class128/class128.md
-class129,17,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,1/96,NLP/STT/TTS 개요 · 단계 1/8 입문 이해 [class129],입문,nlpSpeechAI/class129/class129.md
-class130,17,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,2/96,NLP/STT/TTS 개요 · 단계 2/8 기초 구현 [class130],입문,nlpSpeechAI/class130/class130.md
-class131,17,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,3/96,NLP/STT/TTS 개요 · 단계 3/8 기초 구현 [class131],입문,nlpSpeechAI/class131/class131.md
-class132,17,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,4/96,NLP/STT/TTS 개요 · 단계 4/8 응용 확장 [class132],입문,nlpSpeechAI/class132/class132.md
-class133,17,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,5/96,NLP/STT/TTS 개요 · 단계 5/8 응용 확장 [class133],입문,nlpSpeechAI/class133/class133.md
-class134,17,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,6/96,NLP/STT/TTS 개요 · 단계 6/8 실전 검증 [class134],입문,nlpSpeechAI/class134/class134.md
-class135,17,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,7/96,NLP/STT/TTS 개요 · 단계 7/8 실전 검증 [class135],입문,nlpSpeechAI/class135/class135.md
-class136,17,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,8/96,NLP/STT/TTS 개요 · 단계 8/8 운영 최적화 [class136],입문,nlpSpeechAI/class136/class136.md
-class137,18,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,9/96,텍스트 데이터 수집 · 단계 1/8 입문 이해 [class137],입문,nlpSpeechAI/class137/class137.md
-class138,18,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,10/96,텍스트 데이터 수집 · 단계 2/8 기초 구현 [class138],입문,nlpSpeechAI/class138/class138.md
-class139,18,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,11/96,텍스트 데이터 수집 · 단계 3/8 기초 구현 [class139],입문,nlpSpeechAI/class139/class139.md
-class140,18,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,12/96,텍스트 데이터 수집 · 단계 4/8 응용 확장 [class140],입문,nlpSpeechAI/class140/class140.md
-class141,18,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,13/96,텍스트 데이터 수집 · 단계 5/8 응용 확장 [class141],입문,nlpSpeechAI/class141/class141.md
-class142,18,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,14/96,텍스트 데이터 수집 · 단계 6/8 실전 검증 [class142],입문,nlpSpeechAI/class142/class142.md
-class143,18,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,15/96,텍스트 데이터 수집 · 단계 7/8 실전 검증 [class143],입문,nlpSpeechAI/class143/class143.md
-class144,18,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,16/96,텍스트 데이터 수집 · 단계 8/8 운영 최적화 [class144],입문,nlpSpeechAI/class144/class144.md
-class145,19,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,17/96,텍스트 정제와 토큰화 · 단계 1/8 입문 이해 [class145],입문,nlpSpeechAI/class145/class145.md
-class146,19,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,18/96,텍스트 정제와 토큰화 · 단계 2/8 기초 구현 [class146],입문,nlpSpeechAI/class146/class146.md
-class147,19,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,19/96,텍스트 정제와 토큰화 · 단계 3/8 기초 구현 [class147],입문,nlpSpeechAI/class147/class147.md
-class148,19,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,20/96,텍스트 정제와 토큰화 · 단계 4/8 응용 확장 [class148],기초응용,nlpSpeechAI/class148/class148.md
-class149,19,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,21/96,텍스트 정제와 토큰화 · 단계 5/8 응용 확장 [class149],기초응용,nlpSpeechAI/class149/class149.md
-class150,19,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,22/96,텍스트 정제와 토큰화 · 단계 6/8 실전 검증 [class150],기초응용,nlpSpeechAI/class150/class150.md
-class151,19,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,23/96,텍스트 정제와 토큰화 · 단계 7/8 실전 검증 [class151],기초응용,nlpSpeechAI/class151/class151.md
-class152,19,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,24/96,텍스트 정제와 토큰화 · 단계 8/8 운영 최적화 [class152],기초응용,nlpSpeechAI/class152/class152.md
-class153,20,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,25/96,임베딩 기초 · 단계 1/8 입문 이해 [class153],기초응용,nlpSpeechAI/class153/class153.md
-class154,20,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,26/96,임베딩 기초 · 단계 2/8 기초 구현 [class154],기초응용,nlpSpeechAI/class154/class154.md
-class155,20,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,27/96,임베딩 기초 · 단계 3/8 기초 구현 [class155],기초응용,nlpSpeechAI/class155/class155.md
-class156,20,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,28/96,임베딩 기초 · 단계 4/8 응용 확장 [class156],기초응용,nlpSpeechAI/class156/class156.md
-class157,20,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,29/96,임베딩 기초 · 단계 5/8 응용 확장 [class157],기초응용,nlpSpeechAI/class157/class157.md
-class158,20,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,30/96,임베딩 기초 · 단계 6/8 실전 검증 [class158],기초응용,nlpSpeechAI/class158/class158.md
-class159,20,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,31/96,임베딩 기초 · 단계 7/8 실전 검증 [class159],기초응용,nlpSpeechAI/class159/class159.md
-class160,20,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,32/96,임베딩 기초 · 단계 8/8 운영 최적화 [class160],기초응용,nlpSpeechAI/class160/class160.md
-class161,21,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,33/96,언어모델 입력 구조 · 단계 1/8 입문 이해 [class161],기초응용,nlpSpeechAI/class161/class161.md
-class162,21,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,34/96,언어모델 입력 구조 · 단계 2/8 기초 구현 [class162],기초응용,nlpSpeechAI/class162/class162.md
-class163,21,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,35/96,언어모델 입력 구조 · 단계 3/8 기초 구현 [class163],기초응용,nlpSpeechAI/class163/class163.md
-class164,21,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,36/96,언어모델 입력 구조 · 단계 4/8 응용 확장 [class164],기초응용,nlpSpeechAI/class164/class164.md
-class165,21,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,37/96,언어모델 입력 구조 · 단계 5/8 응용 확장 [class165],기초응용,nlpSpeechAI/class165/class165.md
-class166,21,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,38/96,언어모델 입력 구조 · 단계 6/8 실전 검증 [class166],기초응용,nlpSpeechAI/class166/class166.md
-class167,21,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,39/96,언어모델 입력 구조 · 단계 7/8 실전 검증 [class167],기초응용,nlpSpeechAI/class167/class167.md
-class168,21,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,40/96,언어모델 입력 구조 · 단계 8/8 운영 최적화 [class168],기초응용,nlpSpeechAI/class168/class168.md
-class169,22,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,41/96,음성 데이터 구조 이해 · 단계 1/8 입문 이해 [class169],기초응용,nlpSpeechAI/class169/class169.md
-class170,22,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,42/96,음성 데이터 구조 이해 · 단계 2/8 기초 구현 [class170],기초응용,nlpSpeechAI/class170/class170.md
-class171,22,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,43/96,음성 데이터 구조 이해 · 단계 3/8 기초 구현 [class171],기초응용,nlpSpeechAI/class171/class171.md
-class172,22,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,44/96,음성 데이터 구조 이해 · 단계 4/8 응용 확장 [class172],기초응용,nlpSpeechAI/class172/class172.md
-class173,22,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,45/96,음성 데이터 구조 이해 · 단계 5/8 응용 확장 [class173],기초응용,nlpSpeechAI/class173/class173.md
-class174,22,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,46/96,음성 데이터 구조 이해 · 단계 6/8 실전 검증 [class174],기초응용,nlpSpeechAI/class174/class174.md
-class175,22,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,47/96,음성 데이터 구조 이해 · 단계 7/8 실전 검증 [class175],기초응용,nlpSpeechAI/class175/class175.md
-class176,22,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,48/96,음성 데이터 구조 이해 · 단계 8/8 운영 최적화 [class176],기초응용,nlpSpeechAI/class176/class176.md
-class177,23,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,49/96,오디오 전처리 · 단계 1/8 입문 이해 [class177],기초응용,nlpSpeechAI/class177/class177.md
-class178,23,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,50/96,오디오 전처리 · 단계 2/8 기초 구현 [class178],기초응용,nlpSpeechAI/class178/class178.md
-class179,23,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,51/96,오디오 전처리 · 단계 3/8 기초 구현 [class179],기초응용,nlpSpeechAI/class179/class179.md
-class180,23,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,52/96,오디오 전처리 · 단계 4/8 응용 확장 [class180],기초응용,nlpSpeechAI/class180/class180.md
-class181,23,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,53/96,오디오 전처리 · 단계 5/8 응용 확장 [class181],기초응용,nlpSpeechAI/class181/class181.md
-class182,23,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,54/96,오디오 전처리 · 단계 6/8 실전 검증 [class182],기초응용,nlpSpeechAI/class182/class182.md
-class183,23,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,55/96,오디오 전처리 · 단계 7/8 실전 검증 [class183],기초응용,nlpSpeechAI/class183/class183.md
-class184,23,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,56/96,오디오 전처리 · 단계 8/8 운영 최적화 [class184],기초응용,nlpSpeechAI/class184/class184.md
-class185,24,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,57/96,특징 추출(MFCC 등) · 단계 1/8 입문 이해 [class185],기초응용,nlpSpeechAI/class185/class185.md
-class186,24,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,58/96,특징 추출(MFCC 등) · 단계 2/8 기초 구현 [class186],기초응용,nlpSpeechAI/class186/class186.md
-class187,24,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,59/96,특징 추출(MFCC 등) · 단계 3/8 기초 구현 [class187],기초응용,nlpSpeechAI/class187/class187.md
-class188,24,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,60/96,특징 추출(MFCC 등) · 단계 4/8 응용 확장 [class188],기초응용,nlpSpeechAI/class188/class188.md
-class189,24,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,61/96,특징 추출(MFCC 등) · 단계 5/8 응용 확장 [class189],기초응용,nlpSpeechAI/class189/class189.md
-class190,24,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,62/96,특징 추출(MFCC 등) · 단계 6/8 실전 검증 [class190],기초응용,nlpSpeechAI/class190/class190.md
-class191,24,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,63/96,특징 추출(MFCC 등) · 단계 7/8 실전 검증 [class191],기초응용,nlpSpeechAI/class191/class191.md
-class192,24,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,64/96,특징 추출(MFCC 등) · 단계 8/8 운영 최적화 [class192],기초응용,nlpSpeechAI/class192/class192.md
-class193,25,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,65/96,텍스트 분류 기초 · 단계 1/8 입문 이해 [class193],기초응용,nlpSpeechAI/class193/class193.md
-class194,25,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,66/96,텍스트 분류 기초 · 단계 2/8 기초 구현 [class194],기초응용,nlpSpeechAI/class194/class194.md
-class195,25,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,67/96,텍스트 분류 기초 · 단계 3/8 기초 구현 [class195],기초응용,nlpSpeechAI/class195/class195.md
-class196,25,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,68/96,텍스트 분류 기초 · 단계 4/8 응용 확장 [class196],실전심화,nlpSpeechAI/class196/class196.md
-class197,25,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,69/96,텍스트 분류 기초 · 단계 5/8 응용 확장 [class197],실전심화,nlpSpeechAI/class197/class197.md
-class198,25,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,70/96,텍스트 분류 기초 · 단계 6/8 실전 검증 [class198],실전심화,nlpSpeechAI/class198/class198.md
-class199,25,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,71/96,텍스트 분류 기초 · 단계 7/8 실전 검증 [class199],실전심화,nlpSpeechAI/class199/class199.md
-class200,25,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,72/96,텍스트 분류 기초 · 단계 8/8 운영 최적화 [class200],실전심화,nlpSpeechAI/class200/class200.md
-class201,26,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,73/96,시퀀스 모델 기초 · 단계 1/8 입문 이해 [class201],실전심화,nlpSpeechAI/class201/class201.md
-class202,26,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,74/96,시퀀스 모델 기초 · 단계 2/8 기초 구현 [class202],실전심화,nlpSpeechAI/class202/class202.md
-class203,26,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,75/96,시퀀스 모델 기초 · 단계 3/8 기초 구현 [class203],실전심화,nlpSpeechAI/class203/class203.md
-class204,26,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,76/96,시퀀스 모델 기초 · 단계 4/8 응용 확장 [class204],실전심화,nlpSpeechAI/class204/class204.md
-class205,26,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,77/96,시퀀스 모델 기초 · 단계 5/8 응용 확장 [class205],실전심화,nlpSpeechAI/class205/class205.md
-class206,26,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,78/96,시퀀스 모델 기초 · 단계 6/8 실전 검증 [class206],실전심화,nlpSpeechAI/class206/class206.md
-class207,26,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,79/96,시퀀스 모델 기초 · 단계 7/8 실전 검증 [class207],실전심화,nlpSpeechAI/class207/class207.md
-class208,26,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,80/96,시퀀스 모델 기초 · 단계 8/8 운영 최적화 [class208],실전심화,nlpSpeechAI/class208/class208.md
-class209,27,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,81/96,멀티모달 데이터 연결 · 단계 1/8 입문 이해 [class209],실전심화,nlpSpeechAI/class209/class209.md
-class210,27,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,82/96,멀티모달 데이터 연결 · 단계 2/8 기초 구현 [class210],실전심화,nlpSpeechAI/class210/class210.md
-class211,27,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,83/96,멀티모달 데이터 연결 · 단계 3/8 기초 구현 [class211],실전심화,nlpSpeechAI/class211/class211.md
-class212,27,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,84/96,멀티모달 데이터 연결 · 단계 4/8 응용 확장 [class212],실전심화,nlpSpeechAI/class212/class212.md
-class213,27,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,85/96,멀티모달 데이터 연결 · 단계 5/8 응용 확장 [class213],실전심화,nlpSpeechAI/class213/class213.md
-class214,27,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,86/96,멀티모달 데이터 연결 · 단계 6/8 실전 검증 [class214],실전심화,nlpSpeechAI/class214/class214.md
-class215,27,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,87/96,멀티모달 데이터 연결 · 단계 7/8 실전 검증 [class215],실전심화,nlpSpeechAI/class215/class215.md
-class216,27,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,88/96,멀티모달 데이터 연결 · 단계 8/8 운영 최적화 [class216],실전심화,nlpSpeechAI/class216/class216.md
-class217,28,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,89/96,실전 데이터셋 설계 · 단계 1/8 입문 이해 [class217],실전심화,nlpSpeechAI/class217/class217.md
-class218,28,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,90/96,실전 데이터셋 설계 · 단계 2/8 기초 구현 [class218],실전심화,nlpSpeechAI/class218/class218.md
-class219,28,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,91/96,실전 데이터셋 설계 · 단계 3/8 기초 구현 [class219],실전심화,nlpSpeechAI/class219/class219.md
-class220,28,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,92/96,실전 데이터셋 설계 · 단계 4/8 응용 확장 [class220],실전심화,nlpSpeechAI/class220/class220.md
-class221,28,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,93/96,실전 데이터셋 설계 · 단계 5/8 응용 확장 [class221],실전심화,nlpSpeechAI/class221/class221.md
-class222,28,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,94/96,실전 데이터셋 설계 · 단계 6/8 실전 검증 [class222],실전심화,nlpSpeechAI/class222/class222.md
-class223,28,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,95/96,실전 데이터셋 설계 · 단계 7/8 실전 검증 [class223],실전심화,nlpSpeechAI/class223/class223.md
-class224,28,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,96/96,실전 데이터셋 설계 · 단계 8/8 운영 최적화 [class224],실전심화,nlpSpeechAI/class224/class224.md
-class225,29,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,1/64,음성 AI 개요 · 단계 1/7 입문 이해 [class225],입문,speechTtsStt/class225/class225.md
-class226,29,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,2/64,음성 AI 개요 · 단계 2/7 기초 구현 [class226],입문,speechTtsStt/class226/class226.md
-class227,29,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,3/64,음성 AI 개요 · 단계 3/7 기초 구현 [class227],입문,speechTtsStt/class227/class227.md
-class228,29,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,4/64,음성 AI 개요 · 단계 4/7 응용 확장 [class228],입문,speechTtsStt/class228/class228.md
-class229,29,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,5/64,음성 AI 개요 · 단계 5/7 실전 검증 [class229],입문,speechTtsStt/class229/class229.md
-class230,29,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,6/64,음성 AI 개요 · 단계 6/7 실전 검증 [class230],입문,speechTtsStt/class230/class230.md
-class231,29,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,7/64,음성 AI 개요 · 단계 7/7 운영 최적화 [class231],입문,speechTtsStt/class231/class231.md
-class232,29,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,8/64,STT 파이프라인 · 단계 1/6 입문 이해 [class232],입문,speechTtsStt/class232/class232.md
-class233,30,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,9/64,STT 파이프라인 · 단계 2/6 기초 구현 [class233],입문,speechTtsStt/class233/class233.md
-class234,30,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,10/64,STT 파이프라인 · 단계 3/6 응용 확장 [class234],입문,speechTtsStt/class234/class234.md
-class235,30,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,11/64,STT 파이프라인 · 단계 4/6 응용 확장 [class235],입문,speechTtsStt/class235/class235.md
-class236,30,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,12/64,STT 파이프라인 · 단계 5/6 실전 검증 [class236],입문,speechTtsStt/class236/class236.md
-class237,30,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,13/64,STT 파이프라인 · 단계 6/6 운영 최적화 [class237],기초응용,speechTtsStt/class237/class237.md
-class238,30,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,14/64,STT 데이터 라벨링 · 단계 1/7 입문 이해 [class238],기초응용,speechTtsStt/class238/class238.md
-class239,30,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,15/64,STT 데이터 라벨링 · 단계 2/7 기초 구현 [class239],기초응용,speechTtsStt/class239/class239.md
-class240,30,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,16/64,STT 데이터 라벨링 · 단계 3/7 기초 구현 [class240],기초응용,speechTtsStt/class240/class240.md
-class241,31,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,17/64,STT 데이터 라벨링 · 단계 4/7 응용 확장 [class241],기초응용,speechTtsStt/class241/class241.md
-class242,31,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,18/64,STT 데이터 라벨링 · 단계 5/7 실전 검증 [class242],기초응용,speechTtsStt/class242/class242.md
-class243,31,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,19/64,STT 데이터 라벨링 · 단계 6/7 실전 검증 [class243],기초응용,speechTtsStt/class243/class243.md
-class244,31,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,20/64,STT 데이터 라벨링 · 단계 7/7 운영 최적화 [class244],기초응용,speechTtsStt/class244/class244.md
-class245,31,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,21/64,STT 전처리/학습 · 단계 1/6 입문 이해 [class245],기초응용,speechTtsStt/class245/class245.md
-class246,31,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,22/64,STT 전처리/학습 · 단계 2/6 기초 구현 [class246],기초응용,speechTtsStt/class246/class246.md
-class247,31,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,23/64,STT 전처리/학습 · 단계 3/6 응용 확장 [class247],기초응용,speechTtsStt/class247/class247.md
-class248,31,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,24/64,STT 전처리/학습 · 단계 4/6 응용 확장 [class248],기초응용,speechTtsStt/class248/class248.md
-class249,32,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,25/64,STT 전처리/학습 · 단계 5/6 실전 검증 [class249],기초응용,speechTtsStt/class249/class249.md
-class250,32,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,26/64,STT 전처리/학습 · 단계 6/6 운영 최적화 [class250],기초응용,speechTtsStt/class250/class250.md
-class251,32,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,27/64,TTS 파이프라인 · 단계 1/6 입문 이해 [class251],기초응용,speechTtsStt/class251/class251.md
-class252,32,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,28/64,TTS 파이프라인 · 단계 2/6 기초 구현 [class252],기초응용,speechTtsStt/class252/class252.md
-class253,32,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,29/64,TTS 파이프라인 · 단계 3/6 응용 확장 [class253],기초응용,speechTtsStt/class253/class253.md
-class254,32,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,30/64,TTS 파이프라인 · 단계 4/6 응용 확장 [class254],기초응용,speechTtsStt/class254/class254.md
-class255,32,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,31/64,TTS 파이프라인 · 단계 5/6 실전 검증 [class255],기초응용,speechTtsStt/class255/class255.md
-class256,32,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,32/64,TTS 파이프라인 · 단계 6/6 운영 최적화 [class256],기초응용,speechTtsStt/class256/class256.md
-class257,33,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,33/64,발화/화자 특성 이해 · 단계 1/7 입문 이해 [class257],기초응용,speechTtsStt/class257/class257.md
-class258,33,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,34/64,발화/화자 특성 이해 · 단계 2/7 기초 구현 [class258],기초응용,speechTtsStt/class258/class258.md
-class259,33,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,35/64,발화/화자 특성 이해 · 단계 3/7 기초 구현 [class259],기초응용,speechTtsStt/class259/class259.md
-class260,33,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,36/64,발화/화자 특성 이해 · 단계 4/7 응용 확장 [class260],기초응용,speechTtsStt/class260/class260.md
-class261,33,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,37/64,발화/화자 특성 이해 · 단계 5/7 실전 검증 [class261],기초응용,speechTtsStt/class261/class261.md
-class262,33,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,38/64,발화/화자 특성 이해 · 단계 6/7 실전 검증 [class262],기초응용,speechTtsStt/class262/class262.md
-class263,33,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,39/64,발화/화자 특성 이해 · 단계 7/7 운영 최적화 [class263],기초응용,speechTtsStt/class263/class263.md
-class264,33,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,40/64,TTS 전처리/학습 · 단계 1/6 입문 이해 [class264],기초응용,speechTtsStt/class264/class264.md
-class265,34,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,41/64,TTS 전처리/학습 · 단계 2/6 기초 구현 [class265],기초응용,speechTtsStt/class265/class265.md
-class266,34,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,42/64,TTS 전처리/학습 · 단계 3/6 응용 확장 [class266],기초응용,speechTtsStt/class266/class266.md
-class267,34,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,43/64,TTS 전처리/학습 · 단계 4/6 응용 확장 [class267],기초응용,speechTtsStt/class267/class267.md
-class268,34,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,44/64,TTS 전처리/학습 · 단계 5/6 실전 검증 [class268],기초응용,speechTtsStt/class268/class268.md
-class269,34,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,45/64,TTS 전처리/학습 · 단계 6/6 운영 최적화 [class269],실전심화,speechTtsStt/class269/class269.md
-class270,34,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,46/64,음성 품질 평가 · 단계 1/7 입문 이해 [class270],실전심화,speechTtsStt/class270/class270.md
-class271,34,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,47/64,음성 품질 평가 · 단계 2/7 기초 구현 [class271],실전심화,speechTtsStt/class271/class271.md
-class272,34,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,48/64,음성 품질 평가 · 단계 3/7 기초 구현 [class272],실전심화,speechTtsStt/class272/class272.md
-class273,35,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,49/64,음성 품질 평가 · 단계 4/7 응용 확장 [class273],실전심화,speechTtsStt/class273/class273.md
-class274,35,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,50/64,음성 품질 평가 · 단계 5/7 실전 검증 [class274],실전심화,speechTtsStt/class274/class274.md
-class275,35,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,51/64,음성 품질 평가 · 단계 6/7 실전 검증 [class275],실전심화,speechTtsStt/class275/class275.md
-class276,35,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,52/64,음성 품질 평가 · 단계 7/7 운영 최적화 [class276],실전심화,speechTtsStt/class276/class276.md
-class277,35,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,53/64,모델 추론 및 튜닝 · 단계 1/6 입문 이해 [class277],실전심화,speechTtsStt/class277/class277.md
-class278,35,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,54/64,모델 추론 및 튜닝 · 단계 2/6 기초 구현 [class278],실전심화,speechTtsStt/class278/class278.md
-class279,35,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,55/64,모델 추론 및 튜닝 · 단계 3/6 응용 확장 [class279],실전심화,speechTtsStt/class279/class279.md
-class280,35,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,56/64,모델 추론 및 튜닝 · 단계 4/6 응용 확장 [class280],실전심화,speechTtsStt/class280/class280.md
-class281,36,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,57/64,모델 추론 및 튜닝 · 단계 5/6 실전 검증 [class281],실전심화,speechTtsStt/class281/class281.md
-class282,36,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,58/64,모델 추론 및 튜닝 · 단계 6/6 운영 최적화 [class282],실전심화,speechTtsStt/class282/class282.md
-class283,36,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,59/64,실전 음성 모델 데모 · 단계 1/6 입문 이해 [class283],실전심화,speechTtsStt/class283/class283.md
-class284,36,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,60/64,실전 음성 모델 데모 · 단계 2/6 기초 구현 [class284],실전심화,speechTtsStt/class284/class284.md
-class285,36,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,61/64,실전 음성 모델 데모 · 단계 3/6 응용 확장 [class285],실전심화,speechTtsStt/class285/class285.md
-class286,36,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,62/64,실전 음성 모델 데모 · 단계 4/6 응용 확장 [class286],실전심화,speechTtsStt/class286/class286.md
-class287,36,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,63/64,실전 음성 모델 데모 · 단계 5/6 실전 검증 [class287],실전심화,speechTtsStt/class287/class287.md
-class288,36,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,64/64,실전 음성 모델 데모 · 단계 6/6 운영 최적화 [class288],실전심화,speechTtsStt/class288/class288.md
-class289,37,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,1/64,LLM 개요 · 단계 1/7 입문 이해 [class289],입문,llmTextGen/class289/class289.md
-class290,37,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,2/64,LLM 개요 · 단계 2/7 기초 구현 [class290],입문,llmTextGen/class290/class290.md
-class291,37,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,3/64,LLM 개요 · 단계 3/7 기초 구현 [class291],입문,llmTextGen/class291/class291.md
-class292,37,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,4/64,LLM 개요 · 단계 4/7 응용 확장 [class292],입문,llmTextGen/class292/class292.md
-class293,37,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,5/64,LLM 개요 · 단계 5/7 실전 검증 [class293],입문,llmTextGen/class293/class293.md
-class294,37,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,6/64,LLM 개요 · 단계 6/7 실전 검증 [class294],입문,llmTextGen/class294/class294.md
-class295,37,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,7/64,LLM 개요 · 단계 7/7 운영 최적화 [class295],입문,llmTextGen/class295/class295.md
-class296,37,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,8/64,토큰/컨텍스트 이해 · 단계 1/6 입문 이해 [class296],입문,llmTextGen/class296/class296.md
-class297,38,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,9/64,토큰/컨텍스트 이해 · 단계 2/6 기초 구현 [class297],입문,llmTextGen/class297/class297.md
-class298,38,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,10/64,토큰/컨텍스트 이해 · 단계 3/6 응용 확장 [class298],입문,llmTextGen/class298/class298.md
-class299,38,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,11/64,토큰/컨텍스트 이해 · 단계 4/6 응용 확장 [class299],입문,llmTextGen/class299/class299.md
-class300,38,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,12/64,토큰/컨텍스트 이해 · 단계 5/6 실전 검증 [class300],입문,llmTextGen/class300/class300.md
-class301,38,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,13/64,토큰/컨텍스트 이해 · 단계 6/6 운영 최적화 [class301],기초응용,llmTextGen/class301/class301.md
-class302,38,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,14/64,생성 파라미터 · 단계 1/7 입문 이해 [class302],기초응용,llmTextGen/class302/class302.md
-class303,38,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,15/64,생성 파라미터 · 단계 2/7 기초 구현 [class303],기초응용,llmTextGen/class303/class303.md
-class304,38,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,16/64,생성 파라미터 · 단계 3/7 기초 구현 [class304],기초응용,llmTextGen/class304/class304.md
-class305,39,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,17/64,생성 파라미터 · 단계 4/7 응용 확장 [class305],기초응용,llmTextGen/class305/class305.md
-class306,39,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,18/64,생성 파라미터 · 단계 5/7 실전 검증 [class306],기초응용,llmTextGen/class306/class306.md
-class307,39,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,19/64,생성 파라미터 · 단계 6/7 실전 검증 [class307],기초응용,llmTextGen/class307/class307.md
-class308,39,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,20/64,생성 파라미터 · 단계 7/7 운영 최적화 [class308],기초응용,llmTextGen/class308/class308.md
-class309,39,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,21/64,프롬프트 기반 생성 · 단계 1/6 입문 이해 [class309],기초응용,llmTextGen/class309/class309.md
-class310,39,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,22/64,프롬프트 기반 생성 · 단계 2/6 기초 구현 [class310],기초응용,llmTextGen/class310/class310.md
-class311,39,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,23/64,프롬프트 기반 생성 · 단계 3/6 응용 확장 [class311],기초응용,llmTextGen/class311/class311.md
-class312,39,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,24/64,프롬프트 기반 생성 · 단계 4/6 응용 확장 [class312],기초응용,llmTextGen/class312/class312.md
-class313,40,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,25/64,프롬프트 기반 생성 · 단계 5/6 실전 검증 [class313],기초응용,llmTextGen/class313/class313.md
-class314,40,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,26/64,프롬프트 기반 생성 · 단계 6/6 운영 최적화 [class314],기초응용,llmTextGen/class314/class314.md
-class315,40,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,27/64,요약/분류/추출 · 단계 1/6 입문 이해 [class315],기초응용,llmTextGen/class315/class315.md
-class316,40,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,28/64,요약/분류/추출 · 단계 2/6 기초 구현 [class316],기초응용,llmTextGen/class316/class316.md
-class317,40,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,29/64,요약/분류/추출 · 단계 3/6 응용 확장 [class317],기초응용,llmTextGen/class317/class317.md
-class318,40,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,30/64,요약/분류/추출 · 단계 4/6 응용 확장 [class318],기초응용,llmTextGen/class318/class318.md
-class319,40,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,31/64,요약/분류/추출 · 단계 5/6 실전 검증 [class319],기초응용,llmTextGen/class319/class319.md
-class320,40,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,32/64,요약/분류/추출 · 단계 6/6 운영 최적화 [class320],기초응용,llmTextGen/class320/class320.md
-class321,41,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,33/64,대화형 응답 설계 · 단계 1/7 입문 이해 [class321],기초응용,llmTextGen/class321/class321.md
-class322,41,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,34/64,대화형 응답 설계 · 단계 2/7 기초 구현 [class322],기초응용,llmTextGen/class322/class322.md
-class323,41,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,35/64,대화형 응답 설계 · 단계 3/7 기초 구현 [class323],기초응용,llmTextGen/class323/class323.md
-class324,41,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,36/64,대화형 응답 설계 · 단계 4/7 응용 확장 [class324],기초응용,llmTextGen/class324/class324.md
-class325,41,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,37/64,대화형 응답 설계 · 단계 5/7 실전 검증 [class325],기초응용,llmTextGen/class325/class325.md
-class326,41,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,38/64,대화형 응답 설계 · 단계 6/7 실전 검증 [class326],기초응용,llmTextGen/class326/class326.md
-class327,41,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,39/64,대화형 응답 설계 · 단계 7/7 운영 최적화 [class327],기초응용,llmTextGen/class327/class327.md
-class328,41,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,40/64,안전성/환각 관리 · 단계 1/6 입문 이해 [class328],기초응용,llmTextGen/class328/class328.md
-class329,42,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,41/64,안전성/환각 관리 · 단계 2/6 기초 구현 [class329],기초응용,llmTextGen/class329/class329.md
-class330,42,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,42/64,안전성/환각 관리 · 단계 3/6 응용 확장 [class330],기초응용,llmTextGen/class330/class330.md
-class331,42,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,43/64,안전성/환각 관리 · 단계 4/6 응용 확장 [class331],기초응용,llmTextGen/class331/class331.md
-class332,42,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,44/64,안전성/환각 관리 · 단계 5/6 실전 검증 [class332],기초응용,llmTextGen/class332/class332.md
-class333,42,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,45/64,안전성/환각 관리 · 단계 6/6 운영 최적화 [class333],실전심화,llmTextGen/class333/class333.md
-class334,42,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,46/64,도메인 적용 시나리오 · 단계 1/7 입문 이해 [class334],실전심화,llmTextGen/class334/class334.md
-class335,42,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,47/64,도메인 적용 시나리오 · 단계 2/7 기초 구현 [class335],실전심화,llmTextGen/class335/class335.md
-class336,42,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,48/64,도메인 적용 시나리오 · 단계 3/7 기초 구현 [class336],실전심화,llmTextGen/class336/class336.md
-class337,43,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,49/64,도메인 적용 시나리오 · 단계 4/7 응용 확장 [class337],실전심화,llmTextGen/class337/class337.md
-class338,43,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,50/64,도메인 적용 시나리오 · 단계 5/7 실전 검증 [class338],실전심화,llmTextGen/class338/class338.md
-class339,43,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,51/64,도메인 적용 시나리오 · 단계 6/7 실전 검증 [class339],실전심화,llmTextGen/class339/class339.md
-class340,43,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,52/64,도메인 적용 시나리오 · 단계 7/7 운영 최적화 [class340],실전심화,llmTextGen/class340/class340.md
-class341,43,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,53/64,API 연동 실습 · 단계 1/6 입문 이해 [class341],실전심화,llmTextGen/class341/class341.md
-class342,43,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,54/64,API 연동 실습 · 단계 2/6 기초 구현 [class342],실전심화,llmTextGen/class342/class342.md
-class343,43,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,55/64,API 연동 실습 · 단계 3/6 응용 확장 [class343],실전심화,llmTextGen/class343/class343.md
-class344,43,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,56/64,API 연동 실습 · 단계 4/6 응용 확장 [class344],실전심화,llmTextGen/class344/class344.md
-class345,44,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,57/64,API 연동 실습 · 단계 5/6 실전 검증 [class345],실전심화,llmTextGen/class345/class345.md
-class346,44,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,58/64,API 연동 실습 · 단계 6/6 운영 최적화 [class346],실전심화,llmTextGen/class346/class346.md
-class347,44,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,59/64,Agent 시스템 통합 구현 · 단계 1/6 입문 이해 [class347],실전심화,llmTextGen/class347/class347.md
-class348,44,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,60/64,Agent 시스템 통합 구현 · 단계 2/6 기초 구현 [class348],실전심화,llmTextGen/class348/class348.md
-class349,44,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,61/64,Agent 시스템 통합 구현 · 단계 3/6 응용 확장 [class349],실전심화,llmTextGen/class349/class349.md
-class350,44,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,62/64,Agent 시스템 통합 구현 · 단계 4/6 응용 확장 [class350],실전심화,llmTextGen/class350/class350.md
-class351,44,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,63/64,Agent 시스템 통합 구현 · 단계 5/6 실전 검증 [class351],실전심화,llmTextGen/class351/class351.md
-class352,44,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,64/64,Agent 시스템 통합 구현 · 단계 6/6 운영 최적화 [class352],실전심화,llmTextGen/class352/class352.md
-class353,45,1,정규교과-7,프롬프트 엔지니어링,1/40,프롬프트 엔지니어링 개요 · 단계 1/4 입문 이해 [class353],입문,promptEng/class353/class353.md
-class354,45,2,정규교과-7,프롬프트 엔지니어링,2/40,프롬프트 엔지니어링 개요 · 단계 2/4 기초 구현 [class354],입문,promptEng/class354/class354.md
-class355,45,3,정규교과-7,프롬프트 엔지니어링,3/40,프롬프트 엔지니어링 개요 · 단계 3/4 실전 검증 [class355],입문,promptEng/class355/class355.md
-class356,45,4,정규교과-7,프롬프트 엔지니어링,4/40,프롬프트 엔지니어링 개요 · 단계 4/4 운영 최적화 [class356],입문,promptEng/class356/class356.md
-class357,45,5,정규교과-7,프롬프트 엔지니어링,5/40,질문 구조화 · 단계 1/4 입문 이해 [class357],입문,promptEng/class357/class357.md
-class358,45,6,정규교과-7,프롬프트 엔지니어링,6/40,질문 구조화 · 단계 2/4 기초 구현 [class358],입문,promptEng/class358/class358.md
-class359,45,7,정규교과-7,프롬프트 엔지니어링,7/40,질문 구조화 · 단계 3/4 실전 검증 [class359],입문,promptEng/class359/class359.md
-class360,45,8,정규교과-7,프롬프트 엔지니어링,8/40,질문 구조화 · 단계 4/4 운영 최적화 [class360],입문,promptEng/class360/class360.md
-class361,46,1,정규교과-7,프롬프트 엔지니어링,9/40,역할/맥락 설정 · 단계 1/4 입문 이해 [class361],기초응용,promptEng/class361/class361.md
-class362,46,2,정규교과-7,프롬프트 엔지니어링,10/40,역할/맥락 설정 · 단계 2/4 기초 구현 [class362],기초응용,promptEng/class362/class362.md
-class363,46,3,정규교과-7,프롬프트 엔지니어링,11/40,역할/맥락 설정 · 단계 3/4 실전 검증 [class363],기초응용,promptEng/class363/class363.md
-class364,46,4,정규교과-7,프롬프트 엔지니어링,12/40,역할/맥락 설정 · 단계 4/4 운영 최적화 [class364],기초응용,promptEng/class364/class364.md
-class365,46,5,정규교과-7,프롬프트 엔지니어링,13/40,출력 포맷 제어 · 단계 1/4 입문 이해 [class365],기초응용,promptEng/class365/class365.md
-class366,46,6,정규교과-7,프롬프트 엔지니어링,14/40,출력 포맷 제어 · 단계 2/4 기초 구현 [class366],기초응용,promptEng/class366/class366.md
-class367,46,7,정규교과-7,프롬프트 엔지니어링,15/40,출력 포맷 제어 · 단계 3/4 실전 검증 [class367],기초응용,promptEng/class367/class367.md
-class368,46,8,정규교과-7,프롬프트 엔지니어링,16/40,출력 포맷 제어 · 단계 4/4 운영 최적화 [class368],기초응용,promptEng/class368/class368.md
-class369,47,1,정규교과-7,프롬프트 엔지니어링,17/40,예시 기반 학습 · 단계 1/4 입문 이해 [class369],기초응용,promptEng/class369/class369.md
-class370,47,2,정규교과-7,프롬프트 엔지니어링,18/40,예시 기반 학습 · 단계 2/4 기초 구현 [class370],기초응용,promptEng/class370/class370.md
-class371,47,3,정규교과-7,프롬프트 엔지니어링,19/40,예시 기반 학습 · 단계 3/4 실전 검증 [class371],기초응용,promptEng/class371/class371.md
-class372,47,4,정규교과-7,프롬프트 엔지니어링,20/40,예시 기반 학습 · 단계 4/4 운영 최적화 [class372],기초응용,promptEng/class372/class372.md
-class373,47,5,정규교과-7,프롬프트 엔지니어링,21/40,단계적 추론 유도 · 단계 1/4 입문 이해 [class373],기초응용,promptEng/class373/class373.md
-class374,47,6,정규교과-7,프롬프트 엔지니어링,22/40,단계적 추론 유도 · 단계 2/4 기초 구현 [class374],기초응용,promptEng/class374/class374.md
-class375,47,7,정규교과-7,프롬프트 엔지니어링,23/40,단계적 추론 유도 · 단계 3/4 실전 검증 [class375],기초응용,promptEng/class375/class375.md
-class376,47,8,정규교과-7,프롬프트 엔지니어링,24/40,단계적 추론 유도 · 단계 4/4 운영 최적화 [class376],기초응용,promptEng/class376/class376.md
-class377,48,1,정규교과-7,프롬프트 엔지니어링,25/40,평가와 개선 · 단계 1/4 입문 이해 [class377],기초응용,promptEng/class377/class377.md
-class378,48,2,정규교과-7,프롬프트 엔지니어링,26/40,평가와 개선 · 단계 2/4 기초 구현 [class378],기초응용,promptEng/class378/class378.md
-class379,48,3,정규교과-7,프롬프트 엔지니어링,27/40,평가와 개선 · 단계 3/4 실전 검증 [class379],기초응용,promptEng/class379/class379.md
-class380,48,4,정규교과-7,프롬프트 엔지니어링,28/40,평가와 개선 · 단계 4/4 운영 최적화 [class380],기초응용,promptEng/class380/class380.md
-class381,48,5,정규교과-7,프롬프트 엔지니어링,29/40,자동화 프롬프트 패턴 · 단계 1/4 입문 이해 [class381],실전심화,promptEng/class381/class381.md
-class382,48,6,정규교과-7,프롬프트 엔지니어링,30/40,자동화 프롬프트 패턴 · 단계 2/4 기초 구현 [class382],실전심화,promptEng/class382/class382.md
-class383,48,7,정규교과-7,프롬프트 엔지니어링,31/40,자동화 프롬프트 패턴 · 단계 3/4 실전 검증 [class383],실전심화,promptEng/class383/class383.md
-class384,48,8,정규교과-7,프롬프트 엔지니어링,32/40,자동화 프롬프트 패턴 · 단계 4/4 운영 최적화 [class384],실전심화,promptEng/class384/class384.md
-class385,49,1,정규교과-7,프롬프트 엔지니어링,33/40,도메인 템플릿 작성 · 단계 1/4 입문 이해 [class385],실전심화,promptEng/class385/class385.md
-class386,49,2,정규교과-7,프롬프트 엔지니어링,34/40,도메인 템플릿 작성 · 단계 2/4 기초 구현 [class386],실전심화,promptEng/class386/class386.md
-class387,49,3,정규교과-7,프롬프트 엔지니어링,35/40,도메인 템플릿 작성 · 단계 3/4 실전 검증 [class387],실전심화,promptEng/class387/class387.md
-class388,49,4,정규교과-7,프롬프트 엔지니어링,36/40,도메인 템플릿 작성 · 단계 4/4 운영 최적화 [class388],실전심화,promptEng/class388/class388.md
-class389,49,5,정규교과-7,프롬프트 엔지니어링,37/40,실전 프롬프트 튜닝 · 단계 1/4 입문 이해 [class389],실전심화,promptEng/class389/class389.md
-class390,49,6,정규교과-7,프롬프트 엔지니어링,38/40,실전 프롬프트 튜닝 · 단계 2/4 기초 구현 [class390],실전심화,promptEng/class390/class390.md
-class391,49,7,정규교과-7,프롬프트 엔지니어링,39/40,실전 프롬프트 튜닝 · 단계 3/4 실전 검증 [class391],실전심화,promptEng/class391/class391.md
-class392,49,8,정규교과-7,프롬프트 엔지니어링,40/40,실전 프롬프트 튜닝 · 단계 4/4 운영 최적화 [class392],실전심화,promptEng/class392/class392.md
-class393,50,1,정규교과-8,Langchain 활용하기,1/56,LangChain 개요 · 단계 1/6 입문 이해 [class393],입문,langChainLab/class393/class393.md
-class394,50,2,정규교과-8,Langchain 활용하기,2/56,LangChain 개요 · 단계 2/6 기초 구현 [class394],입문,langChainLab/class394/class394.md
-class395,50,3,정규교과-8,Langchain 활용하기,3/56,LangChain 개요 · 단계 3/6 응용 확장 [class395],입문,langChainLab/class395/class395.md
-class396,50,4,정규교과-8,Langchain 활용하기,4/56,LangChain 개요 · 단계 4/6 응용 확장 [class396],입문,langChainLab/class396/class396.md
-class397,50,5,정규교과-8,Langchain 활용하기,5/56,LangChain 개요 · 단계 5/6 실전 검증 [class397],입문,langChainLab/class397/class397.md
-class398,50,6,정규교과-8,Langchain 활용하기,6/56,LangChain 개요 · 단계 6/6 운영 최적화 [class398],입문,langChainLab/class398/class398.md
-class399,50,7,정규교과-8,Langchain 활용하기,7/56,PromptTemplate · 단계 1/6 입문 이해 [class399],입문,langChainLab/class399/class399.md
-class400,50,8,정규교과-8,Langchain 활용하기,8/56,PromptTemplate · 단계 2/6 기초 구현 [class400],입문,langChainLab/class400/class400.md
-class401,51,1,정규교과-8,Langchain 활용하기,9/56,PromptTemplate · 단계 3/6 응용 확장 [class401],입문,langChainLab/class401/class401.md
-class402,51,2,정규교과-8,Langchain 활용하기,10/56,PromptTemplate · 단계 4/6 응용 확장 [class402],입문,langChainLab/class402/class402.md
-class403,51,3,정규교과-8,Langchain 활용하기,11/56,PromptTemplate · 단계 5/6 실전 검증 [class403],입문,langChainLab/class403/class403.md
-class404,51,4,정규교과-8,Langchain 활용하기,12/56,PromptTemplate · 단계 6/6 운영 최적화 [class404],기초응용,langChainLab/class404/class404.md
-class405,51,5,정규교과-8,Langchain 활용하기,13/56,Model/LLM 연결 · 단계 1/5 입문 이해 [class405],기초응용,langChainLab/class405/class405.md
-class406,51,6,정규교과-8,Langchain 활용하기,14/56,Model/LLM 연결 · 단계 2/5 기초 구현 [class406],기초응용,langChainLab/class406/class406.md
-class407,51,7,정규교과-8,Langchain 활용하기,15/56,Model/LLM 연결 · 단계 3/5 응용 확장 [class407],기초응용,langChainLab/class407/class407.md
-class408,51,8,정규교과-8,Langchain 활용하기,16/56,Model/LLM 연결 · 단계 4/5 실전 검증 [class408],기초응용,langChainLab/class408/class408.md
-class409,52,1,정규교과-8,Langchain 활용하기,17/56,Model/LLM 연결 · 단계 5/5 운영 최적화 [class409],기초응용,langChainLab/class409/class409.md
-class410,52,2,정규교과-8,Langchain 활용하기,18/56,OutputParser · 단계 1/6 입문 이해 [class410],기초응용,langChainLab/class410/class410.md
-class411,52,3,정규교과-8,Langchain 활용하기,19/56,OutputParser · 단계 2/6 기초 구현 [class411],기초응용,langChainLab/class411/class411.md
-class412,52,4,정규교과-8,Langchain 활용하기,20/56,OutputParser · 단계 3/6 응용 확장 [class412],기초응용,langChainLab/class412/class412.md
-class413,52,5,정규교과-8,Langchain 활용하기,21/56,OutputParser · 단계 4/6 응용 확장 [class413],기초응용,langChainLab/class413/class413.md
-class414,52,6,정규교과-8,Langchain 활용하기,22/56,OutputParser · 단계 5/6 실전 검증 [class414],기초응용,langChainLab/class414/class414.md
-class415,52,7,정규교과-8,Langchain 활용하기,23/56,OutputParser · 단계 6/6 운영 최적화 [class415],기초응용,langChainLab/class415/class415.md
-class416,52,8,정규교과-8,Langchain 활용하기,24/56,Chain 구성 · 단계 1/5 입문 이해 [class416],기초응용,langChainLab/class416/class416.md
-class417,53,1,정규교과-8,Langchain 활용하기,25/56,Chain 구성 · 단계 2/5 기초 구현 [class417],기초응용,langChainLab/class417/class417.md
-class418,53,2,정규교과-8,Langchain 활용하기,26/56,Chain 구성 · 단계 3/5 응용 확장 [class418],기초응용,langChainLab/class418/class418.md
-class419,53,3,정규교과-8,Langchain 활용하기,27/56,Chain 구성 · 단계 4/5 실전 검증 [class419],기초응용,langChainLab/class419/class419.md
-class420,53,4,정규교과-8,Langchain 활용하기,28/56,Chain 구성 · 단계 5/5 운영 최적화 [class420],기초응용,langChainLab/class420/class420.md
-class421,53,5,정규교과-8,Langchain 활용하기,29/56,Memory 활용 · 단계 1/6 입문 이해 [class421],기초응용,langChainLab/class421/class421.md
-class422,53,6,정규교과-8,Langchain 활용하기,30/56,Memory 활용 · 단계 2/6 기초 구현 [class422],기초응용,langChainLab/class422/class422.md
-class423,53,7,정규교과-8,Langchain 활용하기,31/56,Memory 활용 · 단계 3/6 응용 확장 [class423],기초응용,langChainLab/class423/class423.md
-class424,53,8,정규교과-8,Langchain 활용하기,32/56,Memory 활용 · 단계 4/6 응용 확장 [class424],기초응용,langChainLab/class424/class424.md
-class425,54,1,정규교과-8,Langchain 활용하기,33/56,Memory 활용 · 단계 5/6 실전 검증 [class425],기초응용,langChainLab/class425/class425.md
-class426,54,2,정규교과-8,Langchain 활용하기,34/56,Memory 활용 · 단계 6/6 운영 최적화 [class426],기초응용,langChainLab/class426/class426.md
-class427,54,3,정규교과-8,Langchain 활용하기,35/56,Tool/Agent 기초 · 단계 1/6 입문 이해 [class427],기초응용,langChainLab/class427/class427.md
-class428,54,4,정규교과-8,Langchain 활용하기,36/56,Tool/Agent 기초 · 단계 2/6 기초 구현 [class428],기초응용,langChainLab/class428/class428.md
-class429,54,5,정규교과-8,Langchain 활용하기,37/56,Tool/Agent 기초 · 단계 3/6 응용 확장 [class429],기초응용,langChainLab/class429/class429.md
-class430,54,6,정규교과-8,Langchain 활용하기,38/56,Tool/Agent 기초 · 단계 4/6 응용 확장 [class430],기초응용,langChainLab/class430/class430.md
-class431,54,7,정규교과-8,Langchain 활용하기,39/56,Tool/Agent 기초 · 단계 5/6 실전 검증 [class431],기초응용,langChainLab/class431/class431.md
-class432,54,8,정규교과-8,Langchain 활용하기,40/56,Tool/Agent 기초 · 단계 6/6 운영 최적화 [class432],실전심화,langChainLab/class432/class432.md
-class433,55,1,정규교과-8,Langchain 활용하기,41/56,문서 로딩과 분할 · 단계 1/5 입문 이해 [class433],실전심화,langChainLab/class433/class433.md
-class434,55,2,정규교과-8,Langchain 활용하기,42/56,문서 로딩과 분할 · 단계 2/5 기초 구현 [class434],실전심화,langChainLab/class434/class434.md
-class435,55,3,정규교과-8,Langchain 활용하기,43/56,문서 로딩과 분할 · 단계 3/5 응용 확장 [class435],실전심화,langChainLab/class435/class435.md
-class436,55,4,정규교과-8,Langchain 활용하기,44/56,문서 로딩과 분할 · 단계 4/5 실전 검증 [class436],실전심화,langChainLab/class436/class436.md
-class437,55,5,정규교과-8,Langchain 활용하기,45/56,문서 로딩과 분할 · 단계 5/5 운영 최적화 [class437],실전심화,langChainLab/class437/class437.md
-class438,55,6,정규교과-8,Langchain 활용하기,46/56,VectorStore 연동 · 단계 1/6 입문 이해 [class438],실전심화,langChainLab/class438/class438.md
-class439,55,7,정규교과-8,Langchain 활용하기,47/56,VectorStore 연동 · 단계 2/6 기초 구현 [class439],실전심화,langChainLab/class439/class439.md
-class440,55,8,정규교과-8,Langchain 활용하기,48/56,VectorStore 연동 · 단계 3/6 응용 확장 [class440],실전심화,langChainLab/class440/class440.md
-class441,56,1,정규교과-8,Langchain 활용하기,49/56,VectorStore 연동 · 단계 4/6 응용 확장 [class441],실전심화,langChainLab/class441/class441.md
-class442,56,2,정규교과-8,Langchain 활용하기,50/56,VectorStore 연동 · 단계 5/6 실전 검증 [class442],실전심화,langChainLab/class442/class442.md
-class443,56,3,정규교과-8,Langchain 활용하기,51/56,VectorStore 연동 · 단계 6/6 운영 최적화 [class443],실전심화,langChainLab/class443/class443.md
-class444,56,4,정규교과-8,Langchain 활용하기,52/56,실전 체인 애플리케이션 · 단계 1/5 입문 이해 [class444],실전심화,langChainLab/class444/class444.md
-class445,56,5,정규교과-8,Langchain 활용하기,53/56,실전 체인 애플리케이션 · 단계 2/5 기초 구현 [class445],실전심화,langChainLab/class445/class445.md
-class446,56,6,정규교과-8,Langchain 활용하기,54/56,실전 체인 애플리케이션 · 단계 3/5 응용 확장 [class446],실전심화,langChainLab/class446/class446.md
-class447,56,7,정규교과-8,Langchain 활용하기,55/56,실전 체인 애플리케이션 · 단계 4/5 실전 검증 [class447],실전심화,langChainLab/class447/class447.md
-class448,56,8,정규교과-8,Langchain 활용하기,56/56,실전 체인 애플리케이션 · 단계 5/5 운영 최적화 [class448],실전심화,langChainLab/class448/class448.md
-class449,57,1,정규교과-9,RAG(Retrieval-Augmented Generation),1/52,RAG 개요 · 단계 1/6 입문 이해 [class449],입문,ragPipeline/class449/class449.md
-class450,57,2,정규교과-9,RAG(Retrieval-Augmented Generation),2/52,RAG 개요 · 단계 2/6 기초 구현 [class450],입문,ragPipeline/class450/class450.md
-class451,57,3,정규교과-9,RAG(Retrieval-Augmented Generation),3/52,RAG 개요 · 단계 3/6 응용 확장 [class451],입문,ragPipeline/class451/class451.md
-class452,57,4,정규교과-9,RAG(Retrieval-Augmented Generation),4/52,RAG 개요 · 단계 4/6 응용 확장 [class452],입문,ragPipeline/class452/class452.md
-class453,57,5,정규교과-9,RAG(Retrieval-Augmented Generation),5/52,RAG 개요 · 단계 5/6 실전 검증 [class453],입문,ragPipeline/class453/class453.md
-class454,57,6,정규교과-9,RAG(Retrieval-Augmented Generation),6/52,RAG 개요 · 단계 6/6 운영 최적화 [class454],입문,ragPipeline/class454/class454.md
-class455,57,7,정규교과-9,RAG(Retrieval-Augmented Generation),7/52,문서 수집 전략 · 단계 1/5 입문 이해 [class455],입문,ragPipeline/class455/class455.md
-class456,57,8,정규교과-9,RAG(Retrieval-Augmented Generation),8/52,문서 수집 전략 · 단계 2/5 기초 구현 [class456],입문,ragPipeline/class456/class456.md
-class457,58,1,정규교과-9,RAG(Retrieval-Augmented Generation),9/52,문서 수집 전략 · 단계 3/5 응용 확장 [class457],입문,ragPipeline/class457/class457.md
-class458,58,2,정규교과-9,RAG(Retrieval-Augmented Generation),10/52,문서 수집 전략 · 단계 4/5 실전 검증 [class458],입문,ragPipeline/class458/class458.md
-class459,58,3,정규교과-9,RAG(Retrieval-Augmented Generation),11/52,문서 수집 전략 · 단계 5/5 운영 최적화 [class459],기초응용,ragPipeline/class459/class459.md
-class460,58,4,정규교과-9,RAG(Retrieval-Augmented Generation),12/52,문서 청크 설계 · 단계 1/5 입문 이해 [class460],기초응용,ragPipeline/class460/class460.md
-class461,58,5,정규교과-9,RAG(Retrieval-Augmented Generation),13/52,문서 청크 설계 · 단계 2/5 기초 구현 [class461],기초응용,ragPipeline/class461/class461.md
-class462,58,6,정규교과-9,RAG(Retrieval-Augmented Generation),14/52,문서 청크 설계 · 단계 3/5 응용 확장 [class462],기초응용,ragPipeline/class462/class462.md
-class463,58,7,정규교과-9,RAG(Retrieval-Augmented Generation),15/52,문서 청크 설계 · 단계 4/5 실전 검증 [class463],기초응용,ragPipeline/class463/class463.md
-class464,58,8,정규교과-9,RAG(Retrieval-Augmented Generation),16/52,문서 청크 설계 · 단계 5/5 운영 최적화 [class464],기초응용,ragPipeline/class464/class464.md
-class465,59,1,정규교과-9,RAG(Retrieval-Augmented Generation),17/52,임베딩 생성 · 단계 1/5 입문 이해 [class465],기초응용,ragPipeline/class465/class465.md
-class466,59,2,정규교과-9,RAG(Retrieval-Augmented Generation),18/52,임베딩 생성 · 단계 2/5 기초 구현 [class466],기초응용,ragPipeline/class466/class466.md
-class467,59,3,정규교과-9,RAG(Retrieval-Augmented Generation),19/52,임베딩 생성 · 단계 3/5 응용 확장 [class467],기초응용,ragPipeline/class467/class467.md
-class468,59,4,정규교과-9,RAG(Retrieval-Augmented Generation),20/52,임베딩 생성 · 단계 4/5 실전 검증 [class468],기초응용,ragPipeline/class468/class468.md
-class469,59,5,정규교과-9,RAG(Retrieval-Augmented Generation),21/52,임베딩 생성 · 단계 5/5 운영 최적화 [class469],기초응용,ragPipeline/class469/class469.md
-class470,59,6,정규교과-9,RAG(Retrieval-Augmented Generation),22/52,벡터DB 기초 · 단계 1/5 입문 이해 [class470],기초응용,ragPipeline/class470/class470.md
-class471,59,7,정규교과-9,RAG(Retrieval-Augmented Generation),23/52,벡터DB 기초 · 단계 2/5 기초 구현 [class471],기초응용,ragPipeline/class471/class471.md
-class472,59,8,정규교과-9,RAG(Retrieval-Augmented Generation),24/52,벡터DB 기초 · 단계 3/5 응용 확장 [class472],기초응용,ragPipeline/class472/class472.md
-class473,60,1,정규교과-9,RAG(Retrieval-Augmented Generation),25/52,벡터DB 기초 · 단계 4/5 실전 검증 [class473],기초응용,ragPipeline/class473/class473.md
-class474,60,2,정규교과-9,RAG(Retrieval-Augmented Generation),26/52,벡터DB 기초 · 단계 5/5 운영 최적화 [class474],기초응용,ragPipeline/class474/class474.md
-class475,60,3,정규교과-9,RAG(Retrieval-Augmented Generation),27/52,검색 품질 개선 · 단계 1/6 입문 이해 [class475],기초응용,ragPipeline/class475/class475.md
-class476,60,4,정규교과-9,RAG(Retrieval-Augmented Generation),28/52,검색 품질 개선 · 단계 2/6 기초 구현 [class476],기초응용,ragPipeline/class476/class476.md
-class477,60,5,정규교과-9,RAG(Retrieval-Augmented Generation),29/52,검색 품질 개선 · 단계 3/6 응용 확장 [class477],기초응용,ragPipeline/class477/class477.md
-class478,60,6,정규교과-9,RAG(Retrieval-Augmented Generation),30/52,검색 품질 개선 · 단계 4/6 응용 확장 [class478],기초응용,ragPipeline/class478/class478.md
-class479,60,7,정규교과-9,RAG(Retrieval-Augmented Generation),31/52,검색 품질 개선 · 단계 5/6 실전 검증 [class479],기초응용,ragPipeline/class479/class479.md
-class480,60,8,정규교과-9,RAG(Retrieval-Augmented Generation),32/52,검색 품질 개선 · 단계 6/6 운영 최적화 [class480],기초응용,ragPipeline/class480/class480.md
-class481,61,1,정규교과-9,RAG(Retrieval-Augmented Generation),33/52,프롬프트 결합 · 단계 1/5 입문 이해 [class481],기초응용,ragPipeline/class481/class481.md
-class482,61,2,정규교과-9,RAG(Retrieval-Augmented Generation),34/52,프롬프트 결합 · 단계 2/5 기초 구현 [class482],기초응용,ragPipeline/class482/class482.md
-class483,61,3,정규교과-9,RAG(Retrieval-Augmented Generation),35/52,프롬프트 결합 · 단계 3/5 응용 확장 [class483],기초응용,ragPipeline/class483/class483.md
-class484,61,4,정규교과-9,RAG(Retrieval-Augmented Generation),36/52,프롬프트 결합 · 단계 4/5 실전 검증 [class484],기초응용,ragPipeline/class484/class484.md
-class485,61,5,정규교과-9,RAG(Retrieval-Augmented Generation),37/52,프롬프트 결합 · 단계 5/5 운영 최적화 [class485],실전심화,ragPipeline/class485/class485.md
-class486,61,6,정규교과-9,RAG(Retrieval-Augmented Generation),38/52,응답 검증/출처화 · 단계 1/5 입문 이해 [class486],실전심화,ragPipeline/class486/class486.md
-class487,61,7,정규교과-9,RAG(Retrieval-Augmented Generation),39/52,응답 검증/출처화 · 단계 2/5 기초 구현 [class487],실전심화,ragPipeline/class487/class487.md
-class488,61,8,정규교과-9,RAG(Retrieval-Augmented Generation),40/52,응답 검증/출처화 · 단계 3/5 응용 확장 [class488],실전심화,ragPipeline/class488/class488.md
-class489,62,1,정규교과-9,RAG(Retrieval-Augmented Generation),41/52,응답 검증/출처화 · 단계 4/5 실전 검증 [class489],실전심화,ragPipeline/class489/class489.md
-class490,62,2,정규교과-9,RAG(Retrieval-Augmented Generation),42/52,응답 검증/출처화 · 단계 5/5 운영 최적화 [class490],실전심화,ragPipeline/class490/class490.md
-class491,62,3,정규교과-9,RAG(Retrieval-Augmented Generation),43/52,평가 지표 설계 · 단계 1/5 입문 이해 [class491],실전심화,ragPipeline/class491/class491.md
-class492,62,4,정규교과-9,RAG(Retrieval-Augmented Generation),44/52,평가 지표 설계 · 단계 2/5 기초 구현 [class492],실전심화,ragPipeline/class492/class492.md
-class493,62,5,정규교과-9,RAG(Retrieval-Augmented Generation),45/52,평가 지표 설계 · 단계 3/5 응용 확장 [class493],실전심화,ragPipeline/class493/class493.md
-class494,62,6,정규교과-9,RAG(Retrieval-Augmented Generation),46/52,평가 지표 설계 · 단계 4/5 실전 검증 [class494],실전심화,ragPipeline/class494/class494.md
-class495,62,7,정규교과-9,RAG(Retrieval-Augmented Generation),47/52,평가 지표 설계 · 단계 5/5 운영 최적화 [class495],실전심화,ragPipeline/class495/class495.md
-class496,62,8,정규교과-9,RAG(Retrieval-Augmented Generation),48/52,Agent 시스템 통합 구현 · 단계 1/5 입문 이해 [class496],실전심화,ragPipeline/class496/class496.md
-class497,63,1,정규교과-9,RAG(Retrieval-Augmented Generation),49/52,Agent 시스템 통합 구현 · 단계 2/5 기초 구현 [class497],실전심화,ragPipeline/class497/class497.md
-class498,63,2,정규교과-9,RAG(Retrieval-Augmented Generation),50/52,Agent 시스템 통합 구현 · 단계 3/5 응용 확장 [class498],실전심화,ragPipeline/class498/class498.md
-class499,63,3,정규교과-9,RAG(Retrieval-Augmented Generation),51/52,Agent 시스템 통합 구현 · 단계 4/5 실전 검증 [class499],실전심화,ragPipeline/class499/class499.md
-class500,63,4,정규교과-9,RAG(Retrieval-Augmented Generation),52/52,Agent 시스템 통합 구현 · 단계 5/5 운영 최적화 [class500],실전심화,ragPipeline/class500/class500.md
-class501,64,1,정규교과-10,LLMOps,1/20,LLMOps 개요 · 단계 1/4 입문 이해 [class501],입문,llmOps/class501/class501.md
-class502,64,2,정규교과-10,LLMOps,2/20,LLMOps 개요 · 단계 2/4 기초 구현 [class502],기초응용,llmOps/class502/class502.md
-class503,64,3,정규교과-10,LLMOps,3/20,LLMOps 개요 · 단계 3/4 실전 검증 [class503],실전심화,llmOps/class503/class503.md
-class504,64,4,정규교과-10,LLMOps,4/20,LLMOps 개요 · 단계 4/4 운영 최적화 [class504],실전심화,llmOps/class504/class504.md
-class505,64,5,정규교과-10,LLMOps,5/20,프롬프트 관리 · 단계 1/4 입문 이해 [class505],입문,llmOps/class505/class505.md
-class506,64,6,정규교과-10,LLMOps,6/20,프롬프트 관리 · 단계 2/4 기초 구현 [class506],기초응용,llmOps/class506/class506.md
-class507,64,7,정규교과-10,LLMOps,7/20,프롬프트 관리 · 단계 3/4 실전 검증 [class507],실전심화,llmOps/class507/class507.md
-class508,64,8,정규교과-10,LLMOps,8/20,프롬프트 관리 · 단계 4/4 운영 최적화 [class508],실전심화,llmOps/class508/class508.md
-class509,65,1,정규교과-10,LLMOps,9/20,LLM 평가와 품질 · 단계 1/4 입문 이해 [class509],입문,llmOps/class509/class509.md
-class510,65,2,정규교과-10,LLMOps,10/20,LLM 평가와 품질 · 단계 2/4 기초 구현 [class510],기초응용,llmOps/class510/class510.md
-class511,65,3,정규교과-10,LLMOps,11/20,LLM 평가와 품질 · 단계 3/4 실전 검증 [class511],실전심화,llmOps/class511/class511.md
-class512,65,4,정규교과-10,LLMOps,12/20,LLM 평가와 품질 · 단계 4/4 운영 최적화 [class512],실전심화,llmOps/class512/class512.md
-class513,65,5,정규교과-10,LLMOps,13/20,LLM 모니터링 · 단계 1/4 입문 이해 [class513],입문,llmOps/class513/class513.md
-class514,65,6,정규교과-10,LLMOps,14/20,LLM 모니터링 · 단계 2/4 기초 구현 [class514],기초응용,llmOps/class514/class514.md
-class515,65,7,정규교과-10,LLMOps,15/20,LLM 모니터링 · 단계 3/4 실전 검증 [class515],실전심화,llmOps/class515/class515.md
-class516,65,8,정규교과-10,LLMOps,16/20,LLM 모니터링 · 단계 4/4 운영 최적화 [class516],실전심화,llmOps/class516/class516.md
-class517,66,1,정규교과-10,LLMOps,17/20,LLM 배포 자동화 · 단계 1/4 입문 이해 [class517],입문,llmOps/class517/class517.md
-class518,66,2,정규교과-10,LLMOps,18/20,LLM 배포 자동화 · 단계 2/4 기초 구현 [class518],기초응용,llmOps/class518/class518.md
-class519,66,3,정규교과-10,LLMOps,19/20,LLM 배포 자동화 · 단계 3/4 실전 검증 [class519],실전심화,llmOps/class519/class519.md
-class520,66,4,정규교과-10,LLMOps,20/20,LLM 배포 자동화 · 단계 4/4 운영 최적화 [class520],실전심화,llmOps/class520/class520.md
-project001,63,5,프로젝트-A,프로젝트,1/3,나만의 음성 모델 만들기 [VoiceModelBuilder],기초응용,VoiceModelBuilder/README.md
-project002,63,6,프로젝트-B,프로젝트,2/3,거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기 [PersonaLLMResponder],기초응용,PersonaLLMResponder/README.md
-project003,63,7,프로젝트-C,프로젝트,3/3,사전 데이터 기반 PERSO AI의 답변 커스텀하기 [PersonaKnowledgeCustomizer],기초응용,PersonaKnowledgeCustomizer/README.md
+class,day,slot,subject_code,subject_name,subject_session,module,level,md_file,lm_studio_level
+class001,1,1,정규교과-1,Python 프로그래밍,1/40,수업 준비 1: 필수 플랫폼 가입/계정 설정 (class001) · 단계 1/1 입문 이해 [class001],입문,pyBasics/class001/class001.md,레벨1-입문
+class002,1,2,정규교과-1,Python 프로그래밍,2/40,수업 준비 2: 필수 소프트웨어 설치 (class002) · 단계 1/1 입문 이해 [class002],입문,pyBasics/class002/class002.md,레벨1-입문
+class003,1,3,정규교과-1,Python 프로그래밍,3/40,수업 준비 3: 개발환경 검증/실행 확인 (class003) · 단계 1/1 입문 이해 [class003],입문,pyBasics/class003/class003.md,레벨1-입문
+class004,1,4,정규교과-1,Python 프로그래밍,4/40,Python 기초 시작: 변수와 출력 첫 실행 (class004) · 단계 1/1 입문 이해 [class004],입문,pyBasics/class004/class004.md,레벨1-입문
+class005,1,5,정규교과-1,Python 프로그래밍,5/40,변수와 자료형 · 단계 1/4 입문 이해 [class005],입문,pyBasics/class005/class005.md,레벨1-입문
+class006,1,6,정규교과-1,Python 프로그래밍,6/40,변수와 자료형 · 단계 2/4 기초 구현 [class006],입문,pyBasics/class006/class006.md,레벨1-입문
+class007,1,7,정규교과-1,Python 프로그래밍,7/40,변수와 자료형 · 단계 3/4 실전 검증 [class007],입문,pyBasics/class007/class007.md,레벨1-입문
+class008,1,8,정규교과-1,Python 프로그래밍,8/40,변수와 자료형 · 단계 4/4 운영 최적화 [class008],입문,pyBasics/class008/class008.md,레벨1-입문
+class009,2,1,정규교과-1,Python 프로그래밍,9/40,연산자와 조건문 · 단계 1/4 입문 이해 [class009],기초응용,pyBasics/class009/class009.md,레벨1-입문
+class010,2,2,정규교과-1,Python 프로그래밍,10/40,연산자와 조건문 · 단계 2/4 기초 구현 [class010],기초응용,pyBasics/class010/class010.md,레벨1-입문
+class011,2,3,정규교과-1,Python 프로그래밍,11/40,연산자와 조건문 · 단계 3/4 실전 검증 [class011],기초응용,pyBasics/class011/class011.md,레벨1-입문
+class012,2,4,정규교과-1,Python 프로그래밍,12/40,연산자와 조건문 · 단계 4/4 운영 최적화 [class012],기초응용,pyBasics/class012/class012.md,레벨1-입문
+class013,2,5,정규교과-1,Python 프로그래밍,13/40,반복문과 흐름제어 · 단계 1/4 입문 이해 [class013],기초응용,pyBasics/class013/class013.md,레벨1-입문
+class014,2,6,정규교과-1,Python 프로그래밍,14/40,반복문과 흐름제어 · 단계 2/4 기초 구현 [class014],기초응용,pyBasics/class014/class014.md,레벨1-입문
+class015,2,7,정규교과-1,Python 프로그래밍,15/40,반복문과 흐름제어 · 단계 3/4 실전 검증 [class015],기초응용,pyBasics/class015/class015.md,레벨1-입문
+class016,2,8,정규교과-1,Python 프로그래밍,16/40,반복문과 흐름제어 · 단계 4/4 운영 최적화 [class016],기초응용,pyBasics/class016/class016.md,레벨1-입문
+class017,3,1,정규교과-1,Python 프로그래밍,17/40,함수와 모듈 · 단계 1/4 입문 이해 [class017],기초응용,pyBasics/class017/class017.md,레벨1-입문
+class018,3,2,정규교과-1,Python 프로그래밍,18/40,함수와 모듈 · 단계 2/4 기초 구현 [class018],기초응용,pyBasics/class018/class018.md,레벨1-입문
+class019,3,3,정규교과-1,Python 프로그래밍,19/40,함수와 모듈 · 단계 3/4 실전 검증 [class019],기초응용,pyBasics/class019/class019.md,레벨1-입문
+class020,3,4,정규교과-1,Python 프로그래밍,20/40,함수와 모듈 · 단계 4/4 운영 최적화 [class020],기초응용,pyBasics/class020/class020.md,레벨1-입문
+class021,3,5,정규교과-1,Python 프로그래밍,21/40,컬렉션 자료구조 · 단계 1/4 입문 이해 [class021],기초응용,pyBasics/class021/class021.md,레벨1-입문
+class022,3,6,정규교과-1,Python 프로그래밍,22/40,컬렉션 자료구조 · 단계 2/4 기초 구현 [class022],기초응용,pyBasics/class022/class022.md,레벨1-입문
+class023,3,7,정규교과-1,Python 프로그래밍,23/40,컬렉션 자료구조 · 단계 3/4 실전 검증 [class023],기초응용,pyBasics/class023/class023.md,레벨1-입문
+class024,3,8,정규교과-1,Python 프로그래밍,24/40,컬렉션 자료구조 · 단계 4/4 운영 최적화 [class024],기초응용,pyBasics/class024/class024.md,레벨1-입문
+class025,4,1,정규교과-1,Python 프로그래밍,25/40,파일 입출력 · 단계 1/4 입문 이해 [class025],기초응용,pyBasics/class025/class025.md,레벨1-입문
+class026,4,2,정규교과-1,Python 프로그래밍,26/40,파일 입출력 · 단계 2/4 기초 구현 [class026],기초응용,pyBasics/class026/class026.md,레벨1-입문
+class027,4,3,정규교과-1,Python 프로그래밍,27/40,파일 입출력 · 단계 3/4 실전 검증 [class027],기초응용,pyBasics/class027/class027.md,레벨1-입문
+class028,4,4,정규교과-1,Python 프로그래밍,28/40,파일 입출력 · 단계 4/4 운영 최적화 [class028],기초응용,pyBasics/class028/class028.md,레벨1-입문
+class029,4,5,정규교과-1,Python 프로그래밍,29/40,웹 프론트엔드 기초 (HTML/CSS/JS) · 단계 1/2 입문 이해 [class029],실전심화,pyBasics/class029/class029.md,레벨1-입문
+class030,4,6,정규교과-1,Python 프로그래밍,30/40,웹 프론트엔드 기초 (HTML/CSS/JS) · 단계 2/2 운영 최적화 [class030],실전심화,pyBasics/class030/class030.md,레벨1-입문
+class031,4,7,정규교과-1,Python 프로그래밍,31/40,Tailwind CSS와 UI 컴포넌트 · 단계 1/2 입문 이해 [class031],실전심화,pyBasics/class031/class031.md,레벨1-입문
+class032,4,8,정규교과-1,Python 프로그래밍,32/40,Tailwind CSS와 UI 컴포넌트 · 단계 2/2 운영 최적화 [class032],실전심화,pyBasics/class032/class032.md,레벨1-입문
+class033,5,1,정규교과-1,Python 프로그래밍,33/40,Python 외부 라이브러리 활용 · 단계 1/2 입문 이해 [class033],실전심화,pyBasics/class033/class033.md,레벨1-입문
+class034,5,2,정규교과-1,Python 프로그래밍,34/40,Python 외부 라이브러리 활용 · 단계 2/2 운영 최적화 [class034],실전심화,pyBasics/class034/class034.md,레벨1-입문
+class035,5,3,정규교과-1,Python 프로그래밍,35/40,API 기본 개념과 HTTP · 단계 1/2 입문 이해 [class035],실전심화,pyBasics/class035/class035.md,레벨1-입문
+class036,5,4,정규교과-1,Python 프로그래밍,36/40,API 기본 개념과 HTTP · 단계 2/2 운영 최적화 [class036],실전심화,pyBasics/class036/class036.md,레벨1-입문
+class037,5,5,정규교과-1,Python 프로그래밍,37/40,FastAPI와 Uvicorn · 단계 1/2 입문 이해 [class037],실전심화,pyBasics/class037/class037.md,레벨1-입문
+class038,5,6,정규교과-1,Python 프로그래밍,38/40,FastAPI와 Uvicorn · 단계 2/2 운영 최적화 [class038],실전심화,pyBasics/class038/class038.md,레벨1-입문
+class039,5,7,정규교과-1,Python 프로그래밍,39/40,API 명세서와 개발자 문서화 · 단계 1/2 입문 이해 [class039],실전심화,pyBasics/class039/class039.md,레벨1-입문
+class040,5,8,정규교과-1,Python 프로그래밍,40/40,API 명세서와 개발자 문서화 · 단계 2/2 운영 최적화 [class040],실전심화,pyBasics/class040/class040.md,레벨1-입문
+class041,6,1,정규교과-2,Python 전처리 및 시각화,1/40,데이터 분석 환경 구성 · 단계 1/4 입문 이해 [class041],입문,dataVizPrep/class041/class041.md,레벨2-기초
+class042,6,2,정규교과-2,Python 전처리 및 시각화,2/40,데이터 분석 환경 구성 · 단계 2/4 기초 구현 [class042],입문,dataVizPrep/class042/class042.md,레벨2-기초
+class043,6,3,정규교과-2,Python 전처리 및 시각화,3/40,데이터 분석 환경 구성 · 단계 3/4 실전 검증 [class043],입문,dataVizPrep/class043/class043.md,레벨2-기초
+class044,6,4,정규교과-2,Python 전처리 및 시각화,4/40,데이터 분석 환경 구성 · 단계 4/4 운영 최적화 [class044],입문,dataVizPrep/class044/class044.md,레벨2-기초
+class045,6,5,정규교과-2,Python 전처리 및 시각화,5/40,NumPy 기초 · 단계 1/4 입문 이해 [class045],입문,dataVizPrep/class045/class045.md,레벨2-기초
+class046,6,6,정규교과-2,Python 전처리 및 시각화,6/40,NumPy 기초 · 단계 2/4 기초 구현 [class046],입문,dataVizPrep/class046/class046.md,레벨2-기초
+class047,6,7,정규교과-2,Python 전처리 및 시각화,7/40,NumPy 기초 · 단계 3/4 실전 검증 [class047],입문,dataVizPrep/class047/class047.md,레벨2-기초
+class048,6,8,정규교과-2,Python 전처리 및 시각화,8/40,NumPy 기초 · 단계 4/4 운영 최적화 [class048],입문,dataVizPrep/class048/class048.md,레벨2-기초
+class049,7,1,정규교과-2,Python 전처리 및 시각화,9/40,Pandas 데이터프레임 기초 · 단계 1/4 입문 이해 [class049],기초응용,dataVizPrep/class049/class049.md,레벨2-기초
+class050,7,2,정규교과-2,Python 전처리 및 시각화,10/40,Pandas 데이터프레임 기초 · 단계 2/4 기초 구현 [class050],기초응용,dataVizPrep/class050/class050.md,레벨2-기초
+class051,7,3,정규교과-2,Python 전처리 및 시각화,11/40,Pandas 데이터프레임 기초 · 단계 3/4 실전 검증 [class051],기초응용,dataVizPrep/class051/class051.md,레벨2-기초
+class052,7,4,정규교과-2,Python 전처리 및 시각화,12/40,Pandas 데이터프레임 기초 · 단계 4/4 운영 최적화 [class052],기초응용,dataVizPrep/class052/class052.md,레벨2-기초
+class053,7,5,정규교과-2,Python 전처리 및 시각화,13/40,결측치/이상치 처리 · 단계 1/4 입문 이해 [class053],기초응용,dataVizPrep/class053/class053.md,레벨2-기초
+class054,7,6,정규교과-2,Python 전처리 및 시각화,14/40,결측치/이상치 처리 · 단계 2/4 기초 구현 [class054],기초응용,dataVizPrep/class054/class054.md,레벨2-기초
+class055,7,7,정규교과-2,Python 전처리 및 시각화,15/40,결측치/이상치 처리 · 단계 3/4 실전 검증 [class055],기초응용,dataVizPrep/class055/class055.md,레벨2-기초
+class056,7,8,정규교과-2,Python 전처리 및 시각화,16/40,결측치/이상치 처리 · 단계 4/4 운영 최적화 [class056],기초응용,dataVizPrep/class056/class056.md,레벨2-기초
+class057,8,1,정규교과-2,Python 전처리 및 시각화,17/40,문자열/날짜 전처리 · 단계 1/4 입문 이해 [class057],기초응용,dataVizPrep/class057/class057.md,레벨2-기초
+class058,8,2,정규교과-2,Python 전처리 및 시각화,18/40,문자열/날짜 전처리 · 단계 2/4 기초 구현 [class058],기초응용,dataVizPrep/class058/class058.md,레벨2-기초
+class059,8,3,정규교과-2,Python 전처리 및 시각화,19/40,문자열/날짜 전처리 · 단계 3/4 실전 검증 [class059],기초응용,dataVizPrep/class059/class059.md,레벨2-기초
+class060,8,4,정규교과-2,Python 전처리 및 시각화,20/40,문자열/날짜 전처리 · 단계 4/4 운영 최적화 [class060],기초응용,dataVizPrep/class060/class060.md,레벨2-기초
+class061,8,5,정규교과-2,Python 전처리 및 시각화,21/40,그룹화와 집계 · 단계 1/4 입문 이해 [class061],기초응용,dataVizPrep/class061/class061.md,레벨2-기초
+class062,8,6,정규교과-2,Python 전처리 및 시각화,22/40,그룹화와 집계 · 단계 2/4 기초 구현 [class062],기초응용,dataVizPrep/class062/class062.md,레벨2-기초
+class063,8,7,정규교과-2,Python 전처리 및 시각화,23/40,그룹화와 집계 · 단계 3/4 실전 검증 [class063],기초응용,dataVizPrep/class063/class063.md,레벨2-기초
+class064,8,8,정규교과-2,Python 전처리 및 시각화,24/40,그룹화와 집계 · 단계 4/4 운영 최적화 [class064],기초응용,dataVizPrep/class064/class064.md,레벨2-기초
+class065,9,1,정규교과-2,Python 전처리 및 시각화,25/40,데이터 병합과 변환 · 단계 1/4 입문 이해 [class065],기초응용,dataVizPrep/class065/class065.md,레벨2-기초
+class066,9,2,정규교과-2,Python 전처리 및 시각화,26/40,데이터 병합과 변환 · 단계 2/4 기초 구현 [class066],기초응용,dataVizPrep/class066/class066.md,레벨2-기초
+class067,9,3,정규교과-2,Python 전처리 및 시각화,27/40,데이터 병합과 변환 · 단계 3/4 실전 검증 [class067],기초응용,dataVizPrep/class067/class067.md,레벨2-기초
+class068,9,4,정규교과-2,Python 전처리 및 시각화,28/40,데이터 병합과 변환 · 단계 4/4 운영 최적화 [class068],기초응용,dataVizPrep/class068/class068.md,레벨2-기초
+class069,9,5,정규교과-2,Python 전처리 및 시각화,29/40,Matplotlib 시각화 기초 · 단계 1/4 입문 이해 [class069],실전심화,dataVizPrep/class069/class069.md,레벨2-기초
+class070,9,6,정규교과-2,Python 전처리 및 시각화,30/40,Matplotlib 시각화 기초 · 단계 2/4 기초 구현 [class070],실전심화,dataVizPrep/class070/class070.md,레벨2-기초
+class071,9,7,정규교과-2,Python 전처리 및 시각화,31/40,Matplotlib 시각화 기초 · 단계 3/4 실전 검증 [class071],실전심화,dataVizPrep/class071/class071.md,레벨2-기초
+class072,9,8,정규교과-2,Python 전처리 및 시각화,32/40,Matplotlib 시각화 기초 · 단계 4/4 운영 최적화 [class072],실전심화,dataVizPrep/class072/class072.md,레벨2-기초
+class073,10,1,정규교과-2,Python 전처리 및 시각화,33/40,Seaborn/실전 차트 해석 · 단계 1/4 입문 이해 [class073],실전심화,dataVizPrep/class073/class073.md,레벨2-기초
+class074,10,2,정규교과-2,Python 전처리 및 시각화,34/40,Seaborn/실전 차트 해석 · 단계 2/4 기초 구현 [class074],실전심화,dataVizPrep/class074/class074.md,레벨2-기초
+class075,10,3,정규교과-2,Python 전처리 및 시각화,35/40,Seaborn/실전 차트 해석 · 단계 3/4 실전 검증 [class075],실전심화,dataVizPrep/class075/class075.md,레벨2-기초
+class076,10,4,정규교과-2,Python 전처리 및 시각화,36/40,Seaborn/실전 차트 해석 · 단계 4/4 운영 최적화 [class076],실전심화,dataVizPrep/class076/class076.md,레벨2-기초
+class077,10,5,정규교과-2,Python 전처리 및 시각화,37/40,Agent 시스템 통합 구현 · 단계 1/4 입문 이해 [class077],실전심화,dataVizPrep/class077/class077.md,레벨2-기초
+class078,10,6,정규교과-2,Python 전처리 및 시각화,38/40,Agent 시스템 통합 구현 · 단계 2/4 기초 구현 [class078],실전심화,dataVizPrep/class078/class078.md,레벨2-기초
+class079,10,7,정규교과-2,Python 전처리 및 시각화,39/40,Agent 시스템 통합 구현 · 단계 3/4 실전 검증 [class079],실전심화,dataVizPrep/class079/class079.md,레벨2-기초
+class080,10,8,정규교과-2,Python 전처리 및 시각화,40/40,Agent 시스템 통합 구현 · 단계 4/4 운영 최적화 [class080],실전심화,dataVizPrep/class080/class080.md,레벨2-기초
+class081,11,1,정규교과-3,머신러닝과 딥러닝,1/48,ML/DL 개요와 문제정의 · 단계 1/5 입문 이해 [class081],입문,mlDeepDive/class081/class081.md,레벨3-중급
+class082,11,2,정규교과-3,머신러닝과 딥러닝,2/48,ML/DL 개요와 문제정의 · 단계 2/5 기초 구현 [class082],입문,mlDeepDive/class082/class082.md,레벨3-중급
+class083,11,3,정규교과-3,머신러닝과 딥러닝,3/48,ML/DL 개요와 문제정의 · 단계 3/5 응용 확장 [class083],입문,mlDeepDive/class083/class083.md,레벨3-중급
+class084,11,4,정규교과-3,머신러닝과 딥러닝,4/48,ML/DL 개요와 문제정의 · 단계 4/5 실전 검증 [class084],입문,mlDeepDive/class084/class084.md,레벨3-중급
+class085,11,5,정규교과-3,머신러닝과 딥러닝,5/48,ML/DL 개요와 문제정의 · 단계 5/5 운영 최적화 [class085],입문,mlDeepDive/class085/class085.md,레벨3-중급
+class086,11,6,정규교과-3,머신러닝과 딥러닝,6/48,지도학습 기초 · 단계 1/5 입문 이해 [class086],입문,mlDeepDive/class086/class086.md,레벨3-중급
+class087,11,7,정규교과-3,머신러닝과 딥러닝,7/48,지도학습 기초 · 단계 2/5 기초 구현 [class087],입문,mlDeepDive/class087/class087.md,레벨3-중급
+class088,11,8,정규교과-3,머신러닝과 딥러닝,8/48,지도학습 기초 · 단계 3/5 응용 확장 [class088],입문,mlDeepDive/class088/class088.md,레벨3-중급
+class089,12,1,정규교과-3,머신러닝과 딥러닝,9/48,지도학습 기초 · 단계 4/5 실전 검증 [class089],입문,mlDeepDive/class089/class089.md,레벨3-중급
+class090,12,2,정규교과-3,머신러닝과 딥러닝,10/48,지도학습 기초 · 단계 5/5 운영 최적화 [class090],기초응용,mlDeepDive/class090/class090.md,레벨3-중급
+class091,12,3,정규교과-3,머신러닝과 딥러닝,11/48,회귀 모델 · 단계 1/5 입문 이해 [class091],기초응용,mlDeepDive/class091/class091.md,레벨3-중급
+class092,12,4,정규교과-3,머신러닝과 딥러닝,12/48,회귀 모델 · 단계 2/5 기초 구현 [class092],기초응용,mlDeepDive/class092/class092.md,레벨3-중급
+class093,12,5,정규교과-3,머신러닝과 딥러닝,13/48,회귀 모델 · 단계 3/5 응용 확장 [class093],기초응용,mlDeepDive/class093/class093.md,레벨3-중급
+class094,12,6,정규교과-3,머신러닝과 딥러닝,14/48,회귀 모델 · 단계 4/5 실전 검증 [class094],기초응용,mlDeepDive/class094/class094.md,레벨3-중급
+class095,12,7,정규교과-3,머신러닝과 딥러닝,15/48,회귀 모델 · 단계 5/5 운영 최적화 [class095],기초응용,mlDeepDive/class095/class095.md,레벨3-중급
+class096,12,8,정규교과-3,머신러닝과 딥러닝,16/48,분류 모델 · 단계 1/5 입문 이해 [class096],기초응용,mlDeepDive/class096/class096.md,레벨3-중급
+class097,13,1,정규교과-3,머신러닝과 딥러닝,17/48,분류 모델 · 단계 2/5 기초 구현 [class097],기초응용,mlDeepDive/class097/class097.md,레벨3-중급
+class098,13,2,정규교과-3,머신러닝과 딥러닝,18/48,분류 모델 · 단계 3/5 응용 확장 [class098],기초응용,mlDeepDive/class098/class098.md,레벨3-중급
+class099,13,3,정규교과-3,머신러닝과 딥러닝,19/48,분류 모델 · 단계 4/5 실전 검증 [class099],기초응용,mlDeepDive/class099/class099.md,레벨3-중급
+class100,13,4,정규교과-3,머신러닝과 딥러닝,20/48,분류 모델 · 단계 5/5 운영 최적화 [class100],기초응용,mlDeepDive/class100/class100.md,레벨3-중급
+class101,13,5,정규교과-3,머신러닝과 딥러닝,21/48,모델 평가 지표 · 단계 1/4 입문 이해 [class101],기초응용,mlDeepDive/class101/class101.md,레벨3-중급
+class102,13,6,정규교과-3,머신러닝과 딥러닝,22/48,모델 평가 지표 · 단계 2/4 기초 구현 [class102],기초응용,mlDeepDive/class102/class102.md,레벨3-중급
+class103,13,7,정규교과-3,머신러닝과 딥러닝,23/48,모델 평가 지표 · 단계 3/4 실전 검증 [class103],기초응용,mlDeepDive/class103/class103.md,레벨3-중급
+class104,13,8,정규교과-3,머신러닝과 딥러닝,24/48,모델 평가 지표 · 단계 4/4 운영 최적화 [class104],기초응용,mlDeepDive/class104/class104.md,레벨3-중급
+class105,14,1,정규교과-3,머신러닝과 딥러닝,25/48,특성공학과 전처리 · 단계 1/5 입문 이해 [class105],기초응용,mlDeepDive/class105/class105.md,레벨3-중급
+class106,14,2,정규교과-3,머신러닝과 딥러닝,26/48,특성공학과 전처리 · 단계 2/5 기초 구현 [class106],기초응용,mlDeepDive/class106/class106.md,레벨3-중급
+class107,14,3,정규교과-3,머신러닝과 딥러닝,27/48,특성공학과 전처리 · 단계 3/5 응용 확장 [class107],기초응용,mlDeepDive/class107/class107.md,레벨3-중급
+class108,14,4,정규교과-3,머신러닝과 딥러닝,28/48,특성공학과 전처리 · 단계 4/5 실전 검증 [class108],기초응용,mlDeepDive/class108/class108.md,레벨3-중급
+class109,14,5,정규교과-3,머신러닝과 딥러닝,29/48,특성공학과 전처리 · 단계 5/5 운영 최적화 [class109],기초응용,mlDeepDive/class109/class109.md,레벨3-중급
+class110,14,6,정규교과-3,머신러닝과 딥러닝,30/48,과적합과 일반화 · 단계 1/5 입문 이해 [class110],기초응용,mlDeepDive/class110/class110.md,레벨3-중급
+class111,14,7,정규교과-3,머신러닝과 딥러닝,31/48,과적합과 일반화 · 단계 2/5 기초 구현 [class111],기초응용,mlDeepDive/class111/class111.md,레벨3-중급
+class112,14,8,정규교과-3,머신러닝과 딥러닝,32/48,과적합과 일반화 · 단계 3/5 응용 확장 [class112],기초응용,mlDeepDive/class112/class112.md,레벨3-중급
+class113,15,1,정규교과-3,머신러닝과 딥러닝,33/48,과적합과 일반화 · 단계 4/5 실전 검증 [class113],기초응용,mlDeepDive/class113/class113.md,레벨3-중급
+class114,15,2,정규교과-3,머신러닝과 딥러닝,34/48,과적합과 일반화 · 단계 5/5 운영 최적화 [class114],실전심화,mlDeepDive/class114/class114.md,레벨3-중급
+class115,15,3,정규교과-3,머신러닝과 딥러닝,35/48,신경망 기초 · 단계 1/5 입문 이해 [class115],실전심화,mlDeepDive/class115/class115.md,레벨3-중급
+class116,15,4,정규교과-3,머신러닝과 딥러닝,36/48,신경망 기초 · 단계 2/5 기초 구현 [class116],실전심화,mlDeepDive/class116/class116.md,레벨3-중급
+class117,15,5,정규교과-3,머신러닝과 딥러닝,37/48,신경망 기초 · 단계 3/5 응용 확장 [class117],실전심화,mlDeepDive/class117/class117.md,레벨3-중급
+class118,15,6,정규교과-3,머신러닝과 딥러닝,38/48,신경망 기초 · 단계 4/5 실전 검증 [class118],실전심화,mlDeepDive/class118/class118.md,레벨3-중급
+class119,15,7,정규교과-3,머신러닝과 딥러닝,39/48,신경망 기초 · 단계 5/5 운영 최적화 [class119],실전심화,mlDeepDive/class119/class119.md,레벨3-중급
+class120,15,8,정규교과-3,머신러닝과 딥러닝,40/48,딥러닝 학습 구조 · 단계 1/5 입문 이해 [class120],실전심화,mlDeepDive/class120/class120.md,레벨3-중급
+class121,16,1,정규교과-3,머신러닝과 딥러닝,41/48,딥러닝 학습 구조 · 단계 2/5 기초 구현 [class121],실전심화,mlDeepDive/class121/class121.md,레벨3-중급
+class122,16,2,정규교과-3,머신러닝과 딥러닝,42/48,딥러닝 학습 구조 · 단계 3/5 응용 확장 [class122],실전심화,mlDeepDive/class122/class122.md,레벨3-중급
+class123,16,3,정규교과-3,머신러닝과 딥러닝,43/48,딥러닝 학습 구조 · 단계 4/5 실전 검증 [class123],실전심화,mlDeepDive/class123/class123.md,레벨3-중급
+class124,16,4,정규교과-3,머신러닝과 딥러닝,44/48,딥러닝 학습 구조 · 단계 5/5 운영 최적화 [class124],실전심화,mlDeepDive/class124/class124.md,레벨3-중급
+class125,16,5,정규교과-3,머신러닝과 딥러닝,45/48,Agent 시스템 통합 구현 · 단계 1/4 입문 이해 [class125],실전심화,mlDeepDive/class125/class125.md,레벨3-중급
+class126,16,6,정규교과-3,머신러닝과 딥러닝,46/48,Agent 시스템 통합 구현 · 단계 2/4 기초 구현 [class126],실전심화,mlDeepDive/class126/class126.md,레벨3-중급
+class127,16,7,정규교과-3,머신러닝과 딥러닝,47/48,Agent 시스템 통합 구현 · 단계 3/4 실전 검증 [class127],실전심화,mlDeepDive/class127/class127.md,레벨3-중급
+class128,16,8,정규교과-3,머신러닝과 딥러닝,48/48,Agent 시스템 통합 구현 · 단계 4/4 운영 최적화 [class128],실전심화,mlDeepDive/class128/class128.md,레벨3-중급
+class129,17,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,1/96,NLP/STT/TTS 개요 · 단계 1/8 입문 이해 [class129],입문,nlpSpeechAI/class129/class129.md,레벨3-중급
+class130,17,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,2/96,NLP/STT/TTS 개요 · 단계 2/8 기초 구현 [class130],입문,nlpSpeechAI/class130/class130.md,레벨3-중급
+class131,17,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,3/96,NLP/STT/TTS 개요 · 단계 3/8 기초 구현 [class131],입문,nlpSpeechAI/class131/class131.md,레벨3-중급
+class132,17,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,4/96,NLP/STT/TTS 개요 · 단계 4/8 응용 확장 [class132],입문,nlpSpeechAI/class132/class132.md,레벨3-중급
+class133,17,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,5/96,NLP/STT/TTS 개요 · 단계 5/8 응용 확장 [class133],입문,nlpSpeechAI/class133/class133.md,레벨3-중급
+class134,17,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,6/96,NLP/STT/TTS 개요 · 단계 6/8 실전 검증 [class134],입문,nlpSpeechAI/class134/class134.md,레벨3-중급
+class135,17,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,7/96,NLP/STT/TTS 개요 · 단계 7/8 실전 검증 [class135],입문,nlpSpeechAI/class135/class135.md,레벨3-중급
+class136,17,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,8/96,NLP/STT/TTS 개요 · 단계 8/8 운영 최적화 [class136],입문,nlpSpeechAI/class136/class136.md,레벨3-중급
+class137,18,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,9/96,텍스트 데이터 수집 · 단계 1/8 입문 이해 [class137],입문,nlpSpeechAI/class137/class137.md,레벨3-중급
+class138,18,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,10/96,텍스트 데이터 수집 · 단계 2/8 기초 구현 [class138],입문,nlpSpeechAI/class138/class138.md,레벨3-중급
+class139,18,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,11/96,텍스트 데이터 수집 · 단계 3/8 기초 구현 [class139],입문,nlpSpeechAI/class139/class139.md,레벨3-중급
+class140,18,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,12/96,텍스트 데이터 수집 · 단계 4/8 응용 확장 [class140],입문,nlpSpeechAI/class140/class140.md,레벨3-중급
+class141,18,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,13/96,텍스트 데이터 수집 · 단계 5/8 응용 확장 [class141],입문,nlpSpeechAI/class141/class141.md,레벨3-중급
+class142,18,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,14/96,텍스트 데이터 수집 · 단계 6/8 실전 검증 [class142],입문,nlpSpeechAI/class142/class142.md,레벨3-중급
+class143,18,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,15/96,텍스트 데이터 수집 · 단계 7/8 실전 검증 [class143],입문,nlpSpeechAI/class143/class143.md,레벨3-중급
+class144,18,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,16/96,텍스트 데이터 수집 · 단계 8/8 운영 최적화 [class144],입문,nlpSpeechAI/class144/class144.md,레벨3-중급
+class145,19,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,17/96,텍스트 정제와 토큰화 · 단계 1/8 입문 이해 [class145],입문,nlpSpeechAI/class145/class145.md,레벨3-중급
+class146,19,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,18/96,텍스트 정제와 토큰화 · 단계 2/8 기초 구현 [class146],입문,nlpSpeechAI/class146/class146.md,레벨3-중급
+class147,19,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,19/96,텍스트 정제와 토큰화 · 단계 3/8 기초 구현 [class147],입문,nlpSpeechAI/class147/class147.md,레벨3-중급
+class148,19,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,20/96,텍스트 정제와 토큰화 · 단계 4/8 응용 확장 [class148],기초응용,nlpSpeechAI/class148/class148.md,레벨3-중급
+class149,19,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,21/96,텍스트 정제와 토큰화 · 단계 5/8 응용 확장 [class149],기초응용,nlpSpeechAI/class149/class149.md,레벨3-중급
+class150,19,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,22/96,텍스트 정제와 토큰화 · 단계 6/8 실전 검증 [class150],기초응용,nlpSpeechAI/class150/class150.md,레벨3-중급
+class151,19,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,23/96,텍스트 정제와 토큰화 · 단계 7/8 실전 검증 [class151],기초응용,nlpSpeechAI/class151/class151.md,레벨3-중급
+class152,19,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,24/96,텍스트 정제와 토큰화 · 단계 8/8 운영 최적화 [class152],기초응용,nlpSpeechAI/class152/class152.md,레벨3-중급
+class153,20,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,25/96,임베딩 기초 · 단계 1/8 입문 이해 [class153],기초응용,nlpSpeechAI/class153/class153.md,레벨3-중급
+class154,20,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,26/96,임베딩 기초 · 단계 2/8 기초 구현 [class154],기초응용,nlpSpeechAI/class154/class154.md,레벨3-중급
+class155,20,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,27/96,임베딩 기초 · 단계 3/8 기초 구현 [class155],기초응용,nlpSpeechAI/class155/class155.md,레벨3-중급
+class156,20,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,28/96,임베딩 기초 · 단계 4/8 응용 확장 [class156],기초응용,nlpSpeechAI/class156/class156.md,레벨3-중급
+class157,20,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,29/96,임베딩 기초 · 단계 5/8 응용 확장 [class157],기초응용,nlpSpeechAI/class157/class157.md,레벨3-중급
+class158,20,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,30/96,임베딩 기초 · 단계 6/8 실전 검증 [class158],기초응용,nlpSpeechAI/class158/class158.md,레벨3-중급
+class159,20,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,31/96,임베딩 기초 · 단계 7/8 실전 검증 [class159],기초응용,nlpSpeechAI/class159/class159.md,레벨3-중급
+class160,20,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,32/96,임베딩 기초 · 단계 8/8 운영 최적화 [class160],기초응용,nlpSpeechAI/class160/class160.md,레벨3-중급
+class161,21,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,33/96,언어모델 입력 구조 · 단계 1/8 입문 이해 [class161],기초응용,nlpSpeechAI/class161/class161.md,레벨3-중급
+class162,21,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,34/96,언어모델 입력 구조 · 단계 2/8 기초 구현 [class162],기초응용,nlpSpeechAI/class162/class162.md,레벨3-중급
+class163,21,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,35/96,언어모델 입력 구조 · 단계 3/8 기초 구현 [class163],기초응용,nlpSpeechAI/class163/class163.md,레벨3-중급
+class164,21,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,36/96,언어모델 입력 구조 · 단계 4/8 응용 확장 [class164],기초응용,nlpSpeechAI/class164/class164.md,레벨3-중급
+class165,21,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,37/96,언어모델 입력 구조 · 단계 5/8 응용 확장 [class165],기초응용,nlpSpeechAI/class165/class165.md,레벨3-중급
+class166,21,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,38/96,언어모델 입력 구조 · 단계 6/8 실전 검증 [class166],기초응용,nlpSpeechAI/class166/class166.md,레벨3-중급
+class167,21,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,39/96,언어모델 입력 구조 · 단계 7/8 실전 검증 [class167],기초응용,nlpSpeechAI/class167/class167.md,레벨3-중급
+class168,21,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,40/96,언어모델 입력 구조 · 단계 8/8 운영 최적화 [class168],기초응용,nlpSpeechAI/class168/class168.md,레벨3-중급
+class169,22,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,41/96,음성 데이터 구조 이해 · 단계 1/8 입문 이해 [class169],기초응용,nlpSpeechAI/class169/class169.md,레벨3-중급
+class170,22,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,42/96,음성 데이터 구조 이해 · 단계 2/8 기초 구현 [class170],기초응용,nlpSpeechAI/class170/class170.md,레벨3-중급
+class171,22,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,43/96,음성 데이터 구조 이해 · 단계 3/8 기초 구현 [class171],기초응용,nlpSpeechAI/class171/class171.md,레벨3-중급
+class172,22,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,44/96,음성 데이터 구조 이해 · 단계 4/8 응용 확장 [class172],기초응용,nlpSpeechAI/class172/class172.md,레벨3-중급
+class173,22,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,45/96,음성 데이터 구조 이해 · 단계 5/8 응용 확장 [class173],기초응용,nlpSpeechAI/class173/class173.md,레벨3-중급
+class174,22,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,46/96,음성 데이터 구조 이해 · 단계 6/8 실전 검증 [class174],기초응용,nlpSpeechAI/class174/class174.md,레벨3-중급
+class175,22,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,47/96,음성 데이터 구조 이해 · 단계 7/8 실전 검증 [class175],기초응용,nlpSpeechAI/class175/class175.md,레벨3-중급
+class176,22,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,48/96,음성 데이터 구조 이해 · 단계 8/8 운영 최적화 [class176],기초응용,nlpSpeechAI/class176/class176.md,레벨3-중급
+class177,23,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,49/96,오디오 전처리 · 단계 1/8 입문 이해 [class177],기초응용,nlpSpeechAI/class177/class177.md,레벨3-중급
+class178,23,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,50/96,오디오 전처리 · 단계 2/8 기초 구현 [class178],기초응용,nlpSpeechAI/class178/class178.md,레벨3-중급
+class179,23,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,51/96,오디오 전처리 · 단계 3/8 기초 구현 [class179],기초응용,nlpSpeechAI/class179/class179.md,레벨3-중급
+class180,23,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,52/96,오디오 전처리 · 단계 4/8 응용 확장 [class180],기초응용,nlpSpeechAI/class180/class180.md,레벨3-중급
+class181,23,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,53/96,오디오 전처리 · 단계 5/8 응용 확장 [class181],기초응용,nlpSpeechAI/class181/class181.md,레벨3-중급
+class182,23,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,54/96,오디오 전처리 · 단계 6/8 실전 검증 [class182],기초응용,nlpSpeechAI/class182/class182.md,레벨3-중급
+class183,23,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,55/96,오디오 전처리 · 단계 7/8 실전 검증 [class183],기초응용,nlpSpeechAI/class183/class183.md,레벨3-중급
+class184,23,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,56/96,오디오 전처리 · 단계 8/8 운영 최적화 [class184],기초응용,nlpSpeechAI/class184/class184.md,레벨3-중급
+class185,24,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,57/96,특징 추출(MFCC 등) · 단계 1/8 입문 이해 [class185],기초응용,nlpSpeechAI/class185/class185.md,레벨3-중급
+class186,24,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,58/96,특징 추출(MFCC 등) · 단계 2/8 기초 구현 [class186],기초응용,nlpSpeechAI/class186/class186.md,레벨3-중급
+class187,24,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,59/96,특징 추출(MFCC 등) · 단계 3/8 기초 구현 [class187],기초응용,nlpSpeechAI/class187/class187.md,레벨3-중급
+class188,24,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,60/96,특징 추출(MFCC 등) · 단계 4/8 응용 확장 [class188],기초응용,nlpSpeechAI/class188/class188.md,레벨3-중급
+class189,24,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,61/96,특징 추출(MFCC 등) · 단계 5/8 응용 확장 [class189],기초응용,nlpSpeechAI/class189/class189.md,레벨3-중급
+class190,24,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,62/96,특징 추출(MFCC 등) · 단계 6/8 실전 검증 [class190],기초응용,nlpSpeechAI/class190/class190.md,레벨3-중급
+class191,24,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,63/96,특징 추출(MFCC 등) · 단계 7/8 실전 검증 [class191],기초응용,nlpSpeechAI/class191/class191.md,레벨3-중급
+class192,24,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,64/96,특징 추출(MFCC 등) · 단계 8/8 운영 최적화 [class192],기초응용,nlpSpeechAI/class192/class192.md,레벨3-중급
+class193,25,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,65/96,텍스트 분류 기초 · 단계 1/8 입문 이해 [class193],기초응용,nlpSpeechAI/class193/class193.md,레벨3-중급
+class194,25,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,66/96,텍스트 분류 기초 · 단계 2/8 기초 구현 [class194],기초응용,nlpSpeechAI/class194/class194.md,레벨3-중급
+class195,25,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,67/96,텍스트 분류 기초 · 단계 3/8 기초 구현 [class195],기초응용,nlpSpeechAI/class195/class195.md,레벨3-중급
+class196,25,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,68/96,텍스트 분류 기초 · 단계 4/8 응용 확장 [class196],실전심화,nlpSpeechAI/class196/class196.md,레벨3-중급
+class197,25,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,69/96,텍스트 분류 기초 · 단계 5/8 응용 확장 [class197],실전심화,nlpSpeechAI/class197/class197.md,레벨3-중급
+class198,25,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,70/96,텍스트 분류 기초 · 단계 6/8 실전 검증 [class198],실전심화,nlpSpeechAI/class198/class198.md,레벨3-중급
+class199,25,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,71/96,텍스트 분류 기초 · 단계 7/8 실전 검증 [class199],실전심화,nlpSpeechAI/class199/class199.md,레벨3-중급
+class200,25,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,72/96,텍스트 분류 기초 · 단계 8/8 운영 최적화 [class200],실전심화,nlpSpeechAI/class200/class200.md,레벨3-중급
+class201,26,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,73/96,시퀀스 모델 기초 · 단계 1/8 입문 이해 [class201],실전심화,nlpSpeechAI/class201/class201.md,레벨3-중급
+class202,26,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,74/96,시퀀스 모델 기초 · 단계 2/8 기초 구현 [class202],실전심화,nlpSpeechAI/class202/class202.md,레벨3-중급
+class203,26,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,75/96,시퀀스 모델 기초 · 단계 3/8 기초 구현 [class203],실전심화,nlpSpeechAI/class203/class203.md,레벨3-중급
+class204,26,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,76/96,시퀀스 모델 기초 · 단계 4/8 응용 확장 [class204],실전심화,nlpSpeechAI/class204/class204.md,레벨3-중급
+class205,26,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,77/96,시퀀스 모델 기초 · 단계 5/8 응용 확장 [class205],실전심화,nlpSpeechAI/class205/class205.md,레벨3-중급
+class206,26,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,78/96,시퀀스 모델 기초 · 단계 6/8 실전 검증 [class206],실전심화,nlpSpeechAI/class206/class206.md,레벨3-중급
+class207,26,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,79/96,시퀀스 모델 기초 · 단계 7/8 실전 검증 [class207],실전심화,nlpSpeechAI/class207/class207.md,레벨3-중급
+class208,26,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,80/96,시퀀스 모델 기초 · 단계 8/8 운영 최적화 [class208],실전심화,nlpSpeechAI/class208/class208.md,레벨3-중급
+class209,27,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,81/96,멀티모달 데이터 연결 · 단계 1/8 입문 이해 [class209],실전심화,nlpSpeechAI/class209/class209.md,레벨3-중급
+class210,27,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,82/96,멀티모달 데이터 연결 · 단계 2/8 기초 구현 [class210],실전심화,nlpSpeechAI/class210/class210.md,레벨3-중급
+class211,27,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,83/96,멀티모달 데이터 연결 · 단계 3/8 기초 구현 [class211],실전심화,nlpSpeechAI/class211/class211.md,레벨3-중급
+class212,27,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,84/96,멀티모달 데이터 연결 · 단계 4/8 응용 확장 [class212],실전심화,nlpSpeechAI/class212/class212.md,레벨3-중급
+class213,27,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,85/96,멀티모달 데이터 연결 · 단계 5/8 응용 확장 [class213],실전심화,nlpSpeechAI/class213/class213.md,레벨3-중급
+class214,27,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,86/96,멀티모달 데이터 연결 · 단계 6/8 실전 검증 [class214],실전심화,nlpSpeechAI/class214/class214.md,레벨3-중급
+class215,27,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,87/96,멀티모달 데이터 연결 · 단계 7/8 실전 검증 [class215],실전심화,nlpSpeechAI/class215/class215.md,레벨3-중급
+class216,27,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,88/96,멀티모달 데이터 연결 · 단계 8/8 운영 최적화 [class216],실전심화,nlpSpeechAI/class216/class216.md,레벨3-중급
+class217,28,1,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,89/96,실전 데이터셋 설계 · 단계 1/8 입문 이해 [class217],실전심화,nlpSpeechAI/class217/class217.md,레벨3-중급
+class218,28,2,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,90/96,실전 데이터셋 설계 · 단계 2/8 기초 구현 [class218],실전심화,nlpSpeechAI/class218/class218.md,레벨3-중급
+class219,28,3,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,91/96,실전 데이터셋 설계 · 단계 3/8 기초 구현 [class219],실전심화,nlpSpeechAI/class219/class219.md,레벨3-중급
+class220,28,4,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,92/96,실전 데이터셋 설계 · 단계 4/8 응용 확장 [class220],실전심화,nlpSpeechAI/class220/class220.md,레벨3-중급
+class221,28,5,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,93/96,실전 데이터셋 설계 · 단계 5/8 응용 확장 [class221],실전심화,nlpSpeechAI/class221/class221.md,레벨3-중급
+class222,28,6,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,94/96,실전 데이터셋 설계 · 단계 6/8 실전 검증 [class222],실전심화,nlpSpeechAI/class222/class222.md,레벨3-중급
+class223,28,7,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,95/96,실전 데이터셋 설계 · 단계 7/8 실전 검증 [class223],실전심화,nlpSpeechAI/class223/class223.md,레벨3-중급
+class224,28,8,정규교과-4,자연어 및 음성 데이터 활용 및 모델 개발,96/96,실전 데이터셋 설계 · 단계 8/8 운영 최적화 [class224],실전심화,nlpSpeechAI/class224/class224.md,레벨3-중급
+class225,29,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,1/64,음성 AI 개요 · 단계 1/7 입문 이해 [class225],입문,speechTtsStt/class225/class225.md,레벨3-중급
+class226,29,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,2/64,음성 AI 개요 · 단계 2/7 기초 구현 [class226],입문,speechTtsStt/class226/class226.md,레벨3-중급
+class227,29,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,3/64,음성 AI 개요 · 단계 3/7 기초 구현 [class227],입문,speechTtsStt/class227/class227.md,레벨3-중급
+class228,29,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,4/64,음성 AI 개요 · 단계 4/7 응용 확장 [class228],입문,speechTtsStt/class228/class228.md,레벨3-중급
+class229,29,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,5/64,음성 AI 개요 · 단계 5/7 실전 검증 [class229],입문,speechTtsStt/class229/class229.md,레벨3-중급
+class230,29,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,6/64,음성 AI 개요 · 단계 6/7 실전 검증 [class230],입문,speechTtsStt/class230/class230.md,레벨3-중급
+class231,29,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,7/64,음성 AI 개요 · 단계 7/7 운영 최적화 [class231],입문,speechTtsStt/class231/class231.md,레벨3-중급
+class232,29,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,8/64,STT 파이프라인 · 단계 1/6 입문 이해 [class232],입문,speechTtsStt/class232/class232.md,레벨3-중급
+class233,30,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,9/64,STT 파이프라인 · 단계 2/6 기초 구현 [class233],입문,speechTtsStt/class233/class233.md,레벨3-중급
+class234,30,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,10/64,STT 파이프라인 · 단계 3/6 응용 확장 [class234],입문,speechTtsStt/class234/class234.md,레벨3-중급
+class235,30,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,11/64,STT 파이프라인 · 단계 4/6 응용 확장 [class235],입문,speechTtsStt/class235/class235.md,레벨3-중급
+class236,30,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,12/64,STT 파이프라인 · 단계 5/6 실전 검증 [class236],입문,speechTtsStt/class236/class236.md,레벨3-중급
+class237,30,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,13/64,STT 파이프라인 · 단계 6/6 운영 최적화 [class237],기초응용,speechTtsStt/class237/class237.md,레벨3-중급
+class238,30,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,14/64,STT 데이터 라벨링 · 단계 1/7 입문 이해 [class238],기초응용,speechTtsStt/class238/class238.md,레벨3-중급
+class239,30,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,15/64,STT 데이터 라벨링 · 단계 2/7 기초 구현 [class239],기초응용,speechTtsStt/class239/class239.md,레벨3-중급
+class240,30,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,16/64,STT 데이터 라벨링 · 단계 3/7 기초 구현 [class240],기초응용,speechTtsStt/class240/class240.md,레벨3-중급
+class241,31,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,17/64,STT 데이터 라벨링 · 단계 4/7 응용 확장 [class241],기초응용,speechTtsStt/class241/class241.md,레벨3-중급
+class242,31,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,18/64,STT 데이터 라벨링 · 단계 5/7 실전 검증 [class242],기초응용,speechTtsStt/class242/class242.md,레벨3-중급
+class243,31,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,19/64,STT 데이터 라벨링 · 단계 6/7 실전 검증 [class243],기초응용,speechTtsStt/class243/class243.md,레벨3-중급
+class244,31,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,20/64,STT 데이터 라벨링 · 단계 7/7 운영 최적화 [class244],기초응용,speechTtsStt/class244/class244.md,레벨3-중급
+class245,31,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,21/64,STT 전처리/학습 · 단계 1/6 입문 이해 [class245],기초응용,speechTtsStt/class245/class245.md,레벨3-중급
+class246,31,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,22/64,STT 전처리/학습 · 단계 2/6 기초 구현 [class246],기초응용,speechTtsStt/class246/class246.md,레벨3-중급
+class247,31,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,23/64,STT 전처리/학습 · 단계 3/6 응용 확장 [class247],기초응용,speechTtsStt/class247/class247.md,레벨3-중급
+class248,31,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,24/64,STT 전처리/학습 · 단계 4/6 응용 확장 [class248],기초응용,speechTtsStt/class248/class248.md,레벨3-중급
+class249,32,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,25/64,STT 전처리/학습 · 단계 5/6 실전 검증 [class249],기초응용,speechTtsStt/class249/class249.md,레벨3-중급
+class250,32,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,26/64,STT 전처리/학습 · 단계 6/6 운영 최적화 [class250],기초응용,speechTtsStt/class250/class250.md,레벨3-중급
+class251,32,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,27/64,TTS 파이프라인 · 단계 1/6 입문 이해 [class251],기초응용,speechTtsStt/class251/class251.md,레벨3-중급
+class252,32,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,28/64,TTS 파이프라인 · 단계 2/6 기초 구현 [class252],기초응용,speechTtsStt/class252/class252.md,레벨3-중급
+class253,32,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,29/64,TTS 파이프라인 · 단계 3/6 응용 확장 [class253],기초응용,speechTtsStt/class253/class253.md,레벨3-중급
+class254,32,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,30/64,TTS 파이프라인 · 단계 4/6 응용 확장 [class254],기초응용,speechTtsStt/class254/class254.md,레벨3-중급
+class255,32,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,31/64,TTS 파이프라인 · 단계 5/6 실전 검증 [class255],기초응용,speechTtsStt/class255/class255.md,레벨3-중급
+class256,32,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,32/64,TTS 파이프라인 · 단계 6/6 운영 최적화 [class256],기초응용,speechTtsStt/class256/class256.md,레벨3-중급
+class257,33,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,33/64,발화/화자 특성 이해 · 단계 1/7 입문 이해 [class257],기초응용,speechTtsStt/class257/class257.md,레벨3-중급
+class258,33,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,34/64,발화/화자 특성 이해 · 단계 2/7 기초 구현 [class258],기초응용,speechTtsStt/class258/class258.md,레벨3-중급
+class259,33,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,35/64,발화/화자 특성 이해 · 단계 3/7 기초 구현 [class259],기초응용,speechTtsStt/class259/class259.md,레벨3-중급
+class260,33,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,36/64,발화/화자 특성 이해 · 단계 4/7 응용 확장 [class260],기초응용,speechTtsStt/class260/class260.md,레벨3-중급
+class261,33,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,37/64,발화/화자 특성 이해 · 단계 5/7 실전 검증 [class261],기초응용,speechTtsStt/class261/class261.md,레벨3-중급
+class262,33,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,38/64,발화/화자 특성 이해 · 단계 6/7 실전 검증 [class262],기초응용,speechTtsStt/class262/class262.md,레벨3-중급
+class263,33,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,39/64,발화/화자 특성 이해 · 단계 7/7 운영 최적화 [class263],기초응용,speechTtsStt/class263/class263.md,레벨3-중급
+class264,33,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,40/64,TTS 전처리/학습 · 단계 1/6 입문 이해 [class264],기초응용,speechTtsStt/class264/class264.md,레벨3-중급
+class265,34,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,41/64,TTS 전처리/학습 · 단계 2/6 기초 구현 [class265],기초응용,speechTtsStt/class265/class265.md,레벨3-중급
+class266,34,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,42/64,TTS 전처리/학습 · 단계 3/6 응용 확장 [class266],기초응용,speechTtsStt/class266/class266.md,레벨3-중급
+class267,34,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,43/64,TTS 전처리/학습 · 단계 4/6 응용 확장 [class267],기초응용,speechTtsStt/class267/class267.md,레벨3-중급
+class268,34,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,44/64,TTS 전처리/학습 · 단계 5/6 실전 검증 [class268],기초응용,speechTtsStt/class268/class268.md,레벨3-중급
+class269,34,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,45/64,TTS 전처리/학습 · 단계 6/6 운영 최적화 [class269],실전심화,speechTtsStt/class269/class269.md,레벨3-중급
+class270,34,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,46/64,음성 품질 평가 · 단계 1/7 입문 이해 [class270],실전심화,speechTtsStt/class270/class270.md,레벨3-중급
+class271,34,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,47/64,음성 품질 평가 · 단계 2/7 기초 구현 [class271],실전심화,speechTtsStt/class271/class271.md,레벨3-중급
+class272,34,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,48/64,음성 품질 평가 · 단계 3/7 기초 구현 [class272],실전심화,speechTtsStt/class272/class272.md,레벨3-중급
+class273,35,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,49/64,음성 품질 평가 · 단계 4/7 응용 확장 [class273],실전심화,speechTtsStt/class273/class273.md,레벨3-중급
+class274,35,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,50/64,음성 품질 평가 · 단계 5/7 실전 검증 [class274],실전심화,speechTtsStt/class274/class274.md,레벨3-중급
+class275,35,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,51/64,음성 품질 평가 · 단계 6/7 실전 검증 [class275],실전심화,speechTtsStt/class275/class275.md,레벨3-중급
+class276,35,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,52/64,음성 품질 평가 · 단계 7/7 운영 최적화 [class276],실전심화,speechTtsStt/class276/class276.md,레벨3-중급
+class277,35,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,53/64,모델 추론 및 튜닝 · 단계 1/6 입문 이해 [class277],실전심화,speechTtsStt/class277/class277.md,레벨3-중급
+class278,35,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,54/64,모델 추론 및 튜닝 · 단계 2/6 기초 구현 [class278],실전심화,speechTtsStt/class278/class278.md,레벨3-중급
+class279,35,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,55/64,모델 추론 및 튜닝 · 단계 3/6 응용 확장 [class279],실전심화,speechTtsStt/class279/class279.md,레벨3-중급
+class280,35,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,56/64,모델 추론 및 튜닝 · 단계 4/6 응용 확장 [class280],실전심화,speechTtsStt/class280/class280.md,레벨3-중급
+class281,36,1,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,57/64,모델 추론 및 튜닝 · 단계 5/6 실전 검증 [class281],실전심화,speechTtsStt/class281/class281.md,레벨3-중급
+class282,36,2,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,58/64,모델 추론 및 튜닝 · 단계 6/6 운영 최적화 [class282],실전심화,speechTtsStt/class282/class282.md,레벨3-중급
+class283,36,3,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,59/64,실전 음성 모델 데모 · 단계 1/6 입문 이해 [class283],실전심화,speechTtsStt/class283/class283.md,레벨3-중급
+class284,36,4,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,60/64,실전 음성 모델 데모 · 단계 2/6 기초 구현 [class284],실전심화,speechTtsStt/class284/class284.md,레벨3-중급
+class285,36,5,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,61/64,실전 음성 모델 데모 · 단계 3/6 응용 확장 [class285],실전심화,speechTtsStt/class285/class285.md,레벨3-중급
+class286,36,6,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,62/64,실전 음성 모델 데모 · 단계 4/6 응용 확장 [class286],실전심화,speechTtsStt/class286/class286.md,레벨3-중급
+class287,36,7,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,63/64,실전 음성 모델 데모 · 단계 5/6 실전 검증 [class287],실전심화,speechTtsStt/class287/class287.md,레벨3-중급
+class288,36,8,정규교과-5,음성 데이터 활용한 TTS와 STT 모델 개발,64/64,실전 음성 모델 데모 · 단계 6/6 운영 최적화 [class288],실전심화,speechTtsStt/class288/class288.md,레벨3-중급
+class289,37,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,1/64,LLM 개요 · 단계 1/7 입문 이해 [class289],입문,llmTextGen/class289/class289.md,레벨1-입문
+class290,37,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,2/64,LLM 개요 · 단계 2/7 기초 구현 [class290],입문,llmTextGen/class290/class290.md,레벨1-입문
+class291,37,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,3/64,LLM 개요 · 단계 3/7 기초 구현 [class291],입문,llmTextGen/class291/class291.md,레벨1-입문
+class292,37,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,4/64,LLM 개요 · 단계 4/7 응용 확장 [class292],입문,llmTextGen/class292/class292.md,레벨1-입문
+class293,37,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,5/64,LLM 개요 · 단계 5/7 실전 검증 [class293],입문,llmTextGen/class293/class293.md,레벨1-입문
+class294,37,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,6/64,LLM 개요 · 단계 6/7 실전 검증 [class294],입문,llmTextGen/class294/class294.md,레벨1-입문
+class295,37,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,7/64,LLM 개요 · 단계 7/7 운영 최적화 [class295],입문,llmTextGen/class295/class295.md,레벨1-입문
+class296,37,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,8/64,토큰/컨텍스트 이해 · 단계 1/6 입문 이해 [class296],입문,llmTextGen/class296/class296.md,레벨1-입문
+class297,38,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,9/64,토큰/컨텍스트 이해 · 단계 2/6 기초 구현 [class297],입문,llmTextGen/class297/class297.md,레벨1-입문
+class298,38,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,10/64,토큰/컨텍스트 이해 · 단계 3/6 응용 확장 [class298],입문,llmTextGen/class298/class298.md,레벨1-입문
+class299,38,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,11/64,토큰/컨텍스트 이해 · 단계 4/6 응용 확장 [class299],입문,llmTextGen/class299/class299.md,레벨1-입문
+class300,38,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,12/64,토큰/컨텍스트 이해 · 단계 5/6 실전 검증 [class300],입문,llmTextGen/class300/class300.md,레벨1-입문
+class301,38,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,13/64,토큰/컨텍스트 이해 · 단계 6/6 운영 최적화 [class301],기초응용,llmTextGen/class301/class301.md,레벨1-입문
+class302,38,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,14/64,생성 파라미터 · 단계 1/7 입문 이해 [class302],기초응용,llmTextGen/class302/class302.md,레벨1-입문
+class303,38,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,15/64,생성 파라미터 · 단계 2/7 기초 구현 [class303],기초응용,llmTextGen/class303/class303.md,레벨1-입문
+class304,38,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,16/64,생성 파라미터 · 단계 3/7 기초 구현 [class304],기초응용,llmTextGen/class304/class304.md,레벨1-입문
+class305,39,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,17/64,생성 파라미터 · 단계 4/7 응용 확장 [class305],기초응용,llmTextGen/class305/class305.md,레벨1-입문
+class306,39,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,18/64,생성 파라미터 · 단계 5/7 실전 검증 [class306],기초응용,llmTextGen/class306/class306.md,레벨1-입문
+class307,39,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,19/64,생성 파라미터 · 단계 6/7 실전 검증 [class307],기초응용,llmTextGen/class307/class307.md,레벨1-입문
+class308,39,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,20/64,생성 파라미터 · 단계 7/7 운영 최적화 [class308],기초응용,llmTextGen/class308/class308.md,레벨1-입문
+class309,39,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,21/64,프롬프트 기반 생성 · 단계 1/6 입문 이해 [class309],기초응용,llmTextGen/class309/class309.md,레벨1-입문
+class310,39,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,22/64,프롬프트 기반 생성 · 단계 2/6 기초 구현 [class310],기초응용,llmTextGen/class310/class310.md,레벨1-입문
+class311,39,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,23/64,프롬프트 기반 생성 · 단계 3/6 응용 확장 [class311],기초응용,llmTextGen/class311/class311.md,레벨1-입문
+class312,39,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,24/64,프롬프트 기반 생성 · 단계 4/6 응용 확장 [class312],기초응용,llmTextGen/class312/class312.md,레벨1-입문
+class313,40,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,25/64,프롬프트 기반 생성 · 단계 5/6 실전 검증 [class313],기초응용,llmTextGen/class313/class313.md,레벨1-입문
+class314,40,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,26/64,프롬프트 기반 생성 · 단계 6/6 운영 최적화 [class314],기초응용,llmTextGen/class314/class314.md,레벨1-입문
+class315,40,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,27/64,요약/분류/추출 · 단계 1/6 입문 이해 [class315],기초응용,llmTextGen/class315/class315.md,레벨1-입문
+class316,40,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,28/64,요약/분류/추출 · 단계 2/6 기초 구현 [class316],기초응용,llmTextGen/class316/class316.md,레벨1-입문
+class317,40,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,29/64,요약/분류/추출 · 단계 3/6 응용 확장 [class317],기초응용,llmTextGen/class317/class317.md,레벨1-입문
+class318,40,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,30/64,요약/분류/추출 · 단계 4/6 응용 확장 [class318],기초응용,llmTextGen/class318/class318.md,레벨1-입문
+class319,40,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,31/64,요약/분류/추출 · 단계 5/6 실전 검증 [class319],기초응용,llmTextGen/class319/class319.md,레벨1-입문
+class320,40,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,32/64,요약/분류/추출 · 단계 6/6 운영 최적화 [class320],기초응용,llmTextGen/class320/class320.md,레벨1-입문
+class321,41,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,33/64,대화형 응답 설계 · 단계 1/7 입문 이해 [class321],기초응용,llmTextGen/class321/class321.md,레벨1-입문
+class322,41,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,34/64,대화형 응답 설계 · 단계 2/7 기초 구현 [class322],기초응용,llmTextGen/class322/class322.md,레벨1-입문
+class323,41,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,35/64,대화형 응답 설계 · 단계 3/7 기초 구현 [class323],기초응용,llmTextGen/class323/class323.md,레벨1-입문
+class324,41,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,36/64,대화형 응답 설계 · 단계 4/7 응용 확장 [class324],기초응용,llmTextGen/class324/class324.md,레벨1-입문
+class325,41,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,37/64,대화형 응답 설계 · 단계 5/7 실전 검증 [class325],기초응용,llmTextGen/class325/class325.md,레벨1-입문
+class326,41,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,38/64,대화형 응답 설계 · 단계 6/7 실전 검증 [class326],기초응용,llmTextGen/class326/class326.md,레벨1-입문
+class327,41,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,39/64,대화형 응답 설계 · 단계 7/7 운영 최적화 [class327],기초응용,llmTextGen/class327/class327.md,레벨1-입문
+class328,41,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,40/64,안전성/환각 관리 · 단계 1/6 입문 이해 [class328],기초응용,llmTextGen/class328/class328.md,레벨1-입문
+class329,42,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,41/64,안전성/환각 관리 · 단계 2/6 기초 구현 [class329],기초응용,llmTextGen/class329/class329.md,레벨1-입문
+class330,42,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,42/64,안전성/환각 관리 · 단계 3/6 응용 확장 [class330],기초응용,llmTextGen/class330/class330.md,레벨1-입문
+class331,42,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,43/64,안전성/환각 관리 · 단계 4/6 응용 확장 [class331],기초응용,llmTextGen/class331/class331.md,레벨1-입문
+class332,42,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,44/64,안전성/환각 관리 · 단계 5/6 실전 검증 [class332],기초응용,llmTextGen/class332/class332.md,레벨1-입문
+class333,42,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,45/64,안전성/환각 관리 · 단계 6/6 운영 최적화 [class333],실전심화,llmTextGen/class333/class333.md,레벨1-입문
+class334,42,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,46/64,도메인 적용 시나리오 · 단계 1/7 입문 이해 [class334],실전심화,llmTextGen/class334/class334.md,레벨1-입문
+class335,42,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,47/64,도메인 적용 시나리오 · 단계 2/7 기초 구현 [class335],실전심화,llmTextGen/class335/class335.md,레벨1-입문
+class336,42,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,48/64,도메인 적용 시나리오 · 단계 3/7 기초 구현 [class336],실전심화,llmTextGen/class336/class336.md,레벨1-입문
+class337,43,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,49/64,도메인 적용 시나리오 · 단계 4/7 응용 확장 [class337],실전심화,llmTextGen/class337/class337.md,레벨1-입문
+class338,43,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,50/64,도메인 적용 시나리오 · 단계 5/7 실전 검증 [class338],실전심화,llmTextGen/class338/class338.md,레벨1-입문
+class339,43,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,51/64,도메인 적용 시나리오 · 단계 6/7 실전 검증 [class339],실전심화,llmTextGen/class339/class339.md,레벨1-입문
+class340,43,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,52/64,도메인 적용 시나리오 · 단계 7/7 운영 최적화 [class340],실전심화,llmTextGen/class340/class340.md,레벨1-입문
+class341,43,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,53/64,API 연동 실습 · 단계 1/6 입문 이해 [class341],실전심화,llmTextGen/class341/class341.md,레벨1-입문
+class342,43,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,54/64,API 연동 실습 · 단계 2/6 기초 구현 [class342],실전심화,llmTextGen/class342/class342.md,레벨1-입문
+class343,43,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,55/64,API 연동 실습 · 단계 3/6 응용 확장 [class343],실전심화,llmTextGen/class343/class343.md,레벨1-입문
+class344,43,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,56/64,API 연동 실습 · 단계 4/6 응용 확장 [class344],실전심화,llmTextGen/class344/class344.md,레벨1-입문
+class345,44,1,정규교과-6,거대 언어 모델을 활용한 자연어 생성,57/64,API 연동 실습 · 단계 5/6 실전 검증 [class345],실전심화,llmTextGen/class345/class345.md,레벨1-입문
+class346,44,2,정규교과-6,거대 언어 모델을 활용한 자연어 생성,58/64,API 연동 실습 · 단계 6/6 운영 최적화 [class346],실전심화,llmTextGen/class346/class346.md,레벨1-입문
+class347,44,3,정규교과-6,거대 언어 모델을 활용한 자연어 생성,59/64,Agent 시스템 통합 구현 · 단계 1/6 입문 이해 [class347],실전심화,llmTextGen/class347/class347.md,레벨1-입문
+class348,44,4,정규교과-6,거대 언어 모델을 활용한 자연어 생성,60/64,Agent 시스템 통합 구현 · 단계 2/6 기초 구현 [class348],실전심화,llmTextGen/class348/class348.md,레벨1-입문
+class349,44,5,정규교과-6,거대 언어 모델을 활용한 자연어 생성,61/64,Agent 시스템 통합 구현 · 단계 3/6 응용 확장 [class349],실전심화,llmTextGen/class349/class349.md,레벨1-입문
+class350,44,6,정규교과-6,거대 언어 모델을 활용한 자연어 생성,62/64,Agent 시스템 통합 구현 · 단계 4/6 응용 확장 [class350],실전심화,llmTextGen/class350/class350.md,레벨1-입문
+class351,44,7,정규교과-6,거대 언어 모델을 활용한 자연어 생성,63/64,Agent 시스템 통합 구현 · 단계 5/6 실전 검증 [class351],실전심화,llmTextGen/class351/class351.md,레벨1-입문
+class352,44,8,정규교과-6,거대 언어 모델을 활용한 자연어 생성,64/64,Agent 시스템 통합 구현 · 단계 6/6 운영 최적화 [class352],실전심화,llmTextGen/class352/class352.md,레벨1-입문
+class353,45,1,정규교과-7,프롬프트 엔지니어링,1/40,프롬프트 엔지니어링 개요 · 단계 1/4 입문 이해 [class353],입문,promptEng/class353/class353.md,레벨2-기초
+class354,45,2,정규교과-7,프롬프트 엔지니어링,2/40,프롬프트 엔지니어링 개요 · 단계 2/4 기초 구현 [class354],입문,promptEng/class354/class354.md,레벨2-기초
+class355,45,3,정규교과-7,프롬프트 엔지니어링,3/40,프롬프트 엔지니어링 개요 · 단계 3/4 실전 검증 [class355],입문,promptEng/class355/class355.md,레벨2-기초
+class356,45,4,정규교과-7,프롬프트 엔지니어링,4/40,프롬프트 엔지니어링 개요 · 단계 4/4 운영 최적화 [class356],입문,promptEng/class356/class356.md,레벨2-기초
+class357,45,5,정규교과-7,프롬프트 엔지니어링,5/40,질문 구조화 · 단계 1/4 입문 이해 [class357],입문,promptEng/class357/class357.md,레벨2-기초
+class358,45,6,정규교과-7,프롬프트 엔지니어링,6/40,질문 구조화 · 단계 2/4 기초 구현 [class358],입문,promptEng/class358/class358.md,레벨2-기초
+class359,45,7,정규교과-7,프롬프트 엔지니어링,7/40,질문 구조화 · 단계 3/4 실전 검증 [class359],입문,promptEng/class359/class359.md,레벨2-기초
+class360,45,8,정규교과-7,프롬프트 엔지니어링,8/40,질문 구조화 · 단계 4/4 운영 최적화 [class360],입문,promptEng/class360/class360.md,레벨2-기초
+class361,46,1,정규교과-7,프롬프트 엔지니어링,9/40,역할/맥락 설정 · 단계 1/4 입문 이해 [class361],기초응용,promptEng/class361/class361.md,레벨2-기초
+class362,46,2,정규교과-7,프롬프트 엔지니어링,10/40,역할/맥락 설정 · 단계 2/4 기초 구현 [class362],기초응용,promptEng/class362/class362.md,레벨2-기초
+class363,46,3,정규교과-7,프롬프트 엔지니어링,11/40,역할/맥락 설정 · 단계 3/4 실전 검증 [class363],기초응용,promptEng/class363/class363.md,레벨2-기초
+class364,46,4,정규교과-7,프롬프트 엔지니어링,12/40,역할/맥락 설정 · 단계 4/4 운영 최적화 [class364],기초응용,promptEng/class364/class364.md,레벨2-기초
+class365,46,5,정규교과-7,프롬프트 엔지니어링,13/40,출력 포맷 제어 · 단계 1/4 입문 이해 [class365],기초응용,promptEng/class365/class365.md,레벨2-기초
+class366,46,6,정규교과-7,프롬프트 엔지니어링,14/40,출력 포맷 제어 · 단계 2/4 기초 구현 [class366],기초응용,promptEng/class366/class366.md,레벨2-기초
+class367,46,7,정규교과-7,프롬프트 엔지니어링,15/40,출력 포맷 제어 · 단계 3/4 실전 검증 [class367],기초응용,promptEng/class367/class367.md,레벨2-기초
+class368,46,8,정규교과-7,프롬프트 엔지니어링,16/40,출력 포맷 제어 · 단계 4/4 운영 최적화 [class368],기초응용,promptEng/class368/class368.md,레벨2-기초
+class369,47,1,정규교과-7,프롬프트 엔지니어링,17/40,예시 기반 학습 · 단계 1/4 입문 이해 [class369],기초응용,promptEng/class369/class369.md,레벨2-기초
+class370,47,2,정규교과-7,프롬프트 엔지니어링,18/40,예시 기반 학습 · 단계 2/4 기초 구현 [class370],기초응용,promptEng/class370/class370.md,레벨2-기초
+class371,47,3,정규교과-7,프롬프트 엔지니어링,19/40,예시 기반 학습 · 단계 3/4 실전 검증 [class371],기초응용,promptEng/class371/class371.md,레벨2-기초
+class372,47,4,정규교과-7,프롬프트 엔지니어링,20/40,예시 기반 학습 · 단계 4/4 운영 최적화 [class372],기초응용,promptEng/class372/class372.md,레벨2-기초
+class373,47,5,정규교과-7,프롬프트 엔지니어링,21/40,단계적 추론 유도 · 단계 1/4 입문 이해 [class373],기초응용,promptEng/class373/class373.md,레벨2-기초
+class374,47,6,정규교과-7,프롬프트 엔지니어링,22/40,단계적 추론 유도 · 단계 2/4 기초 구현 [class374],기초응용,promptEng/class374/class374.md,레벨2-기초
+class375,47,7,정규교과-7,프롬프트 엔지니어링,23/40,단계적 추론 유도 · 단계 3/4 실전 검증 [class375],기초응용,promptEng/class375/class375.md,레벨2-기초
+class376,47,8,정규교과-7,프롬프트 엔지니어링,24/40,단계적 추론 유도 · 단계 4/4 운영 최적화 [class376],기초응용,promptEng/class376/class376.md,레벨2-기초
+class377,48,1,정규교과-7,프롬프트 엔지니어링,25/40,평가와 개선 · 단계 1/4 입문 이해 [class377],기초응용,promptEng/class377/class377.md,레벨2-기초
+class378,48,2,정규교과-7,프롬프트 엔지니어링,26/40,평가와 개선 · 단계 2/4 기초 구현 [class378],기초응용,promptEng/class378/class378.md,레벨2-기초
+class379,48,3,정규교과-7,프롬프트 엔지니어링,27/40,평가와 개선 · 단계 3/4 실전 검증 [class379],기초응용,promptEng/class379/class379.md,레벨2-기초
+class380,48,4,정규교과-7,프롬프트 엔지니어링,28/40,평가와 개선 · 단계 4/4 운영 최적화 [class380],기초응용,promptEng/class380/class380.md,레벨2-기초
+class381,48,5,정규교과-7,프롬프트 엔지니어링,29/40,자동화 프롬프트 패턴 · 단계 1/4 입문 이해 [class381],실전심화,promptEng/class381/class381.md,레벨2-기초
+class382,48,6,정규교과-7,프롬프트 엔지니어링,30/40,자동화 프롬프트 패턴 · 단계 2/4 기초 구현 [class382],실전심화,promptEng/class382/class382.md,레벨2-기초
+class383,48,7,정규교과-7,프롬프트 엔지니어링,31/40,자동화 프롬프트 패턴 · 단계 3/4 실전 검증 [class383],실전심화,promptEng/class383/class383.md,레벨2-기초
+class384,48,8,정규교과-7,프롬프트 엔지니어링,32/40,자동화 프롬프트 패턴 · 단계 4/4 운영 최적화 [class384],실전심화,promptEng/class384/class384.md,레벨2-기초
+class385,49,1,정규교과-7,프롬프트 엔지니어링,33/40,도메인 템플릿 작성 · 단계 1/4 입문 이해 [class385],실전심화,promptEng/class385/class385.md,레벨2-기초
+class386,49,2,정규교과-7,프롬프트 엔지니어링,34/40,도메인 템플릿 작성 · 단계 2/4 기초 구현 [class386],실전심화,promptEng/class386/class386.md,레벨2-기초
+class387,49,3,정규교과-7,프롬프트 엔지니어링,35/40,도메인 템플릿 작성 · 단계 3/4 실전 검증 [class387],실전심화,promptEng/class387/class387.md,레벨2-기초
+class388,49,4,정규교과-7,프롬프트 엔지니어링,36/40,도메인 템플릿 작성 · 단계 4/4 운영 최적화 [class388],실전심화,promptEng/class388/class388.md,레벨2-기초
+class389,49,5,정규교과-7,프롬프트 엔지니어링,37/40,실전 프롬프트 튜닝 · 단계 1/4 입문 이해 [class389],실전심화,promptEng/class389/class389.md,레벨2-기초
+class390,49,6,정규교과-7,프롬프트 엔지니어링,38/40,실전 프롬프트 튜닝 · 단계 2/4 기초 구현 [class390],실전심화,promptEng/class390/class390.md,레벨2-기초
+class391,49,7,정규교과-7,프롬프트 엔지니어링,39/40,실전 프롬프트 튜닝 · 단계 3/4 실전 검증 [class391],실전심화,promptEng/class391/class391.md,레벨2-기초
+class392,49,8,정규교과-7,프롬프트 엔지니어링,40/40,실전 프롬프트 튜닝 · 단계 4/4 운영 최적화 [class392],실전심화,promptEng/class392/class392.md,레벨2-기초
+class393,50,1,정규교과-8,Langchain 활용하기,1/56,LangChain 개요 · 단계 1/6 입문 이해 [class393],입문,langChainLab/class393/class393.md,레벨3-중급
+class394,50,2,정규교과-8,Langchain 활용하기,2/56,LangChain 개요 · 단계 2/6 기초 구현 [class394],입문,langChainLab/class394/class394.md,레벨3-중급
+class395,50,3,정규교과-8,Langchain 활용하기,3/56,LangChain 개요 · 단계 3/6 응용 확장 [class395],입문,langChainLab/class395/class395.md,레벨3-중급
+class396,50,4,정규교과-8,Langchain 활용하기,4/56,LangChain 개요 · 단계 4/6 응용 확장 [class396],입문,langChainLab/class396/class396.md,레벨3-중급
+class397,50,5,정규교과-8,Langchain 활용하기,5/56,LangChain 개요 · 단계 5/6 실전 검증 [class397],입문,langChainLab/class397/class397.md,레벨3-중급
+class398,50,6,정규교과-8,Langchain 활용하기,6/56,LangChain 개요 · 단계 6/6 운영 최적화 [class398],입문,langChainLab/class398/class398.md,레벨3-중급
+class399,50,7,정규교과-8,Langchain 활용하기,7/56,PromptTemplate · 단계 1/6 입문 이해 [class399],입문,langChainLab/class399/class399.md,레벨3-중급
+class400,50,8,정규교과-8,Langchain 활용하기,8/56,PromptTemplate · 단계 2/6 기초 구현 [class400],입문,langChainLab/class400/class400.md,레벨3-중급
+class401,51,1,정규교과-8,Langchain 활용하기,9/56,PromptTemplate · 단계 3/6 응용 확장 [class401],입문,langChainLab/class401/class401.md,레벨3-중급
+class402,51,2,정규교과-8,Langchain 활용하기,10/56,PromptTemplate · 단계 4/6 응용 확장 [class402],입문,langChainLab/class402/class402.md,레벨3-중급
+class403,51,3,정규교과-8,Langchain 활용하기,11/56,PromptTemplate · 단계 5/6 실전 검증 [class403],입문,langChainLab/class403/class403.md,레벨3-중급
+class404,51,4,정규교과-8,Langchain 활용하기,12/56,PromptTemplate · 단계 6/6 운영 최적화 [class404],기초응용,langChainLab/class404/class404.md,레벨3-중급
+class405,51,5,정규교과-8,Langchain 활용하기,13/56,Model/LLM 연결 · 단계 1/5 입문 이해 [class405],기초응용,langChainLab/class405/class405.md,레벨3-중급
+class406,51,6,정규교과-8,Langchain 활용하기,14/56,Model/LLM 연결 · 단계 2/5 기초 구현 [class406],기초응용,langChainLab/class406/class406.md,레벨3-중급
+class407,51,7,정규교과-8,Langchain 활용하기,15/56,Model/LLM 연결 · 단계 3/5 응용 확장 [class407],기초응용,langChainLab/class407/class407.md,레벨3-중급
+class408,51,8,정규교과-8,Langchain 활용하기,16/56,Model/LLM 연결 · 단계 4/5 실전 검증 [class408],기초응용,langChainLab/class408/class408.md,레벨3-중급
+class409,52,1,정규교과-8,Langchain 활용하기,17/56,Model/LLM 연결 · 단계 5/5 운영 최적화 [class409],기초응용,langChainLab/class409/class409.md,레벨3-중급
+class410,52,2,정규교과-8,Langchain 활용하기,18/56,OutputParser · 단계 1/6 입문 이해 [class410],기초응용,langChainLab/class410/class410.md,레벨3-중급
+class411,52,3,정규교과-8,Langchain 활용하기,19/56,OutputParser · 단계 2/6 기초 구현 [class411],기초응용,langChainLab/class411/class411.md,레벨3-중급
+class412,52,4,정규교과-8,Langchain 활용하기,20/56,OutputParser · 단계 3/6 응용 확장 [class412],기초응용,langChainLab/class412/class412.md,레벨3-중급
+class413,52,5,정규교과-8,Langchain 활용하기,21/56,OutputParser · 단계 4/6 응용 확장 [class413],기초응용,langChainLab/class413/class413.md,레벨3-중급
+class414,52,6,정규교과-8,Langchain 활용하기,22/56,OutputParser · 단계 5/6 실전 검증 [class414],기초응용,langChainLab/class414/class414.md,레벨3-중급
+class415,52,7,정규교과-8,Langchain 활용하기,23/56,OutputParser · 단계 6/6 운영 최적화 [class415],기초응용,langChainLab/class415/class415.md,레벨3-중급
+class416,52,8,정규교과-8,Langchain 활용하기,24/56,Chain 구성 · 단계 1/5 입문 이해 [class416],기초응용,langChainLab/class416/class416.md,레벨3-중급
+class417,53,1,정규교과-8,Langchain 활용하기,25/56,Chain 구성 · 단계 2/5 기초 구현 [class417],기초응용,langChainLab/class417/class417.md,레벨3-중급
+class418,53,2,정규교과-8,Langchain 활용하기,26/56,Chain 구성 · 단계 3/5 응용 확장 [class418],기초응용,langChainLab/class418/class418.md,레벨3-중급
+class419,53,3,정규교과-8,Langchain 활용하기,27/56,Chain 구성 · 단계 4/5 실전 검증 [class419],기초응용,langChainLab/class419/class419.md,레벨3-중급
+class420,53,4,정규교과-8,Langchain 활용하기,28/56,Chain 구성 · 단계 5/5 운영 최적화 [class420],기초응용,langChainLab/class420/class420.md,레벨3-중급
+class421,53,5,정규교과-8,Langchain 활용하기,29/56,Memory 활용 · 단계 1/6 입문 이해 [class421],기초응용,langChainLab/class421/class421.md,레벨3-중급
+class422,53,6,정규교과-8,Langchain 활용하기,30/56,Memory 활용 · 단계 2/6 기초 구현 [class422],기초응용,langChainLab/class422/class422.md,레벨3-중급
+class423,53,7,정규교과-8,Langchain 활용하기,31/56,Memory 활용 · 단계 3/6 응용 확장 [class423],기초응용,langChainLab/class423/class423.md,레벨3-중급
+class424,53,8,정규교과-8,Langchain 활용하기,32/56,Memory 활용 · 단계 4/6 응용 확장 [class424],기초응용,langChainLab/class424/class424.md,레벨3-중급
+class425,54,1,정규교과-8,Langchain 활용하기,33/56,Memory 활용 · 단계 5/6 실전 검증 [class425],기초응용,langChainLab/class425/class425.md,레벨3-중급
+class426,54,2,정규교과-8,Langchain 활용하기,34/56,Memory 활용 · 단계 6/6 운영 최적화 [class426],기초응용,langChainLab/class426/class426.md,레벨3-중급
+class427,54,3,정규교과-8,Langchain 활용하기,35/56,Tool/Agent 기초 · 단계 1/6 입문 이해 [class427],기초응용,langChainLab/class427/class427.md,레벨3-중급
+class428,54,4,정규교과-8,Langchain 활용하기,36/56,Tool/Agent 기초 · 단계 2/6 기초 구현 [class428],기초응용,langChainLab/class428/class428.md,레벨3-중급
+class429,54,5,정규교과-8,Langchain 활용하기,37/56,Tool/Agent 기초 · 단계 3/6 응용 확장 [class429],기초응용,langChainLab/class429/class429.md,레벨3-중급
+class430,54,6,정규교과-8,Langchain 활용하기,38/56,Tool/Agent 기초 · 단계 4/6 응용 확장 [class430],기초응용,langChainLab/class430/class430.md,레벨3-중급
+class431,54,7,정규교과-8,Langchain 활용하기,39/56,Tool/Agent 기초 · 단계 5/6 실전 검증 [class431],기초응용,langChainLab/class431/class431.md,레벨3-중급
+class432,54,8,정규교과-8,Langchain 활용하기,40/56,Tool/Agent 기초 · 단계 6/6 운영 최적화 [class432],실전심화,langChainLab/class432/class432.md,레벨3-중급
+class433,55,1,정규교과-8,Langchain 활용하기,41/56,문서 로딩과 분할 · 단계 1/5 입문 이해 [class433],실전심화,langChainLab/class433/class433.md,레벨3-중급
+class434,55,2,정규교과-8,Langchain 활용하기,42/56,문서 로딩과 분할 · 단계 2/5 기초 구현 [class434],실전심화,langChainLab/class434/class434.md,레벨3-중급
+class435,55,3,정규교과-8,Langchain 활용하기,43/56,문서 로딩과 분할 · 단계 3/5 응용 확장 [class435],실전심화,langChainLab/class435/class435.md,레벨3-중급
+class436,55,4,정규교과-8,Langchain 활용하기,44/56,문서 로딩과 분할 · 단계 4/5 실전 검증 [class436],실전심화,langChainLab/class436/class436.md,레벨3-중급
+class437,55,5,정규교과-8,Langchain 활용하기,45/56,문서 로딩과 분할 · 단계 5/5 운영 최적화 [class437],실전심화,langChainLab/class437/class437.md,레벨3-중급
+class438,55,6,정규교과-8,Langchain 활용하기,46/56,VectorStore 연동 · 단계 1/6 입문 이해 [class438],실전심화,langChainLab/class438/class438.md,레벨3-중급
+class439,55,7,정규교과-8,Langchain 활용하기,47/56,VectorStore 연동 · 단계 2/6 기초 구현 [class439],실전심화,langChainLab/class439/class439.md,레벨3-중급
+class440,55,8,정규교과-8,Langchain 활용하기,48/56,VectorStore 연동 · 단계 3/6 응용 확장 [class440],실전심화,langChainLab/class440/class440.md,레벨3-중급
+class441,56,1,정규교과-8,Langchain 활용하기,49/56,VectorStore 연동 · 단계 4/6 응용 확장 [class441],실전심화,langChainLab/class441/class441.md,레벨3-중급
+class442,56,2,정규교과-8,Langchain 활용하기,50/56,VectorStore 연동 · 단계 5/6 실전 검증 [class442],실전심화,langChainLab/class442/class442.md,레벨3-중급
+class443,56,3,정규교과-8,Langchain 활용하기,51/56,VectorStore 연동 · 단계 6/6 운영 최적화 [class443],실전심화,langChainLab/class443/class443.md,레벨3-중급
+class444,56,4,정규교과-8,Langchain 활용하기,52/56,실전 체인 애플리케이션 · 단계 1/5 입문 이해 [class444],실전심화,langChainLab/class444/class444.md,레벨3-중급
+class445,56,5,정규교과-8,Langchain 활용하기,53/56,실전 체인 애플리케이션 · 단계 2/5 기초 구현 [class445],실전심화,langChainLab/class445/class445.md,레벨3-중급
+class446,56,6,정규교과-8,Langchain 활용하기,54/56,실전 체인 애플리케이션 · 단계 3/5 응용 확장 [class446],실전심화,langChainLab/class446/class446.md,레벨3-중급
+class447,56,7,정규교과-8,Langchain 활용하기,55/56,실전 체인 애플리케이션 · 단계 4/5 실전 검증 [class447],실전심화,langChainLab/class447/class447.md,레벨3-중급
+class448,56,8,정규교과-8,Langchain 활용하기,56/56,실전 체인 애플리케이션 · 단계 5/5 운영 최적화 [class448],실전심화,langChainLab/class448/class448.md,레벨3-중급
+class449,57,1,정규교과-9,RAG(Retrieval-Augmented Generation),1/52,RAG 개요 · 단계 1/6 입문 이해 [class449],입문,ragPipeline/class449/class449.md,레벨4-심화
+class450,57,2,정규교과-9,RAG(Retrieval-Augmented Generation),2/52,RAG 개요 · 단계 2/6 기초 구현 [class450],입문,ragPipeline/class450/class450.md,레벨4-심화
+class451,57,3,정규교과-9,RAG(Retrieval-Augmented Generation),3/52,RAG 개요 · 단계 3/6 응용 확장 [class451],입문,ragPipeline/class451/class451.md,레벨4-심화
+class452,57,4,정규교과-9,RAG(Retrieval-Augmented Generation),4/52,RAG 개요 · 단계 4/6 응용 확장 [class452],입문,ragPipeline/class452/class452.md,레벨4-심화
+class453,57,5,정규교과-9,RAG(Retrieval-Augmented Generation),5/52,RAG 개요 · 단계 5/6 실전 검증 [class453],입문,ragPipeline/class453/class453.md,레벨4-심화
+class454,57,6,정규교과-9,RAG(Retrieval-Augmented Generation),6/52,RAG 개요 · 단계 6/6 운영 최적화 [class454],입문,ragPipeline/class454/class454.md,레벨4-심화
+class455,57,7,정규교과-9,RAG(Retrieval-Augmented Generation),7/52,문서 수집 전략 · 단계 1/5 입문 이해 [class455],입문,ragPipeline/class455/class455.md,레벨4-심화
+class456,57,8,정규교과-9,RAG(Retrieval-Augmented Generation),8/52,문서 수집 전략 · 단계 2/5 기초 구현 [class456],입문,ragPipeline/class456/class456.md,레벨4-심화
+class457,58,1,정규교과-9,RAG(Retrieval-Augmented Generation),9/52,문서 수집 전략 · 단계 3/5 응용 확장 [class457],입문,ragPipeline/class457/class457.md,레벨4-심화
+class458,58,2,정규교과-9,RAG(Retrieval-Augmented Generation),10/52,문서 수집 전략 · 단계 4/5 실전 검증 [class458],입문,ragPipeline/class458/class458.md,레벨4-심화
+class459,58,3,정규교과-9,RAG(Retrieval-Augmented Generation),11/52,문서 수집 전략 · 단계 5/5 운영 최적화 [class459],기초응용,ragPipeline/class459/class459.md,레벨4-심화
+class460,58,4,정규교과-9,RAG(Retrieval-Augmented Generation),12/52,문서 청크 설계 · 단계 1/5 입문 이해 [class460],기초응용,ragPipeline/class460/class460.md,레벨4-심화
+class461,58,5,정규교과-9,RAG(Retrieval-Augmented Generation),13/52,문서 청크 설계 · 단계 2/5 기초 구현 [class461],기초응용,ragPipeline/class461/class461.md,레벨4-심화
+class462,58,6,정규교과-9,RAG(Retrieval-Augmented Generation),14/52,문서 청크 설계 · 단계 3/5 응용 확장 [class462],기초응용,ragPipeline/class462/class462.md,레벨4-심화
+class463,58,7,정규교과-9,RAG(Retrieval-Augmented Generation),15/52,문서 청크 설계 · 단계 4/5 실전 검증 [class463],기초응용,ragPipeline/class463/class463.md,레벨4-심화
+class464,58,8,정규교과-9,RAG(Retrieval-Augmented Generation),16/52,문서 청크 설계 · 단계 5/5 운영 최적화 [class464],기초응용,ragPipeline/class464/class464.md,레벨4-심화
+class465,59,1,정규교과-9,RAG(Retrieval-Augmented Generation),17/52,임베딩 생성 · 단계 1/5 입문 이해 [class465],기초응용,ragPipeline/class465/class465.md,레벨4-심화
+class466,59,2,정규교과-9,RAG(Retrieval-Augmented Generation),18/52,임베딩 생성 · 단계 2/5 기초 구현 [class466],기초응용,ragPipeline/class466/class466.md,레벨4-심화
+class467,59,3,정규교과-9,RAG(Retrieval-Augmented Generation),19/52,임베딩 생성 · 단계 3/5 응용 확장 [class467],기초응용,ragPipeline/class467/class467.md,레벨4-심화
+class468,59,4,정규교과-9,RAG(Retrieval-Augmented Generation),20/52,임베딩 생성 · 단계 4/5 실전 검증 [class468],기초응용,ragPipeline/class468/class468.md,레벨4-심화
+class469,59,5,정규교과-9,RAG(Retrieval-Augmented Generation),21/52,임베딩 생성 · 단계 5/5 운영 최적화 [class469],기초응용,ragPipeline/class469/class469.md,레벨4-심화
+class470,59,6,정규교과-9,RAG(Retrieval-Augmented Generation),22/52,벡터DB 기초 · 단계 1/5 입문 이해 [class470],기초응용,ragPipeline/class470/class470.md,레벨4-심화
+class471,59,7,정규교과-9,RAG(Retrieval-Augmented Generation),23/52,벡터DB 기초 · 단계 2/5 기초 구현 [class471],기초응용,ragPipeline/class471/class471.md,레벨4-심화
+class472,59,8,정규교과-9,RAG(Retrieval-Augmented Generation),24/52,벡터DB 기초 · 단계 3/5 응용 확장 [class472],기초응용,ragPipeline/class472/class472.md,레벨4-심화
+class473,60,1,정규교과-9,RAG(Retrieval-Augmented Generation),25/52,벡터DB 기초 · 단계 4/5 실전 검증 [class473],기초응용,ragPipeline/class473/class473.md,레벨4-심화
+class474,60,2,정규교과-9,RAG(Retrieval-Augmented Generation),26/52,벡터DB 기초 · 단계 5/5 운영 최적화 [class474],기초응용,ragPipeline/class474/class474.md,레벨4-심화
+class475,60,3,정규교과-9,RAG(Retrieval-Augmented Generation),27/52,검색 품질 개선 · 단계 1/6 입문 이해 [class475],기초응용,ragPipeline/class475/class475.md,레벨4-심화
+class476,60,4,정규교과-9,RAG(Retrieval-Augmented Generation),28/52,검색 품질 개선 · 단계 2/6 기초 구현 [class476],기초응용,ragPipeline/class476/class476.md,레벨4-심화
+class477,60,5,정규교과-9,RAG(Retrieval-Augmented Generation),29/52,검색 품질 개선 · 단계 3/6 응용 확장 [class477],기초응용,ragPipeline/class477/class477.md,레벨4-심화
+class478,60,6,정규교과-9,RAG(Retrieval-Augmented Generation),30/52,검색 품질 개선 · 단계 4/6 응용 확장 [class478],기초응용,ragPipeline/class478/class478.md,레벨4-심화
+class479,60,7,정규교과-9,RAG(Retrieval-Augmented Generation),31/52,검색 품질 개선 · 단계 5/6 실전 검증 [class479],기초응용,ragPipeline/class479/class479.md,레벨4-심화
+class480,60,8,정규교과-9,RAG(Retrieval-Augmented Generation),32/52,검색 품질 개선 · 단계 6/6 운영 최적화 [class480],기초응용,ragPipeline/class480/class480.md,레벨4-심화
+class481,61,1,정규교과-9,RAG(Retrieval-Augmented Generation),33/52,프롬프트 결합 · 단계 1/5 입문 이해 [class481],기초응용,ragPipeline/class481/class481.md,레벨4-심화
+class482,61,2,정규교과-9,RAG(Retrieval-Augmented Generation),34/52,프롬프트 결합 · 단계 2/5 기초 구현 [class482],기초응용,ragPipeline/class482/class482.md,레벨4-심화
+class483,61,3,정규교과-9,RAG(Retrieval-Augmented Generation),35/52,프롬프트 결합 · 단계 3/5 응용 확장 [class483],기초응용,ragPipeline/class483/class483.md,레벨4-심화
+class484,61,4,정규교과-9,RAG(Retrieval-Augmented Generation),36/52,프롬프트 결합 · 단계 4/5 실전 검증 [class484],기초응용,ragPipeline/class484/class484.md,레벨4-심화
+class485,61,5,정규교과-9,RAG(Retrieval-Augmented Generation),37/52,프롬프트 결합 · 단계 5/5 운영 최적화 [class485],실전심화,ragPipeline/class485/class485.md,레벨4-심화
+class486,61,6,정규교과-9,RAG(Retrieval-Augmented Generation),38/52,응답 검증/출처화 · 단계 1/5 입문 이해 [class486],실전심화,ragPipeline/class486/class486.md,레벨4-심화
+class487,61,7,정규교과-9,RAG(Retrieval-Augmented Generation),39/52,응답 검증/출처화 · 단계 2/5 기초 구현 [class487],실전심화,ragPipeline/class487/class487.md,레벨4-심화
+class488,61,8,정규교과-9,RAG(Retrieval-Augmented Generation),40/52,응답 검증/출처화 · 단계 3/5 응용 확장 [class488],실전심화,ragPipeline/class488/class488.md,레벨4-심화
+class489,62,1,정규교과-9,RAG(Retrieval-Augmented Generation),41/52,응답 검증/출처화 · 단계 4/5 실전 검증 [class489],실전심화,ragPipeline/class489/class489.md,레벨4-심화
+class490,62,2,정규교과-9,RAG(Retrieval-Augmented Generation),42/52,응답 검증/출처화 · 단계 5/5 운영 최적화 [class490],실전심화,ragPipeline/class490/class490.md,레벨4-심화
+class491,62,3,정규교과-9,RAG(Retrieval-Augmented Generation),43/52,평가 지표 설계 · 단계 1/5 입문 이해 [class491],실전심화,ragPipeline/class491/class491.md,레벨4-심화
+class492,62,4,정규교과-9,RAG(Retrieval-Augmented Generation),44/52,평가 지표 설계 · 단계 2/5 기초 구현 [class492],실전심화,ragPipeline/class492/class492.md,레벨4-심화
+class493,62,5,정규교과-9,RAG(Retrieval-Augmented Generation),45/52,평가 지표 설계 · 단계 3/5 응용 확장 [class493],실전심화,ragPipeline/class493/class493.md,레벨4-심화
+class494,62,6,정규교과-9,RAG(Retrieval-Augmented Generation),46/52,평가 지표 설계 · 단계 4/5 실전 검증 [class494],실전심화,ragPipeline/class494/class494.md,레벨4-심화
+class495,62,7,정규교과-9,RAG(Retrieval-Augmented Generation),47/52,평가 지표 설계 · 단계 5/5 운영 최적화 [class495],실전심화,ragPipeline/class495/class495.md,레벨4-심화
+class496,62,8,정규교과-9,RAG(Retrieval-Augmented Generation),48/52,Agent 시스템 통합 구현 · 단계 1/5 입문 이해 [class496],실전심화,ragPipeline/class496/class496.md,레벨4-심화
+class497,63,1,정규교과-9,RAG(Retrieval-Augmented Generation),49/52,Agent 시스템 통합 구현 · 단계 2/5 기초 구현 [class497],실전심화,ragPipeline/class497/class497.md,레벨4-심화
+class498,63,2,정규교과-9,RAG(Retrieval-Augmented Generation),50/52,Agent 시스템 통합 구현 · 단계 3/5 응용 확장 [class498],실전심화,ragPipeline/class498/class498.md,레벨4-심화
+class499,63,3,정규교과-9,RAG(Retrieval-Augmented Generation),51/52,Agent 시스템 통합 구현 · 단계 4/5 실전 검증 [class499],실전심화,ragPipeline/class499/class499.md,레벨4-심화
+class500,63,4,정규교과-9,RAG(Retrieval-Augmented Generation),52/52,Agent 시스템 통합 구현 · 단계 5/5 운영 최적화 [class500],실전심화,ragPipeline/class500/class500.md,레벨4-심화
+class501,64,1,정규교과-10,LLMOps,1/20,LLMOps 개요 · 단계 1/4 입문 이해 [class501],입문,llmOps/class501/class501.md,레벨5-전문가
+class502,64,2,정규교과-10,LLMOps,2/20,LLMOps 개요 · 단계 2/4 기초 구현 [class502],기초응용,llmOps/class502/class502.md,레벨5-전문가
+class503,64,3,정규교과-10,LLMOps,3/20,LLMOps 개요 · 단계 3/4 실전 검증 [class503],실전심화,llmOps/class503/class503.md,레벨5-전문가
+class504,64,4,정규교과-10,LLMOps,4/20,LLMOps 개요 · 단계 4/4 운영 최적화 [class504],실전심화,llmOps/class504/class504.md,레벨5-전문가
+class505,64,5,정규교과-10,LLMOps,5/20,프롬프트 관리 · 단계 1/4 입문 이해 [class505],입문,llmOps/class505/class505.md,레벨5-전문가
+class506,64,6,정규교과-10,LLMOps,6/20,프롬프트 관리 · 단계 2/4 기초 구현 [class506],기초응용,llmOps/class506/class506.md,레벨5-전문가
+class507,64,7,정규교과-10,LLMOps,7/20,프롬프트 관리 · 단계 3/4 실전 검증 [class507],실전심화,llmOps/class507/class507.md,레벨5-전문가
+class508,64,8,정규교과-10,LLMOps,8/20,프롬프트 관리 · 단계 4/4 운영 최적화 [class508],실전심화,llmOps/class508/class508.md,레벨5-전문가
+class509,65,1,정규교과-10,LLMOps,9/20,LLM 평가와 품질 · 단계 1/4 입문 이해 [class509],입문,llmOps/class509/class509.md,레벨5-전문가
+class510,65,2,정규교과-10,LLMOps,10/20,LLM 평가와 품질 · 단계 2/4 기초 구현 [class510],기초응용,llmOps/class510/class510.md,레벨5-전문가
+class511,65,3,정규교과-10,LLMOps,11/20,LLM 평가와 품질 · 단계 3/4 실전 검증 [class511],실전심화,llmOps/class511/class511.md,레벨5-전문가
+class512,65,4,정규교과-10,LLMOps,12/20,LLM 평가와 품질 · 단계 4/4 운영 최적화 [class512],실전심화,llmOps/class512/class512.md,레벨5-전문가
+class513,65,5,정규교과-10,LLMOps,13/20,LLM 모니터링 · 단계 1/4 입문 이해 [class513],입문,llmOps/class513/class513.md,레벨5-전문가
+class514,65,6,정규교과-10,LLMOps,14/20,LLM 모니터링 · 단계 2/4 기초 구현 [class514],기초응용,llmOps/class514/class514.md,레벨5-전문가
+class515,65,7,정규교과-10,LLMOps,15/20,LLM 모니터링 · 단계 3/4 실전 검증 [class515],실전심화,llmOps/class515/class515.md,레벨5-전문가
+class516,65,8,정규교과-10,LLMOps,16/20,LLM 모니터링 · 단계 4/4 운영 최적화 [class516],실전심화,llmOps/class516/class516.md,레벨5-전문가
+class517,66,1,정규교과-10,LLMOps,17/20,LLM 배포 자동화 · 단계 1/4 입문 이해 [class517],입문,llmOps/class517/class517.md,레벨5-전문가
+class518,66,2,정규교과-10,LLMOps,18/20,LLM 배포 자동화 · 단계 2/4 기초 구현 [class518],기초응용,llmOps/class518/class518.md,레벨5-전문가
+class519,66,3,정규교과-10,LLMOps,19/20,LLM 배포 자동화 · 단계 3/4 실전 검증 [class519],실전심화,llmOps/class519/class519.md,레벨5-전문가
+class520,66,4,정규교과-10,LLMOps,20/20,LLM 배포 자동화 · 단계 4/4 운영 최적화 [class520],실전심화,llmOps/class520/class520.md,레벨5-전문가
+project001,63,5,프로젝트-A,프로젝트,1/3,나만의 음성 모델 만들기 [VoiceModelBuilder],기초응용,VoiceModelBuilder/README.md,레벨1-입문
+project002,63,6,프로젝트-B,프로젝트,2/3,거대 언어 모델을 활용한 PERSONA AI 답변 기능 구현하기 [PersonaLLMResponder],기초응용,PersonaLLMResponder/README.md,레벨1-입문
+project003,63,7,프로젝트-C,프로젝트,3/3,사전 데이터 기반 PERSO AI의 답변 커스텀하기 [PersonaKnowledgeCustomizer],기초응용,PersonaKnowledgeCustomizer/README.md,레벨1-입문

@@ -1,4 +1,40 @@
+# 이 파일은 www.edumgt.co.kr 의 에듀엠지티에 저작권이 있습니다
+#
+# LM Studio AI Agent Lab — Docker Compose
+# =========================================
+# LM Studio 는 호스트 PC 에서 실행합니다 (포트 1234).
+# 컨테이너에서는 LM_STUDIO_URL 환경변수로 호스트를 참조합니다.
+#
+# 빠른 시작:
+#   1. LM Studio 실행 후 모델 로드 (포트 1234)
+#   2. docker compose up -d
+#   3. http://localhost:8954  (Agent API)
+#
+# LM_STUDIO_HOST 기본값은 host.docker.internal (Windows/Mac).
+# Linux 에서는 --add-host=host.docker.internal:host-gateway 가 자동 적용됩니다.
+
+x-lm-studio: &lm-studio-env
+  LM_STUDIO_URL: http://${LM_STUDIO_HOST:-host.docker.internal}:1234/v1
+  LM_STUDIO_API_KEY: ${LM_STUDIO_API_KEY:-lm-studio}
+  LM_STUDIO_MODEL: ${LM_STUDIO_MODEL:-local-model}
+
 services:
+
+  # ── Qdrant 벡터DB (RAG 실습용) ── port 6333 ──────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:v1.9.2
+    container_name: lmlab-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "sh", "-c", "wget -qO- http://localhost:6333/healthz || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
 
   # ── VoiceModelBuilder ── port 8951 ─────────────────────────────────────────
   voice-model-builder:
@@ -6,10 +42,13 @@ services:
       context: ./VoiceModelBuilder
       dockerfile: Dockerfile
     environment:
+      <<: *lm-studio-env
       PROJECT_ID: ${VMB_PROJECT_ID:-project001}
       PROJECT_NAME: ${VMB_PROJECT_NAME:-금융 상담 음성 브리핑 스튜디오}
       PROJECT_TRACK: ${VMB_PROJECT_TRACK:-금융-프로젝트-A}
       PROJECT_TOPIC: ${VMB_PROJECT_TOPIC:-금융 상담 음성 브리핑 스튜디오}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8951:8080"
     healthcheck:
@@ -25,12 +64,13 @@ services:
       context: ./PersonaLLMResponder
       dockerfile: Dockerfile
     environment:
+      <<: *lm-studio-env
       PROJECT_ID: ${PLR_PROJECT_ID:-project002}
       PROJECT_NAME: ${PLR_PROJECT_NAME:-금융 상품 상담 에이전트}
       PROJECT_TRACK: ${PLR_PROJECT_TRACK:-금융-프로젝트-B}
       PROJECT_TOPIC: ${PLR_PROJECT_TOPIC:-금융 상품 상담 에이전트}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8952:8080"
     healthcheck:
@@ -46,10 +86,13 @@ services:
       context: ./PersonaKnowledgeCustomizer
       dockerfile: Dockerfile
     environment:
+      <<: *lm-studio-env
       PROJECT_ID: ${PKC_PROJECT_ID:-project003}
       PROJECT_NAME: ${PKC_PROJECT_NAME:-금융 지식베이스 커스터마이저}
       PROJECT_TRACK: ${PKC_PROJECT_TRACK:-금융-프로젝트-C}
       PROJECT_TOPIC: ${PKC_PROJECT_TOPIC:-금융 지식베이스 커스터마이저}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8953:8080"
     healthcheck:
@@ -67,13 +110,11 @@ services:
     env_file:
       - Agent/.env
     environment:
+      <<: *lm-studio-env
       REPO_ROOT: /srv/repo
       VECTOR_DB_PATH: /srv/vector_db
       VECTOR_COLLECTION: ${VECTOR_COLLECTION:-finance_agent_lab}
       EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
-      OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-large}
-      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
       CHUNK_SIZE: ${CHUNK_SIZE:-900}
       CHUNK_OVERLAP: ${CHUNK_OVERLAP:-150}
@@ -88,35 +129,23 @@ services:
       LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
       LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
       LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-finance-agent-lab}
-      OPENAI_STT_MODEL: ${OPENAI_STT_MODEL:-gpt-4o-mini-transcribe}
-      OPENAI_TTS_MODEL: ${OPENAI_TTS_MODEL:-gpt-4o-mini-tts}
-      OPENAI_TTS_VOICE: ${OPENAI_TTS_VOICE:-alloy}
-      OPENAI_VISION_MODEL: ${OPENAI_VISION_MODEL:-gpt-4o-mini}
-      # 멀티모달 기능은 실제 공급자 API 키가 필요합니다. Mock fallback은 지원하지 않습니다.
-      DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY:-}
-      DEEPGRAM_MODEL: ${DEEPGRAM_MODEL:-nova-2}
-      ASSEMBLYAI_API_KEY: ${ASSEMBLYAI_API_KEY:-}
-      ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY:-}
-      ELEVENLABS_VOICE_ID: ${ELEVENLABS_VOICE_ID:-}
-      ELEVENLABS_MODEL_ID: ${ELEVENLABS_MODEL_ID:-eleven_multilingual_v2}
-      OCR_SPACE_API_KEY: ${OCR_SPACE_API_KEY:-}
-      TAVILY_API_KEY: ${TAVILY_API_KEY:-}
-      TAVILY_SEARCH_DEPTH: ${TAVILY_SEARCH_DEPTH:-advanced}
-      TAVILY_TOPIC: ${TAVILY_TOPIC:-general}
-      COHERE_API_KEY: ${COHERE_API_KEY:-}
-      COHERE_RERANK_MODEL: ${COHERE_RERANK_MODEL:-rerank-v3.5}
-      WEB_SEARCH_FALLBACK_THRESHOLD: ${WEB_SEARCH_FALLBACK_THRESHOLD:-0.34}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8954:8000"
     volumes:
       - ./:/srv/repo:ro
       - agent_vector_db:/srv/vector_db
+    depends_on:
+      qdrant:
+        condition: service_healthy
     networks:
       - default
       - shared-net
     restart: unless-stopped
 
 volumes:
+  qdrant_data:
   agent_vector_db:
 
 networks:

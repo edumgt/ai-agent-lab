@@ -239,6 +239,44 @@ def build_mode_summary(mode, prompt_outputs, cfg):
         }
     return {"prompt_count": len(prompt_outputs), "config": cfg}
 
+def _lm_studio_demo():
+    """
+    LM Studio 실제 호출 데모 (LM Studio 가 실행 중일 때 동작).
+    LM Studio 설치/실행 방법: https://lmstudio.ai
+      1. LM Studio 실행 → 모델 다운로드 (예: Qwen2.5-7B-Instruct.gguf)
+      2. 좌측 "Local Server" 탭 → Start Server (포트 1234)
+      3. 이 파일 실행: python class289_example1.py
+    """
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+    try:
+        from lmstudio_config import call_lm_simple, LM_STUDIO_AVAILABLE, LM_MODEL
+    except ImportError:
+        print("[LM Studio] lmstudio_config 를 찾을 수 없습니다. 저장소 루트에서 실행하세요.")
+        return
+
+    if not LM_STUDIO_AVAILABLE:
+        print("[LM Studio] openai 패키지가 없습니다. pip install openai 를 실행하세요.")
+        return
+
+    print(f"\n{'='*60}")
+    print(f"[LM Studio 실습] 모델: {LM_MODEL}")
+    print(f"{'='*60}")
+
+    test_prompts = [
+        "LLM(대규모 언어 모델)이 무엇인지 2문장으로 설명해주세요.",
+        "Transformer 아키텍처가 기존 RNN과 다른 점을 간단히 설명해주세요.",
+    ]
+    for i, prompt in enumerate(test_prompts, 1):
+        print(f"\n[질문 {i}] {prompt}")
+        result = call_lm_simple(prompt, max_tokens=200, temperature=0.7)
+        if result:
+            print(f"[LM Studio 응답]\n{result}")
+        else:
+            print("[LM Studio] 연결 실패 — LM Studio 가 실행 중인지 확인하세요 (포트 1234).")
+            break
+
+
 def main():
     print("오늘 주제:", TOPIC)
     mode = resolve_mode()
@@ -254,6 +292,10 @@ def main():
     summary = build_mode_summary(mode, prompt_outputs, cfg)
     print("모드:", mode)
     print("요약:", summary)
+
+    # LM Studio 실제 호출 (LM Studio 실행 중일 때)
+    _lm_studio_demo()
+
     return {
         "variant": EXAMPLE_VARIANT,
         "mode": mode,

@@ -449,6 +449,58 @@ def summarize_mode(mode, docs, chunks, rows, model_name, chunk_size, overlap):
         }
     return {"result_count": len(rows), "avg_recall": avg_recall, "avg_answer_accuracy": avg_answer}
 
+def _lm_studio_rag_demo():
+    """
+    LM Studio 를 LLM 백엔드로 사용하는 간이 RAG 데모.
+    검색된 컨텍스트를 프롬프트에 주입해 답변을 생성합니다.
+    """
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+    try:
+        from lmstudio_config import call_lm, LM_STUDIO_AVAILABLE, LM_MODEL
+    except ImportError:
+        return
+
+    if not LM_STUDIO_AVAILABLE:
+        return
+
+    # 간이 문서 컬렉션
+    docs = [
+        "RAG 파이프라인은 문서 수집, 청크 분할, 임베딩 생성, 벡터 검색, 프롬프트 주입, 답변 생성 단계로 구성됩니다.",
+        "임베딩은 텍스트를 고차원 벡터로 변환해 의미 기반 유사도 검색을 가능하게 합니다.",
+        "Chroma, FAISS, Qdrant 는 대표적인 로컬 벡터 데이터베이스입니다.",
+        "LM Studio 는 GGUF 형식의 모델을 로컬에서 실행하며 OpenAI 호환 API 를 제공합니다.",
+    ]
+
+    query = "RAG 에서 임베딩의 역할이 무엇인가요?"
+
+    # 키워드 기반 간이 검색 (실습용)
+    keywords = set(query.replace("?", "").replace(".", "").split())
+    scored = []
+    for doc in docs:
+        score = sum(1 for kw in keywords if kw in doc)
+        scored.append((score, doc))
+    retrieved = [doc for _, doc in sorted(scored, reverse=True)[:2]]
+
+    context = "\n".join(f"- {d}" for d in retrieved)
+    messages = [
+        {"role": "system", "content": "당신은 도움이 되는 AI 어시스턴트입니다. 제공된 컨텍스트만 사용해 답변하세요."},
+        {"role": "user", "content": f"[컨텍스트]\n{context}\n\n[질문]\n{query}"},
+    ]
+
+    print(f"\n{'='*60}")
+    print(f"[LM Studio RAG 실습] 모델: {LM_MODEL}")
+    print(f"질문: {query}")
+    print(f"검색된 컨텍스트:\n{context}")
+    print(f"{'='*60}")
+
+    result = call_lm(messages, temperature=0.3, max_tokens=256)
+    if result:
+        print(f"\n[LM Studio 생성 답변]\n{result}")
+    else:
+        print("[LM Studio] 연결 실패 — LM Studio 가 실행 중인지 확인하세요 (포트 1234).")
+
+
 def main():
     print("오늘 주제:", TOPIC)
     mode = resolve_mode()
@@ -468,6 +520,10 @@ def main():
     print("모드:", mode)
     print("선택 임베딩 모델:", model)
     print("요약:", summary)
+
+    # LM Studio RAG 실습
+    _lm_studio_rag_demo()
+
     return {
         "variant": EXAMPLE_VARIANT,
         "mode": mode,

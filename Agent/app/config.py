@@ -20,6 +20,13 @@ class Settings:
         self.openai_model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
         self.default_orchestrator = os.getenv("DEFAULT_ORCHESTRATOR", "native").strip().lower()
 
+        # LM Studio (로컬 LLM 백엔드, OpenAI 호환 API)
+        # OPENAI_API_KEY 가 비어 있으면 LM Studio 를 우선 사용합니다.
+        self.lm_studio_url = os.getenv("LM_STUDIO_URL", "http://localhost:1234/v1").strip()
+        self.lm_studio_api_key = os.getenv("LM_STUDIO_API_KEY", "lm-studio").strip()
+        self.lm_studio_model = os.getenv("LM_STUDIO_MODEL", "local-model").strip()
+        self.use_lm_studio: bool = not bool(self.openai_api_key)
+
         # Authentication / user profile
         self.auth_secret = os.getenv("AUTH_SECRET", "change-me-in-production")
         self.auth_token_ttl_seconds = int(os.getenv("AUTH_TOKEN_TTL_SECONDS", str(60 * 60 * 24)))
@@ -78,6 +85,12 @@ class Settings:
             return False
         return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
 
+    def active_llm_backend(self) -> str:
+        """현재 사용 중인 LLM 백엔드 이름 반환."""
+        if self.use_lm_studio:
+            return f"lm-studio({self.lm_studio_model})"
+        return f"openai({self.openai_model})"
+
     def export_public(self) -> dict[str, Any]:
         return {
             "repo_root": str(self.repo_root),
@@ -85,7 +98,7 @@ class Settings:
             "default_orchestrator": self.default_orchestrator,
             "user_store_mode": self.user_store_mode,
             "langsmith_tracing": self.langsmith_tracing,
-            "openai_model": self.openai_model,
+            "llm_backend": self.active_llm_backend(),
             "embedding_provider": self.embedding_provider,
         }
 

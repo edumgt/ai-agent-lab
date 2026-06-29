@@ -239,6 +239,36 @@ def build_mode_summary(mode, prompt_outputs, cfg):
         }
     return {"prompt_count": len(prompt_outputs), "config": cfg}
 
+def _lm_studio_temperature_demo():
+    """
+    LM Studio 로 temperature 파라미터 효과를 실습합니다.
+    temperature 가 낮을수록 일관된 답변, 높을수록 창의적 답변이 생성됩니다.
+    """
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+    try:
+        from lmstudio_config import call_lm_simple, LM_STUDIO_AVAILABLE, LM_MODEL
+    except ImportError:
+        return
+
+    if not LM_STUDIO_AVAILABLE:
+        return
+
+    prompt = "금융 AI 에이전트의 핵심 역할을 한 문장으로 설명해주세요."
+    print(f"\n{'='*60}")
+    print(f"[LM Studio 실습] Temperature 비교 — 모델: {LM_MODEL}")
+    print(f"프롬프트: {prompt}")
+    print(f"{'='*60}")
+
+    for temp in [0.1, 0.7, 1.2]:
+        result = call_lm_simple(prompt, temperature=temp, max_tokens=100)
+        if result:
+            print(f"\n  temperature={temp}: {result}")
+        else:
+            print(f"\n  temperature={temp}: [LM Studio 연결 실패]")
+            break
+
+
 def main():
     print("오늘 주제:", TOPIC)
     mode = resolve_mode()
@@ -254,6 +284,10 @@ def main():
     summary = build_mode_summary(mode, prompt_outputs, cfg)
     print("모드:", mode)
     print("요약:", summary)
+
+    # LM Studio temperature 실습
+    _lm_studio_temperature_demo()
+
     return {
         "variant": EXAMPLE_VARIANT,
         "mode": mode,
